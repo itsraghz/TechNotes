@@ -59,4 +59,5 @@
 
 			Caused by: java.io.FileNotFoundException: class path resource [application-.properties] cannot be opened because it does not exist
 
-	3.5. 	
+	3.5.
+
