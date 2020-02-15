@@ -1,6 +1,6 @@
 # Spring Notes
 
-##1. Annotations
+1. Annotations
 ----------------
 	@Configuration
 	@Bean
@@ -13,12 +13,12 @@
 	@PropertySource("classpath:/application-${spring.profiles.active}.properties") - to load the env specific property file for all the @Values backed up
 	@Scope("scopeName") - to determine the bean scope. Singleton(default), Prototype, Session and Request.
 
-##2. Classes
+2. Classes
 -------------
 	ApplicationContext
 	AnnotationConfigApplicationContext
 
-##3. Important Notes
+3. Important Notes
 ------------------
 	3.1. The properties being specific in the application.properties (or any other custom properties file) can be
 		overridden by an environment variable - or a Command Line variable. Spring gives a precedence to those
