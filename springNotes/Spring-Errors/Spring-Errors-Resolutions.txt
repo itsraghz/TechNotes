@@ -1,0 +1,51 @@
+Spring Learnings
+================
+
+1. Root Cause: Not specifying the Configuration Class Name in the ApplicationContext Constructor
+   Date : 15 Feb 2020 Saturday
+
+   Exception Stack Trace
+   =====================
+	Exception in thread "main" java.lang.IllegalStateException: org.springframework.context.annotation.AnnotationConfigApplicationContext@7e0b0338 has not been refreshed yet
+	at org.springframework.context.support.AbstractApplicationContext.assertBeanFactoryActive(AbstractApplicationContext.java:1065)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1077)
+	at com.lynda.common.HelloConfig.main(HelloConfig.java:28)
+
+   PSVM method
+   ===========
+	@Configuration
+	public class HelloConfig {
+	
+		@Bean
+		public String greeting() {
+			return "World";
+		}
+
+		public static void main(String[] args) {
+			//Below line does not pass the Configuration Class in the constructor
+			ApplicationContext context = new AnnotationConfigApplicationContext();
+			String text = (String) context.getBean("greeting");
+			System.out.println("Hello " + text);
+		}
+	}
+
+   Resolution
+   ----------
+	Add the .class of the Configuration Annotation backed class to the constructor of the AnnotationConfigApplicationContext. 
+
+		ApplicationContext context = new AnnotationConfigApplicationContext(HelloConfig.class);
+
+   Output
+   -------
+	Feb 15, 2020 9:06:45 AM org.springframework.context.annotation.AnnotationConfigApplicationContext prepareRefresh
+	INFO: Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e0b0338: startup date [Sat Feb 15 09:06:45 IST 2020]; root of context hierarchy
+	WARNING: An illegal reflective access operation has occurred
+	WARNING: Illegal reflective access by org.springframework.cglib.core.ReflectUtils$1 (file:/Users/raghs/.m2/repository/org/springframework/spring-core/4.3.9.RELEASE/spring-core-4.3.9.RELEASE.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+	WARNING: Please consider reporting this to the maintainers of org.springframework.cglib.core.ReflectUtils$1
+	WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+	WARNING: All illegal access operations will be denied in a future release
+	Hello World
+
+-----------------------------------------------------------------------
+
+2. 

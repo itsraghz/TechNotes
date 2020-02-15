@@ -1,0 +1,25 @@
+Date : 15 Feb 2020  Saturday
+
+Question: How to increase the font size of the tree view in Project Explorer etc., inside Eclipse / STS IDE.
+
+You can increase the font size via Preferences -> General -> Appearance -> Fonts. However it helps only the content of the files like Java Source, properties file etc.,
+In order to increase the font size of the tree structures, you need to alter the settings in a .css file as follows.
+
+URL : https://codeyarns.com/2014/11/03/how-to-set-font-and-font-size-of-eclipse-ui/
+      https://stackoverflow.com/questions/47731327/change-project-explorer-tree-view-font-size-in-eclipse-oxygen
+      https://dzone.com/articles/sts-os-x-%E2%80%93-wheres-stsini
+
+Tips: The css folder has so many different stylesheets. You need to know the right theme being used by your STS/Eclipse by clicking on 
+     Preferences -> General -> Apperance.
+
+Add the following lines in the .css file - at the end/bottom to override the previous settings if any 
+========================================
+.MPart Tree {
+    font-family: Consolas;
+    font-size: 8;
+}
+
+Also try to add * { font-size: 12; } if you prefer at the end of all. Modify the size amount as appropriate.
+
+
+
