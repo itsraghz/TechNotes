@@ -12,6 +12,7 @@
 	@Profile("<Dev/Prod../">) - to specify an env specific property so that the rest of the things can be driven accordingly Ex Data Source
 	@PropertySource("classpath:/application-${spring.profiles.active}.properties") - to load the env specific property file for all the @Values backed up
 	@Scope("scopeName") - to determine the bean scope. Singleton(default), Prototype, Session and Request.
+	@ComponentScan(basePackages = {"f.q.c.n", "f.q.c.n2"}) - to load all the classes in this package having the stereotype annotations
 
 2. Classes
 -------------

@@ -32,4 +32,52 @@ Spring Bean Scopes
 		- One instance per request (HttpRequest)
 		- Defintion stored in the bean factory, instances are not
 		- Eligible for GC once the instance is out of scope (on the request)
+
+Spring Bean Autowiring
+----------------------
+	Helps achieving a good encapsulation of the attributes and the dependency management
+	In Spring, it is taken care by the IoC Container.
+	Is a boon and curse - depends on how you use Autowiring.
+	If not properly used, Autowiring can lead to a poorly written code.
+
+	Types of Autowiring
+	-------------------
+	1. Field Level Injection
+		- Private methods can be autowired
+		- Difficult to be tesed by the other public API - like Unit Testing and Mocking frameworks. 
+		- Not recommended until situation really demands.
+
+		Sample Code:
+		------------
+		@Autowired
+		private final InventoryService inventoryService;
+
+	2. Setter Level Injection
+		- Downside is you might possibly allow the other components to allow the data to be modified
+		- Depends on the situation, as long as the data modified does not alter the scope/state of the application
+		- Used for optional dependencies
+		- Used for Changing dependencies
+
+		Sample Code:
+		------------
+		private InventoryService inventoryService; //leave the private field as it is
+
+		@Autowired
+		public void setInventoryService(InventoryService inventoryService) {
+			this.inventoryService = inventoryService;
+		}
+
+	3. Constructor Injection
+		- Preferred method for most situations for all dependencies
+		- Attribute should be final, class should be immutable
+		- Provides a much better level of encapsulation and OO design
+
+		Sample Code
+		-----------
+		private InventoryService inventoryService; //field is untouched and left as private
+
+		@Autowired
+		public OrderServiceImpl(InventoryService inventoryService) { //constructor
+			this.inventoryService = inventoryService;
+		}
  	
