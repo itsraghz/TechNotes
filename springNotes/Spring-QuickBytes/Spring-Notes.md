@@ -1,6 +1,7 @@
 # Spring Notes
 
 ##1. Annotations
+----------------
 	@Configuration
 	@Bean
 	@Value - to configure a property value bound to the configuration file [Syntax: @Value("${key.name}") ]
@@ -13,6 +14,7 @@
 	@Scope("scopeName") - to determine the bean scope. Singleton(default), Prototype, Session and Request.
 
 ##2. Classes
+-------------
 	ApplicationContext
 	AnnotationConfigApplicationContext
 
