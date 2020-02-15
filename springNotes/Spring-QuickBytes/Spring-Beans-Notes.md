@@ -5,6 +5,7 @@ Spring Bean
 	A Typical POJO class can be converted to a bean with the Annotation @Bean.
 	Can be used in the other classes wherever it is needed - with @Autowired annotation, 
 		where Spring IOC Container serves the references of this bean to the consumers
+	Scope can be specified with an additional annotation @Scope("<NameOfScope>")
 
 Spring Bean Scopes
 -------------------
