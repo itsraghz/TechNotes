@@ -1,4 +1,6 @@
-1. Annotations
+# Spring Notes
+
+##1. Annotations
 	@Configuration
 	@Bean
 	@Value - to configure a property value bound to the configuration file [Syntax: @Value("${key.name}") ]
@@ -8,12 +10,13 @@
 	[TBD] @AliasFor
 	@Profile("<Dev/Prod../">) - to specify an env specific property so that the rest of the things can be driven accordingly Ex Data Source
 	@PropertySource("classpath:/application-${spring.profiles.active}.properties") - to load the env specific property file for all the @Values backed up
+	@Scope("scopeName") - to determine the bean scope. Singleton(default), Prototype, Session and Request.
 
-2. Classes
+##2. Classes
 	ApplicationContext
 	AnnotationConfigApplicationContext
 
-3. Important Notes
+##3. Important Notes
 ------------------
 	3.1. The properties being specific in the application.properties (or any other custom properties file) can be
 		overridden by an environment variable - or a Command Line variable. Spring gives a precedence to those
