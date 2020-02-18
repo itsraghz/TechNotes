@@ -2,9 +2,19 @@
 
 ## Definition
 
-	An interface to test a value based on a test/condition and returns a boolean value
+	- An interface to test a value based on a test/condition and returns a boolean value.
+	- Javadoc Link : https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html
+	- The Interface definition has an annotation @FunctionalInterface
 
-## Syntax/Example
+## Methods available in the interface
+
+	- test() - functional method (single abstract method) to test this interface
+	- isEqual() - static method (newly introduced modifier for an Interface in Java 8)
+	- and() - default method (newly introduced modifier for an Interface in Java 8)
+	- or() - default method 
+	- negate() - default method
+
+## Syntax/Example - for test() method
 
 	//declare the interface with the right package
 	import java.util.function.Predicate;
@@ -12,14 +22,14 @@
 	Predicate<String> strLen = (s) -> s.length() < 10;
 	System.out.println(strLen.test("Apples") + " - Apples are less than 10 characters in length");
 
-## Explanation
+## Explanation - for the example using test() method
 
-	Declare the Predicate of a particular type - here we did on a String type, meaning that the Predicate will be used for a String value.
-	Write/Implement the test() method using a Lambda (or you can use the typical old style Anonymous Inner class to override the test() method)
-	Use / Invoke the 'test' method on the predicate instance
-	The return value from the Predicate Interface's test() method will be a boolean - true/false. 
+	- Declare the Predicate of a particular type - here we did on a String type, meaning that the Predicate will be used for a String value.
+	- Write/Implement the test() method using a Lambda (or you can use the typical old style Anonymous Inner class to override the test() method)
+	- Use / Invoke the 'test' method on the predicate instance
+	- The return value from the Predicate Interface's test() method will be a boolean - true/false. 
 
-## Sample Program
+## Sample Program - for the test() method
 
 	`import java.util.function.Predicate;
 

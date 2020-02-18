@@ -1,0 +1,2 @@
+$ java Java8ConsumerExample
+java 8 is really awesome!
