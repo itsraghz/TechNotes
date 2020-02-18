@@ -1,0 +1,4 @@
+[Java8PredicateExample-AnonymousInnerClass] Input : [Apples], length : [6]
+true - Apples are less than 10 characters
+[Java8PredicateExample-AnonymousInnerClass] Input : [Pomegranate], length : [11]
+false - Pomegranate is NOT less than 10 characters

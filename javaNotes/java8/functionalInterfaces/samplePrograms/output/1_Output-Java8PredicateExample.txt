@@ -1,0 +1,2 @@
+true - Apples are less than 10 characters
+false - Pomegranate is NOT less than 10 characters
