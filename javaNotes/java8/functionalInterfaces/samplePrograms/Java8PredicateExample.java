@@ -1,5 +1,12 @@
 import java.util.function.Predicate;
 
+/**
+ * <p>A sample Java program to demonstrate the Java 8 Funtional Interface - Predicate
+ *    in a lambda style of execution.
+ * <p>
+ *
+ * @author raghs (Raghavan alias Saravanan Muthu)
+ */
 public class Java8PredicateExample
 {
 	public static void main(String... args)
