@@ -1,0 +1,2 @@
+$ java Java8ConsumerExample2
+Input : [Java 8 is Really Awesome!], length: [25]
