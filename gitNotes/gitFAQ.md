@@ -10,6 +10,21 @@
 
 ## Git keeps asking me to enter credentials for everytime I issue `git push` for the repo. How do I stop?
 
-  Have been reading on the Internet for the resolution. They suggest to use either SSH or a different approach. #TBD complete this. 
+  Have been reading on the Internet for the resolution. They suggest to use either SSH or a different approach. #TBD to complete this. 
 
+### Command Output (Sample) for entering the credentials during the `git push`
+```
+C:\rags\TechNotes\gitNotes (master)
+λ git push
+Username for 'https://github.com': itsraghz
+Password for 'https://itsraghz@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.14 KiB | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/itsraghz/TechNotes.git
+   2d96107..6b1bcf3  master -> master
+```
 
