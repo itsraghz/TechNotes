@@ -32,7 +32,18 @@ To https://github.com/itsraghz/TechNotes.git
 Ideally you should escape it as like any other syntax oriented language. However, in the markdown you can simply use it with a single hash (#) without any
 space before or after - depending on where the hash is supposed to be present. 
 
-> The beginning character like a hashtag (#github) , or a ending character like a Programming Language `C#`.
+> The beginning character like a hashtag (#github) , or a ending character like a Programming Language `C#`.  
 > If it is prefixed with a # and a space, (# #github) &rarr; will render the content (#github) as a H1 tag tag, for example.
+
+## How do I add a line break in the markdown - like &lt;br/&gt; tag? 
+
+A comment from the original Markdown Syntax says,
+
+> The implication of the "one or more consecutive lines of text" rule is that Markdown supports "hard-wrapped" text paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type's "Convert Line Breaks" option) which translate every line break character in a paragraph into a <br /> tag.
+
+        
+When you do want to insert a &lt;br/&gt; break tag using Markdown, you end a line with two or more spaces, then type return.
+
+Link : https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation/33191810
 
 
