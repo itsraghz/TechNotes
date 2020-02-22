@@ -45,7 +45,7 @@ A comment from the original Markdown Syntax says,
 
   * When you do want to insert a &lt;br/&gt; break tag using Markdown, you end a line with two or more spaces, then type return.
   * To force a line return, place two empty spaces at the end of a line.
-  * Add `&amp;nbsp;` a few times (2 or more) to  have a line space issues while rendering
+  * Add the &amp;nbsp; a few times (2 or more) to  have a line space issues while rendering
   * Just add a backslash `\` at the end of the line where you need a line break, and it is much better than the whitespaces as it would be visible
 
 
