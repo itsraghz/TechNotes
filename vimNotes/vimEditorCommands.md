@@ -1,5 +1,7 @@
 # Vi/Vim Editor Commands
-------------------------------------------------------------------------------------------
+
+## Version History
+
 | Sl # | 	Date	| 	Author		  	 | 		Remarks	         |
 | ---- |. -------------.| -----------------------------	 | ----------------------------- |
 |  1   | 22 Feb 2020 	| Raghavan alias Saravanan Muthu | Initial Version		 | 
@@ -30,15 +32,18 @@ navigating the arrow keys.
  * Block mode : Ctrl+v
 
 ## How to go to the beginning character of the file (start of the file)?
-> Change to the Command mode by pressing the `Esc` key at first, if required.\
+> Change to the Command mode by pressing the `Esc` key at first, if required. \
+
 The operator `G` (uppercase - <shift+g>) takes to the last line of the file (end of file), however, it takes a quantifier as a prefix.
 If you press `1G`, the cursor will be taken to the 1st line of the file (and to the 1st character of the line as well).
 
 > Another easy shortcut is to press `gg` (*twice* the time __lowercase 'g'__), that will take you to the beginning the file.\
+
 > Yet another very simple shortcut is to use `:1` to specify the line number to navigate. 
 
 ## How to go to the beginning of the line?
 > Change to the Command mode by pressing the `Esc` key at first, if required.\
+
 Press `0` at any position of the line will take you to the 0th position (starting character) of the line where the cursor is present.
 
 ## How to go to the end of the line?
