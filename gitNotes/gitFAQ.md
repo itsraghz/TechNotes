@@ -41,8 +41,13 @@ A comment from the original Markdown Syntax says,
 
 > The implication of the "one or more consecutive lines of text" rule is that Markdown supports "hard-wrapped" text paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type's "Convert Line Breaks" option) which translate every line break character in a paragraph into a <br /> tag.
 
-        
-When you do want to insert a &lt;br/&gt; break tag using Markdown, you end a line with two or more spaces, then type return.
+#### Possible Suggestions and options
+
+  * When you do want to insert a &lt;br/&gt; break tag using Markdown, you end a line with two or more spaces, then type return.
+  * To force a line return, place two empty spaces at the end of a line.
+  * Add &at;nbsp; a few times (2 or more) to  have a line space issues while rendering
+  * Just add a backslash `\` at the end of the line where you need a line break, and it is much better than the whitespaces as it would be visible
+
 
 Link : https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation/33191810
 
