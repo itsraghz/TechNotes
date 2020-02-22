@@ -28,3 +28,11 @@ To https://github.com/itsraghz/TechNotes.git
    2d96107..6b1bcf3  master -> master
 ```
 
+## How do I add a hash (#) as part of my markdown/github markdown text?
+Ideally you should escape it as like any other syntax oriented language. However, in the markdown you can simply use it with a single hash (#) without any
+space before or after - depending on where the hash is supposed to be present. 
+
+> The beginning character like a hashtag (#github) , or a ending character like a Programming Language `C#`.
+> If it is prefixed with a # and a space, (# #github) &rarr; will render the content (#github) as a H1 tag tag, for example.
+
+
