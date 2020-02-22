@@ -46,4 +46,58 @@ When you do want to insert a &lt;br/&gt; break tag using Markdown, you end a lin
 
 Link : https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation/33191810
 
+## How does the `git add` command work OR does the `git add` command works depending on the directory from which it is invoked? 
+
+Yes, the git add works in such a way that it adds all the files (recursively) in all the folders, with respect to the current folder from where
+it is invoked. In case, there are files modified but present outside this particular directory from where `git add` was invoked, this command
+will *NOT* any effects on those files. 
+
+### Example - Issue 
+
+See now the `git add` command is issued from a particular sub directory but the subsequent `git status` command still says that a file is being left out and waiting to be added further. 
+
+> Always ensure you issue/invoke the `git add` command from the root/parent directory of the repository so as to get all the files being added/modified
+in a recursive manner for that repository. 
+
+```
+C:\rags\TechNotes\javaNotes\javaPrograms\basics (master)
+λ git add .
+
+C:\rags\TechNotes\javaNotes\javaPrograms\basics (master)
+λ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../output/basics/3_Output_JavaPgmWithIfAndElseIf.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+### Example - Fix (change the directory on shell before you issue the `git add`)
+```
+C:\rags\TechNotes\javaNotes\javaPrograms\basics (master)
+λ cd ..\..
+
+C:\rags\TechNotes\javaNotes (master)
+λ git add .
+warning: LF will be replaced by CRLF in javaNotes/javaPrograms/output/basics/3_Output_JavaPgmWithIfAndElseIf.md.
+The file will have its original line endings in your working directory.
+
+C:\rags\TechNotes\javaNotes (master)
+λ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   javaPrograms/output/basics/3_Output_JavaPgmWithIfAndElseIf.md
+
+
+C:\rags\TechNotes\javaNotes (master)
+λ
+```
+
+Now you see the file left out earlier being considered while adding for staging, and the subsequent invocation of `git status` reflects the same by showing the file newly being added. 
 
