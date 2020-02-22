@@ -159,7 +159,7 @@ Issue the command inside the vi editor `:syntax off` to turn off the Syntax high
 
 ## Are the Commands in Vi / Vim editor case sensitive ? 
 
-Yes, the commands in Vi/Vim editor are case sensitive. If you issue a command in an improper way (mixed/sentence case or upper case), the editor will issue an error message stating that __*E0492: Not an Editor Command : <RecentlyIssuedCommand>__.
+Yes, the commands in Vi/Vim editor are case sensitive. If you issue a command in an improper way (mixed/sentence case or upper case), the editor will issue an error message stating that __*E0492: Not an Editor Command* : <RecentlyIssuedCommand>__.
 
 ## How to enable line number setting permanently while using Vi/Vim Editor?
 If you need number every time you start vi/vim, append the following line to your ~/.vimrc file:
