@@ -187,3 +187,7 @@ Press `:set ic` to let Vi editor search in the case insensitive mode, and press 
 
 > Reference URL : https://stackoverflow.com/questions/2287440/how-to-do-case-insensitive-search-in-vim?rq=1 
 
+## Is there a difference between copying via yanking (`yy`) and visual mode (`v`) and pasting it? 
+
+Yes. If you copy and paste it via Yanking, the cursor have to be set a line before, so that when you press `p` the contents in buffer (clipboard) will be pasted to the next line of the cursor. Whereas if you copy via visual mode, the contents of the buffer will be pasted on the same line of the cursor where you press `p` key. 
+
