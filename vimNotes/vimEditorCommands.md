@@ -2,22 +2,11 @@
 
 ## Version History
 
-
-| No  | 	Date	| 	Author		  	 | 		Remarks	         |
-|---- |.-------------.| ------------------------------- | ----------------------------- |
-|  1   | 22 Feb 2020 	| Raghavan alias Saravanan Muthu | Initial Version		 | 
-
-
 | Sl No. | Date | Author | Remarks |
 | --- | --- | --- | --- |
 | 1 | 22 Feb 2020 | Raghavan Muthu | Initial Version |
 
 #Todo - for pending few of the commands 
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
 
 ## How many modes are available in Vi editor?
 There are 3 different modes available in Vi/Vim Editor, as follows. 
