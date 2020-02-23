@@ -2,8 +2,8 @@
 
 ## Version History
 
-| Sl # | 	Date	| 	Author		  	 | 		Remarks	         |
-|---- |. -------------.| ------------------------------- | ----------------------------- |
+| No  | 	Date	| 	Author		  	 | 		Remarks	         |
+|---- |.-------------.| ------------------------------- | ----------------------------- |
 |  1   | 22 Feb 2020 	| Raghavan alias Saravanan Muthu | Initial Version		 | 
 
 
