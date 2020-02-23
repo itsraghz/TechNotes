@@ -4,7 +4,7 @@ Used this to update from HTTPS to SSL to avoid from git asking the credentials e
 
 ## Terminal Output
 
-`
+``
 C:\rags\TechNotes (master)
 ¿ git remote -v
 origin  https://github.com/itsraghz/TechNotes.git (fetch)
@@ -20,4 +20,4 @@ origin  git@github.com:itsraghz/TechNotes.git (push)
 
 C:\rags\TechNotes (master)
 ¿
-`
+``

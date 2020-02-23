@@ -12,7 +12,7 @@
 
   Have been reading on the Internet for the resolution. They suggest to use either SSH or a different approach. #TBD to complete this. 
   
-  Links : 
+  Links :   
     * https://help.github.com/en/github/using-git/why-is-git-always-asking-for-my-password
     * https://medium.com/@deepakpk/git-push-always-asking-username-and-password-e4d5d12b
     * https://medium.com/@amanze.ogbonna/accessing-pushing-to-github-without-username-and-password-3022feb077fb
