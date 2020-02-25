@@ -1,0 +1,5 @@
+# git ignore file
+
+# Ignore the compiled .class files from being tracked
+**/*.class
+
