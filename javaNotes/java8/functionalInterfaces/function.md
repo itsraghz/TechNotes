@@ -11,10 +11,10 @@
 	* The functional method is *`apply(Object)`*
 
 ## Syntax
-`
+```
 	@FunctionalInterface
 	public interface Function<T,R>
-`
+```
 
 ## Methods
 
@@ -25,18 +25,18 @@
 
 ## Sample Code
 
-`
+```
                 Function<Integer, String> converter = (num) -> Integer.toString(num);
 
                 // apply is the 'functional' interface of Function Interface (SAM Method)
                 System.out.println("Length of 26 is : " + converter.apply(26).length());
-`
+```
 
 ## Sample Output
 
-`
+```
 	C:\rags\TechNotes\javaNotes\java8\functionalInterfaces\samplePrograms (master)
 	¿ java Java8FunctionExample
 	Length of 26 is : 2
-`
+```
 
