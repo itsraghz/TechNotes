@@ -277,3 +277,90 @@ Changes to be committed:
 C:\rags\TechNotes (master)
 ¿
 ```
+
+## Further output 
+
+```
+C:\rags\TechNotes (master)
+¿ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8ConsumerExample.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8ConsumerExample2.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8FunctionExample.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateExample.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateNonLambdaExample$1.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateNonLambdaExample.class
+        deleted:    javaNotes/javaPrograms/basics/ChainedTernaryOperatorDemo.class
+        deleted:    javaNotes/javaPrograms/basics/CommandLineArgsPrint.class
+        deleted:    javaNotes/javaPrograms/basics/EmptyJavaClass.class
+        deleted:    javaNotes/javaPrograms/basics/JavaDataTypesIntOctalPrefix.class
+        deleted:    javaNotes/javaPrograms/basics/JavaPgmWithIfAndElseIf.class
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        gitNotes/output/4_gitignore-remove-cached-files-demo-output.md
+
+
+C:\rags\TechNotes (master)
+¿ git add .
+warning: LF will be replaced by CRLF in gitNotes/output/4_gitignore-remove-cached-files-demo-output.md.
+The file will have its original line endings in your working directory.
+
+C:\rags\TechNotes (master)
+¿ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   gitNotes/output/4_gitignore-remove-cached-files-demo-output.md
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8ConsumerExample.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8ConsumerExample2.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8FunctionExample.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateExample.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateNonLambdaExample$1.class
+        deleted:    javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateNonLambdaExample.class
+        deleted:    javaNotes/javaPrograms/basics/ChainedTernaryOperatorDemo.class
+        deleted:    javaNotes/javaPrograms/basics/CommandLineArgsPrint.class
+        deleted:    javaNotes/javaPrograms/basics/EmptyJavaClass.class
+        deleted:    javaNotes/javaPrograms/basics/JavaDataTypesIntOctalPrefix.class
+        deleted:    javaNotes/javaPrograms/basics/JavaPgmWithIfAndElseIf.class
+
+
+C:\rags\TechNotes (master)
+¿ git commit -m "gitignore rm -r cached intact, demo output added"
+[master 1f15e1e] gitignore rm -r cached intact, demo output added
+warning: LF will be replaced by CRLF in gitNotes/output/4_gitignore-remove-cached-files-demo-output.md.
+The file will have its original line endings in your working directory.
+ 12 files changed, 279 insertions(+)
+ create mode 100644 gitNotes/output/4_gitignore-remove-cached-files-demo-output.md
+ delete mode 100644 javaNotes/java8/functionalInterfaces/samplePrograms/Java8ConsumerExample.class
+ delete mode 100644 javaNotes/java8/functionalInterfaces/samplePrograms/Java8ConsumerExample2.class
+ delete mode 100644 javaNotes/java8/functionalInterfaces/samplePrograms/Java8FunctionExample.class
+ delete mode 100644 javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateExample.class
+ delete mode 100644 javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateNonLambdaExample$1.class
+ delete mode 100644 javaNotes/java8/functionalInterfaces/samplePrograms/Java8PredicateNonLambdaExample.class
+ delete mode 100644 javaNotes/javaPrograms/basics/ChainedTernaryOperatorDemo.class
+ delete mode 100644 javaNotes/javaPrograms/basics/CommandLineArgsPrint.class
+ delete mode 100644 javaNotes/javaPrograms/basics/EmptyJavaClass.class
+ delete mode 100644 javaNotes/javaPrograms/basics/JavaDataTypesIntOctalPrefix.class
+ delete mode 100644 javaNotes/javaPrograms/basics/JavaPgmWithIfAndElseIf.class
+
+C:\rags\TechNotes (master)
+¿ git push
+Username for 'https://github.com': itsraghz
+Password for 'https://itsraghz@github.com':
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 2.56 KiB | 0 bytes/s, done.
+Total 11 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/itsraghz/TechNotes.git
+   a4ef26b..1f15e1e  master -> master
+```
