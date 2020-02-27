@@ -2,41 +2,38 @@
 
 ## Definition
 	
-  * Represets a funtion that accepts one argument and produces one result. 
-  * Function Interface takes two parameters <A,B> where A is the input parameter type and B is the output/return value. 
+  * Represets a supplier of results. 	 
+  * There is no requiement that a new or distinct result be returned each time the supplier is invoked. 
   * Links 
        - https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
        - https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html
   * This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference. 
-  * The functional method is *`apply(Object)`*
+  * The functional method is *`get()`*
 
 ## Syntax
 ```
   @FunctionalInterface
-  public interface Function<T,R>
+  public interface Supplier<T>
 ```
 
 ## Methods
 
-  * andThen(Function<? super R, ? extends V> after)
-  * *functional* - `apply(T t)` - returns R --> _applies this function to the given argument._
-  * *default* - compose(Function<? super V, ? extends T> before)
-  * *static* - identity() 
+  * *functional* - `get()` - returns T --> _applies this function without any arguments_
 
 ## Sample Code
 
 ```
-  Function<Integer, String> converter = (num) -> Integer.toString(num);
+    Supplier<String> s = () -> ("Java 8 is really fun, when it is SUPPLIED well!");
 
-  // apply is the 'functional' interface of Function Interface (SAM Method)
-  System.out.println("Length of 26 is : " + converter.apply(26).length());
+    // get is the 'functional' method of Supplier Interface (SAM Method)
+    // The return type is void(). It does not take any arguments as well.
+    System.out.println(s.get());
 ```
 
 ## Sample Output
 
 ```
-  C:\rags\TechNotes\javaNotes\java8\functionalInterfaces\samplePrograms (master)
-  ¿ java Java8FunctionExample
-	Length of 26 is : 2
+   C:\rags\TechNotes\javaNotes\java8\functionalInterfaces\samplePrograms>java Java8SupplierExample
+   Java 8 is really fun, when it is SUPPLIED well!
 ```
 
