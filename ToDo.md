@@ -55,6 +55,12 @@
   * Automatic SSL - Lets encrypt & Nginx -> https://dev.to/adamkdean/automatic-ssl-with-let-s-encrypt-nginx-4nfk
   * CSS Variables - https://dev.to/samanthaming/css-variables-8di 
 
+### Big Data 
+
+  * Apache Spark Tutorials - https://data-flair.training/blogs/spark-tutorial/
+  * Spark RDD Tutorials - https://data-flair.training/blogs/spark-rdd-tutorial/
+  * Apache Kafka Tutorials - https://data-flair.training/blogs/apache-kafka-tutorial/
+
 ## Online Courses
 
 ### Data Science
