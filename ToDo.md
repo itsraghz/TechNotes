@@ -9,13 +9,19 @@
   * Java SE 8 API enhancements - https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html#javase8
   * Huge Tutorial Collection on Java - https://dzone.com/articles/the-best-of-java-collections-tutorials
 
+### Java Utilities, Frameworks
+
+  * Reducing Boilerplate Code with Project Lombok - https://objectcomputing.com/resources/publications/sett/january-2010-reducing-boilerplate-code-with-project-lombok
+
 ### Java Cryptography Extensions (JCE)
   * JCE - http://tutorials.jenkov.com/java-cryptography/index.html
 
 ### Java Functional Programming 
-   * Java Functional Programming - 
+  * Java Functional Programming - 
   	- http://tutorials.jenkov.com/java-functional-programming/index.html
   	- http://tutorials.jenkov.com/java-functional-programming/functional-interfaces.html 
+  * Java Functional Interfaces - https://dzone.com/articles/be-more-functional-javas-functional-interfaces
+
 
 ### Oracle Java Certification
   * OCAJP 8 Upgrade Guide - http://java.boot.by/ocpjp8-upgrade-guide/ch03.html
@@ -37,6 +43,11 @@
 
 ### Spring, Spring Boot related courses
   * Spring Boot, Hibernate, MySQL - CRUD Application - https://bushansirgur.in/complete-crud-application-with-spring-boot-hibernate-and-mysql/
+  * Java & Databases: Guide to JDBC, Hibernate and Spring Data - https://www.marcobehler.com/guides/java-databases-jdbc-hibernate-spring-data
+  * What is Spring Framework? From Dependency Injection to Web MVC - https://www.marcobehler.com/guides/spring-framework
+  * Spring Boot Reference Documentation - https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-structuring-your-code
+  		- https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started
+  * Design Patterns in the Spring Framework - https://www.baeldung.com/spring-framework-design-patterns 
 
 ### Project Management, Agile 
   * JIRA Tutorials
@@ -48,7 +59,12 @@
 ### Vi, Vim Editor
 
   * Vi - Visual modes - https://opensource.com/article/19/2/getting-started-vim-visual-mode
- 
+
+### Markdown
+
+  * Markdown Cheatsheet - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+  * Markdown Guide - Basic Syntax -- https://www.markdownguide.org/basic-syntax/
+
 ### Web Corner 
 
   * https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf?signin=true 
