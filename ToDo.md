@@ -43,6 +43,7 @@
   	- A JIRA Tutorial for the Software Developers - https://dzone.com/articles/a-jira-tutorial-for-software-developers-get-the-mo
 	- Effective JIRA Test case Management - https://dzone.com/articles/top-ways-to-effective-jira-test-case-management?fromrel=true
   * JIRA Course : https://www.sitepoint.com/premium/courses/setting-up-a-real-world-project-in-jira-3012/lesson/2/step/1 
+  * Effective JIRA Tutorial - https://www.idalko.com/jira-guide/?omhide=true&utm_source=autopilot&utm_medium=email 
 
 ### Vi, Vim Editor
 
