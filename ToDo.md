@@ -60,6 +60,7 @@
   * Apache Spark Tutorials - https://data-flair.training/blogs/spark-tutorial/
   * Spark RDD Tutorials - https://data-flair.training/blogs/spark-rdd-tutorial/
   * Apache Kafka Tutorials - https://data-flair.training/blogs/apache-kafka-tutorial/
+  * Spark Streaming Example for WordCount Program - https://github.com/SoatGroup/spark-streaming-java-examples/blob/master/src/main/java/spark/streaming/WordCount.java 
 
 ## Online Courses
 
