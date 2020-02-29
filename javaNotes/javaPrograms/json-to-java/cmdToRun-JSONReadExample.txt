@@ -1,0 +1,9 @@
+# Command to Run
+
+```
+C:\rags\TechNotes\javaNotes\javaPrograms\json-to-java (master)
+¿ javac JSONReadExample.java -cp \commonj2eelibs\JSON-to-Java\gson\json-simple-1.1.1.jar;.;
+Note: JSONReadExample.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+```
+

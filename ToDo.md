@@ -13,6 +13,16 @@
 
   * Reducing Boilerplate Code with Project Lombok - https://objectcomputing.com/resources/publications/sett/january-2010-reducing-boilerplate-code-with-project-lombok
 
+#### JSON to Java Conversion
+
+  * Jackson and GSON API - https://www.geeksforgeeks.org/convert-json-string-to-java-object-using-gson/
+  * GSON API - https://www.geeksforgeeks.org/parse-json-java/
+  	* Maven Repository - https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple/1.1.1
+	* Direct link to GSON Project - https://code.google.com/archive/p/json-simple
+	* Direct Download to the GSON API JAR file in Google Code - https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/json-simple/json-simple-1.1.1.jar
+	* GitHub link for the GSON API and JAR - https://github.com/fangyidong/json-simple
+	* GitHub Download link for the JAR file in ZIP format - https://github.com/fangyidong/json-simple/archive/master.zip
+
 ### Java Cryptography Extensions (JCE)
   * JCE - http://tutorials.jenkov.com/java-cryptography/index.html
 
