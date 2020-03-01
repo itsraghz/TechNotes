@@ -73,10 +73,10 @@ public class KafkaSparkIntegration {
 		int batchInterval                          = 01;
 		
 		/* The Window Duration Is Defined To Be 10 Minutes */
-		int windowDuration                         = 02;
+		int windowDuration                         = 10;
 		
 		/* The Sliding Window Duration Is Defined To Be 05 Minutes */
-		int slidingWindowDuration                  = 01;
+		int slidingWindowDuration                  = 05;
 		
 		SparkConf sparkConf = null;
 		JavaStreamingContext javaStreamingContext = null;
@@ -88,7 +88,7 @@ public class KafkaSparkIntegration {
 		kafkaParams.put("group.id", "KafkaUpgradStockConsumer");
 		//TODO - Revisit
 		kafkaParams.put("auto.offset.reset", "latest");
-		kafkaParams.put("enable.auto.commit", "false");
+		kafkaParams.put("enable.auto.commit", false);
 
 		Collection<String> topics = Arrays.asList("stockData");
 
