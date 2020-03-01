@@ -38,6 +38,8 @@ public class Stock
 	 * </p>
 	 */
 	private PriceData priceData;
+	
+	private static int totalNoPeriod=0;
 
 	/**
 	 * @return the symbol
@@ -97,5 +99,31 @@ public class Stock
 		this.timestamp = timestamp;
 		this.priceData = priceData;
 	}	
+	
+	public static int getTotalNoPeriod() {
+		
+		return totalNoPeriod;
+	
+	}
+	
+	public static void setTotalNoPeriod(int totalNoPeriod) {
+		
+		Stock.totalNoPeriod = totalNoPeriod;
+	
+	}
+	
+	/* Reset the total number of period to 0. */
+	public static void resetTotalNoPeriod() {
+		
+		Stock.totalNoPeriod = 0;
+	
+	}
+	
+	/* Increments the total number of period by 1. */
+	public static void incrTotalNoPeriod() {
+		
+		Stock.totalNoPeriod = Stock.totalNoPeriod+1;
+	
+	}
 }
 

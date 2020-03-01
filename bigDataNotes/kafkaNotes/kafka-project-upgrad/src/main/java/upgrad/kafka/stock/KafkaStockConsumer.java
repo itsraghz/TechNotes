@@ -2,7 +2,10 @@ package upgrad.kafka.stock;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 import java.util.Properties;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -39,6 +42,13 @@ public class KafkaStockConsumer {
 		KafkaConsumer<String, String> stockConsumer = new KafkaConsumer<String, String>(props);
 		stockConsumer.subscribe(Arrays.asList("stockData"));
 		
+		/* For Development purposes */
+		int maxRecordCount = 10;
+		int recordsConsumed =  0;
+		
+		/** Preferred Stock List */
+		List<String> preferredStockList = Arrays.asList("BTC", "ETH", "LTC", "XRP");
+		
 		/**
 		 * Topic = [stockData], offset = 339048, key = null, value = {"symbol":"BTC","timestamp":"2020-02-29 22:09:00","priceData":{"close":8630.74,"high":8636.15,"low":8630.73,"open":8636.1,"volume":-122138.31000000001}}
 		 * Topic = [stockData], offset = 339049, key = null, value = {"symbol":"ETH","timestamp":"2020-02-29 22:09:00","priceData":{"close":223.48,"high":223.55,"low":223.44,"open":223.5,"volume":-13240.96}}
@@ -47,12 +57,20 @@ public class KafkaStockConsumer {
 		 * {"symbol":"BTC","timestamp":"2020-02-29 22:09:00","priceData":{"close":8630.74,"high":8636.15,"low":8630.73,"open":8636.1,"volume":-122138.31000000001}}
 		 */
 		while (true) {
+			
 			ConsumerRecords<String, String> records = stockConsumer.poll(Duration.ofMillis(100));
 		
-			for (ConsumerRecord<String, String> record : records) {
+			for (ConsumerRecord<String, String> record : records) 
+			{
 				System.out.printf("Topic = [%s], offset = %d, key = %s, value = %s", 
 						record.topic(), record.offset(), record.key(), record.value());
 				System.out.println();
+				
+				/* For development purposes */
+				if(recordsConsumed ++ > maxRecordCount) {
+					System.err.println("MaxRecords Reached. Program exiting now as per configuration..");
+					break;
+				}
 				
 				/* JSON to Java Conversion */
 				JSONParser jsonParser = new JSONParser();
@@ -81,15 +99,27 @@ public class KafkaStockConsumer {
 				
 				if(null!=jsonObj) {
 					symbol = String.valueOf(jsonObj.get("symbol"));
-					timestamp = LocalDateTime.parse(String.valueOf(jsonObj.get("timestamp")));
 					
-					formattedOutputStr = String.format("[JSON-Java] Symbol: [%s]", symbol);
+					/** Business Validation : Consume only the interested stocks */
+					if(Objects.isNull(symbol) || !preferredStockList.contains(symbol)) {
+						System.out.println(" ==== [{##}] Record consumed is of type [ " + symbol + "]. "
+								+ "Skipping this as it is NOT of the preferred stock symbol ["+ preferredStockList + "]");
+						/* For development purposes */
+						recordsConsumed--;
+						continue;
+					}
+					
+					//2020-03-01 00:15:00
+					DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+					timestamp = LocalDateTime.parse(String.valueOf(jsonObj.get("timestamp")), dateTimeFormatter);
+					
+					formattedOutputStr = String.format("[JSON-Java] Symbol: [%s], dateTime : [%s]", symbol, timestamp);
 					
 					JSONObject priceDataJSONObj = (JSONObject) jsonObj.get("priceData");
 					if(null!=priceDataJSONObj) {
 						volume = Double.valueOf(String.valueOf(priceDataJSONObj.get("volume")));
 						if(volume < 0) {
-							System.out.println(" [%%] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
+							System.out.println(" [{%%}] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
 							volume = Math.abs(volume);
 						}
 						high = Double.valueOf(String.valueOf(priceDataJSONObj.get("high")));
@@ -97,12 +127,14 @@ public class KafkaStockConsumer {
 						close = Double.valueOf(String.valueOf(priceDataJSONObj.get("close")));
 						open = Double.valueOf(String.valueOf(priceDataJSONObj.get("open")));
 						
-						formattedOutputStr = String.format(", Volume : [%s]", volume);
+						formattedOutputStr += String.format(", Volume : [%s]", volume);
 					}
 					priceData = new PriceData(close, high, low, open, volume);
 					stockObj = new Stock(symbol, timestamp, priceData);
+					
+					System.out.println("[{##}] stockObj parsed: " + stockObj);
 				}
-				System.out.println(formattedOutputStr);
+				//System.out.println(formattedOutputStr);
 				//System.out.println();
 			}
 			
