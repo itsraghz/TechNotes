@@ -74,32 +74,36 @@ public class KafkaStockConsumer {
 				//System.out.println(" [##] jsonObject type : " + jsonObj.getClass().getTypeName());
 				//System.out.println(" [##] jsonObject  : " + jsonObj);
 				
-				/*if(null!=stockObj) {
-					System.out.printf("[JSON-Java] Symbol: [%s], Volume : [%s]", stockObj.getSymbol(), stockObj.getPriceData().getVolume());
-					System.out.println();
-				}*/
-				
-				
 				String symbol = null;
 				LocalDateTime timestamp = null;
-				double volume, high, low, close, open = 0.0;
+				double volume = 0, high = 0, low = 0, close = 0, open = 0.0;
+				String formattedOutputStr = null;
 				
 				if(null!=jsonObj) {
-					
 					symbol = String.valueOf(jsonObj.get("symbol"));
 					timestamp = LocalDateTime.parse(String.valueOf(jsonObj.get("timestamp")));
 					
-					System.out.printf("[JSON-Java] Symbol: [%s]", symbol);
+					formattedOutputStr = String.format("[JSON-Java] Symbol: [%s]", symbol);
+					
 					JSONObject priceDataJSONObj = (JSONObject) jsonObj.get("priceData");
 					if(null!=priceDataJSONObj) {
+						volume = Double.valueOf(String.valueOf(priceDataJSONObj.get("volume")));
+						if(volume < 0) {
+							System.out.println(" [%%] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
+							volume = Math.abs(volume);
+						}
+						high = Double.valueOf(String.valueOf(priceDataJSONObj.get("high")));
+						low = Double.valueOf(String.valueOf(priceDataJSONObj.get("low")));
+						close = Double.valueOf(String.valueOf(priceDataJSONObj.get("close")));
+						open = Double.valueOf(String.valueOf(priceDataJSONObj.get("open")));
 						
-						System.out.printf(", Volume : [%s]", priceDataJSONObj.get("volume"));
+						formattedOutputStr = String.format(", Volume : [%s]", volume);
 					}
-					
+					priceData = new PriceData(close, high, low, open, volume);
 					stockObj = new Stock(symbol, timestamp, priceData);
 				}
-				
-				System.out.println();
+				System.out.println(formattedOutputStr);
+				//System.out.println();
 			}
 			
 			//consumer.close();
