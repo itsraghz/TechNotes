@@ -90,12 +90,34 @@
   * Automatic SSL - Lets encrypt & Nginx -> https://dev.to/adamkdean/automatic-ssl-with-let-s-encrypt-nginx-4nfk
   * CSS Variables - https://dev.to/samanthaming/css-variables-8di 
 
-### Big Data 
+## Big Data 
 
-  * Apache Spark Tutorials - https://data-flair.training/blogs/spark-tutorial/
-  * Spark RDD Tutorials - https://data-flair.training/blogs/spark-rdd-tutorial/
+### Apache Kafka
+
   * Apache Kafka Tutorials - https://data-flair.training/blogs/apache-kafka-tutorial/
-  * Spark Streaming Example for WordCount Program - https://github.com/SoatGroup/spark-streaming-java-examples/blob/master/src/main/java/spark/streaming/WordCount.java 
+  * How to quickly get started using Kafka - https://www.bigendiandata.com/2016-09-30-Kafka-Quickstart/
+
+ 
+### Java Tuple  - Spark
+
+ * A Java tuple class (Tuple2 or Pair, if you prefer) - https://alvinalexander.com/java/java-tuple-classes
+ * JavaTuples - Library - https://www.javatuples.org/
+
+### Spark
+
+ * Spark Java Programming Guide - https://spark.apache.org/docs/0.8.0/java-programming-guide.html
+ * Spark Tutorial - https://data-flair.training/blogs/spark-tutorial/
+ * Making Apache Spark Easier to Use in Java with Java 8 - https://databricks.com/blog/2014/04/14/spark-with-java-8.html
+ * Difference between SparkContext, JavaSparkContext, SQLContext, and SparkSession? - https://stackoverflow.com/questions/43802809/difference-between-sparkcontext-javasparkcontext-sqlcontext-and-sparksession
+
+#### Spark RDD
+
+ * Spark RDD - https://data-flair.training/blogs/spark-rdd-tutorial/
+ * Getting Started with RDDs in Apache Spark - https://www.allprogrammingtutorials.com/tutorials/getting-started-with-rdds-in-spark.php
+
+#### Spark Streaming 
+
+  * Spark Streaming Example for WordCount Program - https://github.com/SoatGroup/spark-streaming-java-examples/blob/master/src/main/java/spark/streaming/WordCount.java
 
 ## Online Courses
 
