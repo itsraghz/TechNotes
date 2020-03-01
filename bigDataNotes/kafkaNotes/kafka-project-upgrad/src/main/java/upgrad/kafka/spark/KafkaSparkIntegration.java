@@ -73,10 +73,10 @@ public class KafkaSparkIntegration {
 		int batchInterval                          = 01;
 		
 		/* The Window Duration Is Defined To Be 10 Minutes */
-		int windowDuration                         = 10;
+		int windowDuration                         = 02;
 		
 		/* The Sliding Window Duration Is Defined To Be 05 Minutes */
-		int slidingWindowDuration                  = 05;
+		int slidingWindowDuration                  = 01;
 		
 		SparkConf sparkConf = null;
 		JavaStreamingContext javaStreamingContext = null;
@@ -88,7 +88,7 @@ public class KafkaSparkIntegration {
 		kafkaParams.put("group.id", "KafkaUpgradStockConsumer");
 		//TODO - Revisit
 		kafkaParams.put("auto.offset.reset", "latest");
-		kafkaParams.put("enable.auto.commit", false);
+		kafkaParams.put("enable.auto.commit", "false");
 
 		Collection<String> topics = Arrays.asList("stockData");
 
@@ -96,15 +96,16 @@ public class KafkaSparkIntegration {
 			
 			/* The SparkConf object is re-initialized to run in local mode. An APPNAME is set for Spark to uniquely distinguish the spark streaming context for this program execution. */
 			sparkConf = new SparkConf().setAppName(APP_NAME).setMaster("local[*]");
+			
+			System.out.println("[UPGRAD-DEBUG] (1) Spark Conf created successfully. " + sparkConf);
 		
 			/* The JavaStreamingContext is re-initialized. The SparkConf object is passed along with Batch Interval (in seconds) */
 			javaStreamingContext = new JavaStreamingContext(sparkConf, Durations.seconds(batchInterval*(long)secs));
+			
+			System.out.println("[UPGRAD-DEBUG] (2) JavaStreamingContext created successfully. " + javaStreamingContext);
 		
 			/* Introduced Logger to reduce Spark Logging on console */
 			Logger.getRootLogger().setLevel(Level.ERROR);
-		
-			/* The textFileStream() method is used to fetch streaming data from the input location and create DStream of type JavaDStream<String>. The JSON data will be stored as String. */
-			//JavaDStream<String> jsonData = javaStreamingContext.textFileStream(inputStreamFolderLocation).cache();
 			
 			JavaInputDStream<ConsumerRecord<String, String>> dStream = 
 					KafkaUtils.createDirectStream(
@@ -112,6 +113,8 @@ public class KafkaSparkIntegration {
 							LocationStrategies.PreferConsistent(),
 							ConsumerStrategies.<String, String>Subscribe(topics, kafkaParams)
 							);
+			
+			System.out.println("[UPGRAD-DEBUG] (3) JavaInputDStream created successfully. " + dStream);			
 					
 			/* The FlatMapFunction jsonExtractor  is used for a flatMap() transformation. 
 			 * This transformation operates on the JSON data collected as JavaDStream<String>.
@@ -137,6 +140,8 @@ public class KafkaSparkIntegration {
 				@Override
 				public Iterator<Stock> call(String record) throws ParseException  
 				{
+					System.out.println(" >>>> [UPGRAD-DEBUG] call() method of jsonExtractor - ENTRY");
+					
 					Stock stockObj;
 					PriceData priceData;
 					    
@@ -211,6 +216,9 @@ public class KafkaSparkIntegration {
 						/** Add the stock POJO to the list */
 						stockList.add(stockObj);
 					}
+					
+					System.out.println(" <<<< [UPGRAD-DEBUG] call() method of jsonExtractor - EXIT");
+					
 					return stockList.iterator();
 				}
 			};
@@ -283,19 +291,26 @@ public class KafkaSparkIntegration {
 		
 			};
 			
-			 JavaDStream<String> lines = dStream.map(ConsumerRecord::value);
+			JavaDStream<String> lines = dStream.map(ConsumerRecord::value);
 			
+			System.out.println("[UPGRAD-DEBUG] (4) JavaDStream<String> lines - created successfully. " + lines);
+			
+			 
 			/* This transformation operates on the JSON data collected as JavaDStream<String>.
 			 * The JSON data is parsed to fetch individual data elements pertaining to each Stock (like, symbol, volume, etc) and are stored in an object of type Stock.
 			 * The transformed RDDs are stored in a JavaDStream<Stock>.
 			 * */
 			JavaDStream<Stock> stockData = lines.flatMap(jsonExtractor);		
 			
+			System.out.println("[UPGRAD-DEBUG] (5) JavaDStream<Stock> stockData - created successfully. " + stockData);
+			
 			/* This transformation operates on JavaDStream<Stock> which contains the stock data fetched and stored as Stock (POJO).
 			 * The PairFunction extracts the data elements Symbol and Close Price from the Stock POJO and returns a Key-Value pair of type Tuple2<String, Double>.
 			 * The transformed RDDs are stored in a JavaPairDStream<String, Double>.
 			 * */
-			JavaPairDStream<String, Double> stock = stockData.mapToPair(stockMapper);				  
+			JavaPairDStream<String, Double> stock = stockData.mapToPair(stockMapper);			
+			
+			System.out.println("[UPGRAD-DEBUG] (6) JavaPairDStream<String, Double> stock - created successfully. " + stock);
 			
 			/* This transformation operates on JavaPairDStream<String, Double> which contains Stock Symbol and Close Price.
 			 * The function aggregates the Close Price of all stocks. 
@@ -304,16 +319,22 @@ public class KafkaSparkIntegration {
 			 * */
 			JavaPairDStream<String, Double> stockSum = stock.reduceByKeyAndWindow(stockReducer, Durations.seconds(windowDuration*(long)secs), Durations.seconds(slidingWindowDuration*(long)secs));
 			
+			System.out.println("[UPGRAD-DEBUG] (7) JavaPairDStream<String, Double> stockSum - created successfully. " + stockSum);
+			
 			/* This transformation operates on the JSON data collected as JavaDStream<String>.
 			 * The JSON data is parsed to fetch individual data elements pertaining to each Stock (like, symbol, volume, etc) and are stored in an object of type Stock.
 			 * The transformed RDDs are stored in a JavaDStream<Stock>.
 			 * */
 			JavaPairDStream stockAvg = stockSum.mapToPair(stockAverage);
 			
+			System.out.println("[UPGRAD-DEBUG] (8) JavaPairDStream stockAvg - created successfully. " + stockAvg);
+			
 			/* The final output i.e. Stock With Simple Moving Average (Symbol, Simple Moving Average For Close Price) is printed on the console. 
 			 * This will be printed once for each window 
 			 * */
 			stockAvg.print();
+			
+			System.out.println("[UPGRAD-DEBUG] (9) stockAvg - print() executed successfully. ");
 			
 			javaStreamingContext.start();
 			

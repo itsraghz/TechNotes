@@ -109,6 +109,8 @@ public class Stock
 	public static void setTotalNoPeriod(int totalNoPeriod) {
 		
 		Stock.totalNoPeriod = totalNoPeriod;
+		
+		System.out.println("Stock - totalNoPeriod : " + totalNoPeriod);
 	
 	}
 	
