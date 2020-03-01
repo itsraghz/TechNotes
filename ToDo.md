@@ -2,6 +2,15 @@
 
 ## List of topics to be covered and practiced
 
+### Data Structures
+
+  * https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42
+
+### SQL 
+
+  * Writing Good SQL - https://towardsdatascience.com/writing-good-sql-ccb578ff9919
+  * SQL Best Practices - Guide -- https://www.sqlstyle.guide/
+
 ### Java Related - General, Languge Specific 
 
   * Lambda Expressions - http://tutorials.jenkov.com/java/lambda-expressions.html
@@ -93,4 +102,5 @@
 ### Data Science
 
   * PadhAI - https://padhai.onefourthlabs.in/courses/take/data-science/lessons/10329320-statistical-modelling
+
 
