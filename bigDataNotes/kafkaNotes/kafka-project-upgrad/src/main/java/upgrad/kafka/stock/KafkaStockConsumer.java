@@ -37,13 +37,15 @@ public class KafkaStockConsumer {
 		props.put("auto.offset.reset", "earliest");
 		props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 		props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+		props.put("enable.auto.commit", "false");
+		props.put("auto.offset.reset", "latest");
 		
 		@SuppressWarnings("resource")
 		KafkaConsumer<String, String> stockConsumer = new KafkaConsumer<String, String>(props);
 		stockConsumer.subscribe(Arrays.asList("stockData"));
 		
 		/* For Development purposes */
-		int maxRecordCount = 10;
+		int maxRecordCount = 1000;
 		int recordsConsumed =  0;
 		
 		/** Preferred Stock List */

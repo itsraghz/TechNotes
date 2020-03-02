@@ -118,7 +118,8 @@
 #### Spark Streaming 
 
   * Spark Streaming Example for WordCount Program - https://github.com/SoatGroup/spark-streaming-java-examples/blob/master/src/main/java/spark/streaming/WordCount.java
-
+  * Spark Streaming Official Programming Guide - https://spark.apache.org/docs/latest/streaming-programming-guide.html#window-operations
+ 
 ## Online Courses
 
 ### Data Science

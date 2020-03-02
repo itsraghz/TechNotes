@@ -1,5 +1,7 @@
 package upgrad.kafka.stock.model;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * A POJO (Plain Old Java Object) to represent the different attributes of the 
@@ -8,8 +10,14 @@ package upgrad.kafka.stock.model;
  * @author raghs
  *
  */
-public class PriceData {
+public class PriceData implements Serializable 
+{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7447928407235183426L;
+
 	/**
 	 * <p>
 	 * An attribute to represent the amount of a stock during its closing time.

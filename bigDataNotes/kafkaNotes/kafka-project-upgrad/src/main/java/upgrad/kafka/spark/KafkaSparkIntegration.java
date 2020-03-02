@@ -53,7 +53,193 @@ public class KafkaSparkIntegration {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		//stepByStep();
 		simpleMovingAvgClosePrice(args);
+	}
+	
+	public static Stock getStockObjFromJSON(String record, int windowDuration) 
+	throws ParseException 
+	{
+		Stock stockObj;
+		PriceData priceData;
+		    
+		JSONParser jsonParser = new JSONParser();
+		JSONObject jsonObj = (JSONObject) jsonParser.parse(record);;
+		
+		//TODO
+		if (Stock.getTotalNoPeriod()>windowDuration) {
+			Stock.setTotalNoPeriod(windowDuration);
+		}else {
+			Stock.incrTotalNoPeriod();
+		}
+	    
+		/** Preferred Stock List */
+		//TODO Move to a constant
+		List<String> preferredStockList = Arrays.asList("BTC", "ETH", "LTC", "XRP");
+		
+		String symbol = null;
+		LocalDateTime timestamp = null;
+		double volume = 0, high = 0, low = 0, close = 0, open = 0.0;
+		
+		symbol = String.valueOf(jsonObj.get("symbol"));
+		
+		/** Business Validation : Consume only the interested stocks */
+		if(Objects.isNull(symbol) || !preferredStockList.contains(symbol)) {
+			System.out.println(" ==== [{##}] Record consumed is of type [ " + symbol + "]. "
+					+ "Skipping this as it is NOT of the preferred stock symbol ["+ preferredStockList + "]");
+			return null;
+		}
+		
+		//2020-03-01 00:15:00
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		timestamp = LocalDateTime.parse(String.valueOf(jsonObj.get("timestamp")), dateTimeFormatter);
+		
+		JSONObject priceDataJSONObj = (JSONObject) jsonObj.get("priceData");
+		if(null!=priceDataJSONObj) 
+		{
+			volume = Double.valueOf(String.valueOf(priceDataJSONObj.get("volume")));
+			if(volume < 0) {
+				System.out.println(" [{%%}] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
+				volume = Math.abs(volume);
+			}
+			high = Double.valueOf(String.valueOf(priceDataJSONObj.get("high")));
+			low = Double.valueOf(String.valueOf(priceDataJSONObj.get("low")));
+			close = Double.valueOf(String.valueOf(priceDataJSONObj.get("close")));
+			open = Double.valueOf(String.valueOf(priceDataJSONObj.get("open")));
+		}
+		priceData = new PriceData(close, high, low, open, volume);
+		stockObj = new Stock(symbol, timestamp, priceData);
+		
+		System.out.println("[{##}] stockObj parsed: " + stockObj);
+		
+		return stockObj;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public static void stepByStep() {
+		
+		System.out.println("******************************************************************");
+		/* This is the APP NAME to be set while initializing the SparkConf object */
+		final String APP_NAME 				       = "SparkStreamingStockDataAnalysis-Stepwise";
+		
+		/* This is the name of the analysis to be performed on streaming data*/
+		final String ANALYSIS_NAME		           = "SimpleMovingAverage-Close-Price";
+		
+		//SparkConf sparkConf = new SparkConf().setAppName("Kafka Spark Integration for Stock Data").setMaster("local[*]");
+		
+		/* The Seconds variable contains value as 60. This value will be later used to convert seconds into minutes for Batch Interval, Window Duration and Sliding Window Duration. */
+		int secs								   = 60;
+		
+		/* The Batch Interval Is Defined To Be 01 Minute */
+		int batchInterval                          = 01;
+		
+		/* The Window Duration Is Defined To Be 10 Minutes */
+		int windowDuration                         = 10;
+		
+		/* The Sliding Window Duration Is Defined To Be 05 Minutes */
+		int slidingWindowDuration                  = 05;
+		
+		SparkConf sparkConf = null;
+		JavaStreamingContext javaStreamingContext = null;
+		
+		Map<String, Object> kafkaParams = new HashMap<>();
+		kafkaParams.put("bootstrap.servers", "52.55.237.11:9092");
+		kafkaParams.put("key.deserializer", StringDeserializer.class);
+		kafkaParams.put("value.deserializer", StringDeserializer.class);
+		kafkaParams.put("group.id", "KafkaUpgradStockConsumer");
+		//TODO - Revisit
+		kafkaParams.put("auto.offset.reset", "latest");
+		kafkaParams.put("enable.auto.commit", false);
+
+		Collection<String> topics = Arrays.asList("stockData");
+		
+		try 
+		{
+		/* The SparkConf object is re-initialized to run in local mode. An APPNAME is set for Spark to uniquely distinguish the spark streaming context for this program execution. */
+		sparkConf = new SparkConf().setAppName(APP_NAME).setMaster("local[*]");
+		
+		System.out.println("[UPGRAD-DEBUG] (1) Spark Conf created successfully. " + sparkConf);
+	
+		/* The JavaStreamingContext is re-initialized. The SparkConf object is passed along with Batch Interval (in seconds) */
+		javaStreamingContext = new JavaStreamingContext(sparkConf, Durations.seconds(batchInterval*(long)secs));
+		
+		System.out.println("[UPGRAD-DEBUG] (2) JavaStreamingContext created successfully. " + javaStreamingContext);
+	
+		/* Introduced Logger to reduce Spark Logging on console */
+		Logger.getRootLogger().setLevel(Level.ERROR);
+		
+		JavaInputDStream<ConsumerRecord<String, String>> dStream = 
+				KafkaUtils.createDirectStream(
+						javaStreamingContext,
+						LocationStrategies.PreferConsistent(),
+						ConsumerStrategies.<String, String>Subscribe(topics, kafkaParams)
+						);
+					
+		//dStream.cache();
+
+		//works fine
+		dStream.foreachRDD(rdd -> System.out.println(rdd.count()));
+		
+		System.out.println(" --------");
+		
+		/**
+		 * {"symbol":"BTC","timestamp":"2020-03-02 15:52:00","priceData":{"close":8745.4,"high":8747.06,"low":8741.49,"open":8741.88,"volume":-176100.96000000002}}
+		 * {"symbol":"ETH","timestamp":"2020-03-02 15:52:00","priceData":{"close":224.91,"high":224.91,"low":224.65,"open":224.7,"volume":-89125.67}}
+		 * {"symbol":"LTC","timestamp":"2020-03-02 15:52:00","priceData":{"close":59.89,"high":59.89,"low":59.87,"open":59.88,"volume":-7197.71}}
+		 * {"symbol":"XRP","timestamp":"2020-03-02 15:52:00","priceData":{"close":0.2341,"high":0.2342,"low":0.2341,"open":0.2342,"volume":72249.96}}
+		 */
+		dStream.foreachRDD(rdd -> {
+			rdd.foreach(record -> {
+				System.out.println("Record at a time : " + record.value());
+				Stock stockObj = getStockObjFromJSON(record.value(), windowDuration);
+			});
+			System.out.println(" ======== [######] RDD completed [######] ------- ");
+		});
+		
+		dStream.mapToPair(new PairFunction() {
+		
+			private static final long serialVersionUID = 8520769080286267548L;
+
+			@Override
+			public Tuple2<String, Double> call(Object arg0) throws Exception {
+				Stock st      = (Stock)arg0;
+				String symbol = st.getSymbol();
+				Double close  = st.getPriceData().getClose();
+			
+				return new Tuple2<>(symbol, close);
+			}
+		});
+		
+		/* The PairFunction stockMapper is used for a mapToPair() transformation.
+		 * This transformation operates on JavaDStream<Stock> which contains the stock data fetched and stored as Stock (POJO).
+		 * The PairFunction extracts the data elements Symbol and Close Price from the Stock POJO and returns a Key-Value pair of type Tuple2<String, Double>.
+		 * The transformed RDDs are stored in a JavaPairDStream<String, Double>.
+		 * */
+		final PairFunction stockMapper = new PairFunction() {
+		
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			public Tuple2<String, Double> call(Object arg0) throws Exception {
+			
+				Stock st      = (Stock)arg0;
+				String symbol = st.getSymbol();
+				Double close  = st.getPriceData().getClose();
+			
+				return new Tuple2<>(symbol, close);
+		
+			}
+	
+		};
+		
+		javaStreamingContext.start();
+		javaStreamingContext.awaitTermination();
+		
+		}catch(Exception e) {
+			System.err.println("Exception occured " + e.getMessage());
+			e.printStackTrace();
+		}
+		System.out.println("******************************************************************");
 	}
 
 	public static void simpleMovingAvgClosePrice(String[] args) {
@@ -87,8 +273,8 @@ public class KafkaSparkIntegration {
 		kafkaParams.put("value.deserializer", StringDeserializer.class);
 		kafkaParams.put("group.id", "KafkaUpgradStockConsumer");
 		//TODO - Revisit
-		kafkaParams.put("auto.offset.reset", "latest");
-		kafkaParams.put("enable.auto.commit", false);
+		//kafkaParams.put("auto.offset.reset", "latest");
+		//kafkaParams.put("enable.auto.commit", false);
 
 		Collection<String> topics = Arrays.asList("stockData");
 
@@ -113,8 +299,10 @@ public class KafkaSparkIntegration {
 							LocationStrategies.PreferConsistent(),
 							ConsumerStrategies.<String, String>Subscribe(topics, kafkaParams)
 							);
+						
+			//dStream.cache();
 			
-			System.out.println("[UPGRAD-DEBUG] (3) JavaInputDStream created successfully. " + dStream);			
+			System.out.println("[UPGRAD-DEBUG] (3) JavaInputDStream created successfully and applied cache() on it. " + dStream);			
 					
 			/* The FlatMapFunction jsonExtractor  is used for a flatMap() transformation. 
 			 * This transformation operates on the JSON data collected as JavaDStream<String>.
@@ -240,9 +428,7 @@ public class KafkaSparkIntegration {
 					Double close  = st.getPriceData().getClose();
 				
 					return new Tuple2<>(symbol, close);
-			
 				}
-		
 			};
 		
 			/* The Function2 stockReducer is used for a reduceByKeyAndWindow() transformation.
@@ -291,7 +477,14 @@ public class KafkaSparkIntegration {
 		
 			};
 			
-			JavaDStream<String> lines = dStream.map(ConsumerRecord::value);
+			//JavaDStream<String> lines = dStream.map(ConsumerRecord::value);
+			JavaDStream<String> lines = dStream.map(record -> record.value());
+			
+			dStream.foreachRDD(rdd -> System.out.println(rdd.count()));
+			System.out.println("-----------------------------------------------");
+			lines.foreachRDD(rdd -> System.out.println(rdd.count()));
+			
+			//lines.cache();
 			
 			System.out.println("[UPGRAD-DEBUG] (4) JavaDStream<String> lines - created successfully. " + lines);
 			
@@ -301,6 +494,8 @@ public class KafkaSparkIntegration {
 			 * The transformed RDDs are stored in a JavaDStream<Stock>.
 			 * */
 			JavaDStream<Stock> stockData = lines.flatMap(jsonExtractor);		
+			
+			stockData.cache();
 			
 			System.out.println("[UPGRAD-DEBUG] (5) JavaDStream<Stock> stockData - created successfully. " + stockData);
 			
@@ -340,7 +535,9 @@ public class KafkaSparkIntegration {
 			
 			javaStreamingContext.awaitTermination();
 		
-			javaStreamingContext.close();
+			//javaStreamingContext.close();
+			
+			System.out.println("[UPGRAD-DEBUG] (10) Flow completed. ");
 			
 		}catch(Exception e) {
 			

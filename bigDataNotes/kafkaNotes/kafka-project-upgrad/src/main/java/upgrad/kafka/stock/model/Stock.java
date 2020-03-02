@@ -1,5 +1,6 @@
 package upgrad.kafka.stock.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -15,8 +16,13 @@ import java.time.LocalDateTime;
  * @author raghs
  *
  */
-public class Stock 
+public class Stock implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2553388808002737115L;
+
 	/**
 	 * <p>
 	 * An attribute to represent the Symbol of a stock.
