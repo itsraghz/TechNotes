@@ -1,0 +1,83 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/03/01 21:20:26 INFO SparkContext: Running Spark version 2.3.1
+20/03/01 21:20:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/03/01 21:20:27 ERROR Shell: Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:378)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:393)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:386)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2467)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at spark.SparkRDDDemo.main(SparkRDDDemo.java:23)
+20/03/01 21:20:27 INFO SparkContext: Submitted application: Spark Learing
+20/03/01 21:20:28 INFO SecurityManager: Changing view acls to: raghs
+20/03/01 21:20:28 INFO SecurityManager: Changing modify acls to: raghs
+20/03/01 21:20:28 INFO SecurityManager: Changing view acls groups to: 
+20/03/01 21:20:28 INFO SecurityManager: Changing modify acls groups to: 
+20/03/01 21:20:28 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(raghs); groups with view permissions: Set(); users  with modify permissions: Set(raghs); groups with modify permissions: Set()
+20/03/01 21:20:33 INFO Utils: Successfully started service 'sparkDriver' on port 60417.
+20/03/01 21:20:33 INFO SparkEnv: Registering MapOutputTracker
+20/03/01 21:20:33 INFO SparkEnv: Registering BlockManagerMaster
+20/03/01 21:20:33 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/03/01 21:20:33 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/03/01 21:20:33 INFO DiskBlockManager: Created local directory at C:\Users\ragha\AppData\Local\Temp\blockmgr-187a06e6-3903-4523-a6f0-f75b2f4f2ad5
+20/03/01 21:20:33 INFO MemoryStore: MemoryStore started with capacity 1856.4 MB
+20/03/01 21:20:33 INFO SparkEnv: Registering OutputCommitCoordinator
+20/03/01 21:20:34 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/03/01 21:20:34 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://LAPTOP-63DBKP7Q:4040
+20/03/01 21:20:35 INFO Executor: Starting executor ID driver on host localhost
+20/03/01 21:20:35 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 60430.
+20/03/01 21:20:35 INFO NettyBlockTransferService: Server created on LAPTOP-63DBKP7Q:60430
+20/03/01 21:20:35 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/03/01 21:20:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, LAPTOP-63DBKP7Q, 60430, None)
+20/03/01 21:20:36 INFO BlockManagerMasterEndpoint: Registering block manager LAPTOP-63DBKP7Q:60430 with 1856.4 MB RAM, BlockManagerId(driver, LAPTOP-63DBKP7Q, 60430, None)
+20/03/01 21:20:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, LAPTOP-63DBKP7Q, 60430, None)
+20/03/01 21:20:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, LAPTOP-63DBKP7Q, 60430, None)
+20/03/01 21:20:38 INFO SparkContext: Starting job: reduce at SparkRDDDemo.java:28
+20/03/01 21:20:38 INFO DAGScheduler: Got job 0 (reduce at SparkRDDDemo.java:28) with 2 output partitions
+20/03/01 21:20:38 INFO DAGScheduler: Final stage: ResultStage 0 (reduce at SparkRDDDemo.java:28)
+20/03/01 21:20:38 INFO DAGScheduler: Parents of final stage: List()
+20/03/01 21:20:38 INFO DAGScheduler: Missing parents: List()
+20/03/01 21:20:38 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at map at SparkRDDDemo.java:27), which has no missing parents
+20/03/01 21:20:39 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 3.3 KB, free 1856.4 MB)
+20/03/01 21:20:39 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1869.0 B, free 1856.4 MB)
+20/03/01 21:20:39 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on LAPTOP-63DBKP7Q:60430 (size: 1869.0 B, free: 1856.4 MB)
+20/03/01 21:20:39 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1039
+20/03/01 21:20:39 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at map at SparkRDDDemo.java:27) (first 15 tasks are for partitions Vector(0, 1))
+20/03/01 21:20:39 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+20/03/01 21:20:39 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7935 bytes)
+20/03/01 21:20:39 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 7935 bytes)
+20/03/01 21:20:39 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/03/01 21:20:39 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/03/01 21:20:40 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 824 bytes result sent to driver
+20/03/01 21:20:40 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 867 bytes result sent to driver
+20/03/01 21:20:40 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 354 ms on localhost (executor driver) (1/2)
+20/03/01 21:20:40 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 294 ms on localhost (executor driver) (2/2)
+20/03/01 21:20:40 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/03/01 21:20:40 INFO DAGScheduler: ResultStage 0 (reduce at SparkRDDDemo.java:28) finished in 1.578 s
+20/03/01 21:20:40 INFO DAGScheduler: Job 0 finished: reduce at SparkRDDDemo.java:28, took 1.804031 s
+Sum Transformed : 260
+20/03/01 21:20:40 INFO SparkContext: Invoking stop() from shutdown hook
+20/03/01 21:20:40 INFO SparkUI: Stopped Spark web UI at http://LAPTOP-63DBKP7Q:4040
+20/03/01 21:20:40 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/03/01 21:20:40 INFO MemoryStore: MemoryStore cleared
+20/03/01 21:20:40 INFO BlockManager: BlockManager stopped
+20/03/01 21:20:40 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/03/01 21:20:40 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/03/01 21:20:40 INFO SparkContext: Successfully stopped SparkContext
+20/03/01 21:20:40 INFO ShutdownHookManager: Shutdown hook called
+20/03/01 21:20:40 INFO ShutdownHookManager: Deleting directory C:\Users\ragha\AppData\Local\Temp\spark-74969194-868d-4418-9c94-683f1ea673f0
