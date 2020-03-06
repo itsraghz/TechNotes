@@ -191,3 +191,7 @@ Press `:set ic` to let Vi editor search in the case insensitive mode, and press 
 
 Yes. If you copy and paste it via Yanking, the cursor have to be set a line before, so that when you press `p` the contents in buffer (clipboard) will be pasted to the next line of the cursor. Whereas if you copy via visual mode, the contents of the buffer will be pasted on the same line of the cursor where you press `p` key. 
 
+## How to save the file as a new file (Save As) in Vi/Vim editor?
+
+ There is no direct facility in Vi/Vim editor as in other editors like Notepad to do a 'Save As'. Instead you can issue the command `:w <fileName.txt>` to get the current file saved under a new name. Ensure that the file name being issued in this command is a non-existing file so that Vim creates the new file for you, otherwise it might overwrite the contents of the existing file.
+
