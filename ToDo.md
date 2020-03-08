@@ -6,10 +6,23 @@
 
   * https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42
 
+### Linux Commands, Terminal, Scripting
+
+#### Terminal Commands 
+
+  * 6 Terminal Commands You Should Know - https://medium.com/better-programming/6-terminal-commands-you-should-know-8e9767bdfec
+  * 7 Terminal Commands That Will Just Make You Smile - https://medium.com/better-programming/7-terminal-commands-that-will-just-make-you-smile-3f5bc8778080
+
+#### Shell Scripting
+
+  * A Simple Productivity Hack Using Bash Scripts  -> https://medium.com/swlh/a-simple-productivity-hack-using-bash-scripts-b723e60dd584
+  * How to extract substring in Bash - https://www.cyberciti.biz/faq/how-to-extract-substring-in-bash/
+
 ### SQL 
 
   * Writing Good SQL - https://towardsdatascience.com/writing-good-sql-ccb578ff9919
   * SQL Best Practices - Guide -- https://www.sqlstyle.guide/
+  * Cleaning and Transforming Data with SQL -> https://towardsdatascience.com/cleaning-and-transforming-data-with-sql-f93c4de0d2fc
 
 ### Java Related - General, Languge Specific 
 
@@ -47,7 +60,9 @@
   * OCAJP 7 Upgrade Guide - http://java.boot.by/ocpjp7-upgrade/index.html
 
 ### Java Unit Testing
+
   * Java Unit Testing - http://tutorials.jenkov.com/java-unit-testing/index.html
+  * Testing Asynchronous Operations in Spring With JUnit 5 and Byteman - https://dzone.com/articles/testing-asynchronous-operations-in-spring-with-jun-1
 
 ### Git 
   * Git tutorial - https://riptutorial.com/Download/git.pdf
@@ -90,13 +105,16 @@
   * Automatic SSL - Lets encrypt & Nginx -> https://dev.to/adamkdean/automatic-ssl-with-let-s-encrypt-nginx-4nfk
   * CSS Variables - https://dev.to/samanthaming/css-variables-8di 
 
+### JAM Stack
+ 
+  * What is the JAMstack? An Introduction for the non-developer : https://medium.com/better-programming/what-is-the-jamstack-d3f854919ab6
+  
 ## Big Data 
 
 ### Apache Kafka
 
   * Apache Kafka Tutorials - https://data-flair.training/blogs/apache-kafka-tutorial/
   * How to quickly get started using Kafka - https://www.bigendiandata.com/2016-09-30-Kafka-Quickstart/
-
  
 ### Java Tuple  - Spark
 
@@ -120,6 +138,14 @@
   * Spark Streaming Example for WordCount Program - https://github.com/SoatGroup/spark-streaming-java-examples/blob/master/src/main/java/spark/streaming/WordCount.java
   * Spark Streaming Official Programming Guide - https://spark.apache.org/docs/latest/streaming-programming-guide.html#window-operations
   * Spark Streaming Guide - https://github.com/jaceklaskowski/spark-streaming-notebook/blob/master/spark-streaming-dstreams.adoc
+
+### Editors, IDE
+
+  * 8 Practical VS Code Extensions That You Might Not Know About -- https://medium.com/better-programming/8-practical-vs-code-extensions-that-you-might-not-know-about-4f5a30e45b9c
+
+### Micro Services
+
+  * Break a Monolith to Microservices ¿ 12 Best Practices and Design Principles  - https://dzone.com/articles/break-a-monolith-to-microservices-12-best-practice
 
 ## Online Courses
 
