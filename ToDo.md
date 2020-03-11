@@ -153,4 +153,14 @@
 
   * PadhAI - https://padhai.onefourthlabs.in/courses/take/data-science/lessons/10329320-statistical-modelling
 
+## Rough - Unsorted
+
+  * https://dzone.com/articles/10-ways-to-test-your-application-server?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
+  * https://dzone.com/articles/basic-git-branching?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
+  * https://dzone.com/articles/the-dark-side-of-microservices?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
+  * https://dzone.com/articles/the-complete-guide-on-how-to-conduct-a-sprint-plan?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
+  * https://dzone.com/articles/purpose-and-role-of-devops-in-custom-software-deve?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
+  * https://dzone.com/articles/how-to-enable-the-https-into-spring-boot-applicati?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
+  * https://dzone.com/articles/unit-testing-log-messages-made-easy?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
+  * https://dzone.com/articles/spring-security-chapter-1?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
 
