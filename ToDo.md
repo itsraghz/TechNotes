@@ -82,6 +82,7 @@
   * Spring Boot Reference Documentation - https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-structuring-your-code
   		- https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started
   * Design Patterns in the Spring Framework - https://www.baeldung.com/spring-framework-design-patterns 
+  * How to use Project Lombok with Spring Boot - https://medium.com/javarevisited/how-to-use-project-lombok-with-spring-boot-ac84bd6047d1
 
 ### Project Management, Agile 
   * JIRA Tutorials
