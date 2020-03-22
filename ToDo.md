@@ -77,6 +77,13 @@
 #### Git Ops
   * https://www.atlassian.com/git/tutorials/gitops?utm_source=newsletter&utm_medium=email&utm_campaign=bitbucket_git-insiders-march-2020_EML-6051&jobid=104583945&subid=1235328486
 
+#### Git (Github) SSH
+  * https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
+  * https://help.github.com/en/github/authenticating-to-github/about-ssh
+  * https://help.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys
+  * https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+  * https://help.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases
+
 ### Spring, Spring Boot related courses
   * Spring Boot, Hibernate, MySQL - CRUD Application - https://bushansirgur.in/complete-crud-application-with-spring-boot-hibernate-and-mysql/
   * Java & Databases: Guide to JDBC, Hibernate and Spring Data - https://www.marcobehler.com/guides/java-databases-jdbc-hibernate-spring-data
