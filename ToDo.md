@@ -174,3 +174,8 @@
   * https://dzone.com/articles/unit-testing-log-messages-made-easy?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
   * https://dzone.com/articles/spring-security-chapter-1?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
 
+## Open Source Tools
+
+### ASCIIDoctor
+  * https://leanpub.com/awesomeasciidoctornotebook/read_full
+
