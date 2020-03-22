@@ -74,6 +74,8 @@
  * .gitIgnore file - https://www.atlassian.com/git/tutorials/saving-changes/gitignore
  * https://help.github.com/en/github/using-git/ignoring-files
 
+#### Git Ops
+  * https://www.atlassian.com/git/tutorials/gitops?utm_source=newsletter&utm_medium=email&utm_campaign=bitbucket_git-insiders-march-2020_EML-6051&jobid=104583945&subid=1235328486
 
 ### Spring, Spring Boot related courses
   * Spring Boot, Hibernate, MySQL - CRUD Application - https://bushansirgur.in/complete-crud-application-with-spring-boot-hibernate-and-mysql/
