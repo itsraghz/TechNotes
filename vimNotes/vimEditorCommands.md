@@ -195,3 +195,23 @@ Yes. If you copy and paste it via Yanking, the cursor have to be set a line befo
 
  There is no direct facility in Vi/Vim editor as in other editors like Notepad to do a 'Save As'. Instead you can issue the command `:w <fileName.txt>` to get the current file saved under a new name. Ensure that the file name being issued in this command is a non-existing file so that Vim creates the new file for you, otherwise it might overwrite the contents of the existing file.
 
+## How to remove the `^M` (Ctrl+M) characters stored in a file?
+
+ Typically this happens due to the OS specific end of line of characters. In Windows OS a newline character is a combination of two keys `\r\n` where `\r` is for carriage return and `\n` is for the newline (line break), whereas in Unix/Linux based OS, it is just a `\n`. When you add/modify a content in a file in Windows OS, the end of line characters are diplayed with ^M to match with the extra character that is not matching.
+
+   **Reference URL ** 
+     - https://its.ucsc.edu/unix-timeshare/tutorials/clean-ctrl-m.html
+     - https://stackoverflow.com/questions/1110678/m-at-the-end-of-every-line-in-vim
+
+   In order to replace the `^M` characters, you can do the following : 
+
+     - Use `sed` --> `sed -e "s/^M//" fileName > newFileName.txt` . You can press `Ctrl+V` and then `Ctrl+M` in succession to get the `^M`. (tried but not worked)
+     - Use it in VIM editor itself. In the Esc (Command) Mode, type `:%s/^M//g`
+     - Use it in VIM editor. `:%s/^M$//`
+     - (Easy tip and worked well) Use it in VIM editor : `:%s/\r$//` to avoid the ^V^M hassle
+     
+   To avoid the encoding saved differently, use the following
+
+    - `:set ff=unix` and then `:wq`. Now your file is back to the good-old-Unix-way. `ff`- file format (suppose)
+    - If you need to bring back to DOS encoding, you can type `:set ff=dos` and then `:wq`
+    - Alternate is to use the full format in the command `:set fileformats=dos`
