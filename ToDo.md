@@ -100,6 +100,16 @@
   * JIRA Course : https://www.sitepoint.com/premium/courses/setting-up-a-real-world-project-in-jira-3012/lesson/2/step/1 
   * Effective JIRA Tutorial - https://www.idalko.com/jira-guide/?omhide=true&utm_source=autopilot&utm_medium=email 
 
+### CI/CD - Jenkins
+
+  * Running Jenkins with native SSL/HTTPs - https://wiki.jenkins.io/pages/viewpage.action?pageId=135468777
+  * Enable HTTPS on Jenkins - https://jansipke.nl/enable-https-jenkins/
+  
+### HTTPS, SSL 
+
+  * Everything about HTTPS and SSL (Java) - https://dzone.com/articles/ssl-in-java
+  * The Java Develper's Guide to SSL Certificates - https://medium.com/@codebyamir/the-java-developers-guide-to-ssl-certificates-b78142b3a0fc
+
 ### Vi, Vim Editor
 
   * Vi - Visual modes - https://opensource.com/article/19/2/getting-started-vim-visual-mode
@@ -179,3 +189,11 @@
 ### ASCIIDoctor
   * https://leanpub.com/awesomeasciidoctornotebook/read_full
 
+## Database
+
+### Oracle 
+
+  * Securing Stored Data Using Transparent Data Encryption - https://docs.oracle.com/cd/B28359_01/network.111/b28530/asotrans.htm#g1011122
+  * How to Encrypt Sensitive Columns in Oracle DB Table - https://it.toolbox.com/question/how-to-encrypt-sensitive-columns-in-oracle-db-table-101111
+  * Manually Encrypting Data - https://docs.oracle.com/database/121/DBSEG/data_encryption.htm#DBSEG008
+  * How to encrypt nvarchar column in oracle? - https://stackoverflow.com/questions/42979606/how-to-encrypt-nvarchar-column-in-oracle
