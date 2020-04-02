@@ -197,3 +197,4 @@
   * How to Encrypt Sensitive Columns in Oracle DB Table - https://it.toolbox.com/question/how-to-encrypt-sensitive-columns-in-oracle-db-table-101111
   * Manually Encrypting Data - https://docs.oracle.com/database/121/DBSEG/data_encryption.htm#DBSEG008
   * How to encrypt nvarchar column in oracle? - https://stackoverflow.com/questions/42979606/how-to-encrypt-nvarchar-column-in-oracle
+  * https://stackoverflow.com/questions/24098606/encrypting-data-in-oracle-database
