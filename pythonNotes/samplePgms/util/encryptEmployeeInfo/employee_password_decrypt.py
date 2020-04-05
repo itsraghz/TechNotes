@@ -2,9 +2,16 @@ import cryptography
 import csv
 
 from cryptography.fernet import Fernet
+from datetime import datetime
+
+print("=============================================")
+now=datetime.now()
+now_string=now.strftime("%A, %d %B, %Y %I:%M:%S %p")
+print("Executed at : ", now.strftime("%A, %d %B, %Y %I:%M:%S %p"))
+print("=============================================")
 
 # Read the key from the file
-file = open('key.key', 'wb')  # write binary data mode
+file = open('key.key', 'rb')  # write binary data mode
 key = file.read()  # The key is binary type data
 file.close()
 

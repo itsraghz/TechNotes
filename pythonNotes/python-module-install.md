@@ -22,3 +22,15 @@ You should consider upgrading via the 'python -m pip install --upgrade pip' comm
 C:\rags\TechNotes\pythonNotes\samplePgms\io (master)
 ¿
 ```
+
+```
+C:\Users\ragha                                                 
+¿ pip install pytz                                             
+Collecting pytz                                                
+  Using cached pytz-2019.3-py2.py3-none-any.whl (509 kB)       
+Installing collected packages: pytz                            
+Successfully installed pytz-2019.3                             
+                                                               
+C:\Users\ragha                                                 
+¿                                                              
+```

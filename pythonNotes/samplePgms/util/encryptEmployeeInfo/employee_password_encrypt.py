@@ -2,6 +2,13 @@ import cryptography
 import csv
 
 from cryptography.fernet import Fernet
+from datetime import datetime
+
+print("=============================================")
+now=datetime.now()
+now_string=now.strftime("%A, %d %B, %Y %I:%M:%S %p")
+print("Executed at : ", now.strftime("%A, %d %B, %Y %I:%M:%S %p"))
+print("=============================================")
 
 # Generate the Key and store in a file for safety
 key = Fernet.generate_key()
