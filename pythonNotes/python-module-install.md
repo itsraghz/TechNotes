@@ -34,3 +34,32 @@ Successfully installed pytz-2019.3
 C:\Users\ragha                                                 
 ¿                                                              
 ```
+
+## An alternate suggested in StackOverflow but did not proceed further
+
+ Just installed the wheel module but before proceeding, tried the other tip suggested in Stack Overflow which worked. It was actually installing only the binary of the mysql-client for pyton.
+
+Ref URL: https://stackoverflow.com/questions/26866147/mysql-python-install-error-cannot-open-include-file-config-win-h
+
+```
+C:\rags\TechNotes\pythonNotes\samplePgms\db (master)
+? pip install wheel
+Collecting wheel
+  Downloading wheel-0.34.2-py2.py3-none-any.whl (26 kB)
+Installing collected packages: wheel
+Successfully installed wheel-0.34.2
+```
+
+## Alternate for MySQL-python client which gave an error. The below one worked fine.
+```
+C:\rags\TechNotes\pythonNotes\samplePgms\db (master)
+? pip install --only-binary :all: mysqlclient
+Collecting mysqlclient
+  Downloading mysqlclient-1.4.6-cp38-cp38-win_amd64.whl (263 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 263 kB 21 kB/s
+Installing collected packages: mysqlclient
+Successfully installed mysqlclient-1.4.6
+
+C:\rags\TechNotes\pythonNotes\samplePgms\db (master)
+?
+```
