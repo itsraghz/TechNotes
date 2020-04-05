@@ -4,5 +4,5 @@
 **/*.class
 
 # Ignore the .properties file from being tracked
-# **/*.properties
+**/*.properties
 
