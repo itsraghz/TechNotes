@@ -5,7 +5,7 @@ import MySQLdb
 print(f'MySQL client is imported sucessfully!')
 
 # Open database connection
-db = MySQLdb.connect("localhost", "raghs", "RaghsMySQL12#", "PYTHON_MYSQL_DEMO");
+db = MySQLdb.connect("localhost", "<userName>", "<Password>", "PYTHON_MYSQL_DEMO");
 
 print(f'Connected to MySQL DB - successfully!')
 

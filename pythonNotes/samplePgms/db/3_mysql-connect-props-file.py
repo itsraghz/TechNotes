@@ -2,13 +2,24 @@
 # Ref URL : https://stackoverflow.com/questions/3595363/properties-file-in-python-similar-to-java-properties
 # Direct URL : https://stackoverflow.com/a/8220790/1001242
 
+# Ref URL : https://stackoverflow.com/a/26221097/1001242 (for properties file)
+
 import MySQLdb
-import dbProps #to load the dbProps.py file directly
+import configparser
 
 print(f'MySQL client is imported sucessfully!')
 
+
+config=configparser.RawConfigParser()
+config.read('db.properties')
+
+dbName = config.get('Database','dbName')
+host = config.get('Database', 'host')
+userName = config.get('Authentication', 'userName')
+password = config.get('Authentication', 'password')
+
 # Open database connection
-db = MySQLdb.connect("localhost", "raghs", "RaghsMySQL12#", "PYTHON_MYSQL_DEMO");
+db = MySQLdb.connect(host, userName, password, dbName);
 
 print(f'Connected to MySQL DB - successfully!')
 

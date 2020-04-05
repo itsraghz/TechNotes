@@ -3,3 +3,6 @@
 # Ignore the compiled .class files from being tracked
 **/*.class
 
+# Ignore the .properties file from being tracked
+# **/*.properties
+
