@@ -32,4 +32,17 @@
   	```
 	 Hello World! This is Python
 	```
+## PEP8 style conversion
+
+  * Python scripts at times have an error on the console while running the scripts stating that `Incosistent use of tabs and spaces in indentaion`. For which an easy waay to use a tool called [*`autopep8`*](https://pypi.org/project/autopep8/) which is an utility to be installed separately using the `pip`. 
+  * Command to use `autopep8 -i <python_script.py>`
+  * Example: 
+     ```
+     C:\rags\TechNotes\pythonNotes\samplePgms\util (master)
+     ¿ autopep8 -i employee_password_encrypt.py
+
+     C:\rags\TechNotes\pythonNotes\samplePgms\util (master)
+     ¿
+     ```
+  * Command to install the `autopep8` is : `pip install --upgrade autopep8`
 
