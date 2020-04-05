@@ -6,9 +6,9 @@
 
 import MySQLdb
 import configparser
+import sys
 
 print(f'MySQL client is imported sucessfully!')
-
 
 config=configparser.RawConfigParser()
 config.read('db.properties')
@@ -23,6 +23,28 @@ db = MySQLdb.connect(host, userName, password, dbName);
 
 print(f'Connected to MySQL DB - successfully!')
 
+# Prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+# Prepare the SQL Query to insert a record into the database table
+tableName = config.get('Database', 'tableName')
+sql = "INSERT INTO " + tableName + "(EMP_NAME,USER_ID,PASSWORD) VALUES ('%s', '%s', '%s')" % ('Raghavan', 'itsraghz', 'HelloRaghs!')
+
+print(f'SQL Query to execute :: {sql}')
+
+# Execute
+try:
+    # Execute the SQL command
+    cursor.execute(sql)
+    # commit your changes in the database
+    db.commit()
+    print(f'Record inserted into the database successfully!')
+except:
+    # Rollback in case of any exceptions
+    db.rollback()
+    print(f'Exception occurred. Rolled back!', sys.exc_info()[0])
+    raise
+ 
 # close database connection
 db.close()
 

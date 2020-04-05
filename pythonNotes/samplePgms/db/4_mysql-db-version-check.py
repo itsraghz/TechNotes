@@ -1,5 +1,6 @@
 # Ref URL : https://www.tutorialspoint.com/python/python_database_access.htm
-
+# Ref URL : https://docs.python.org/3/library/configparser.html
+# Direct URL: https://stackoverflow.com/a/26221097/1001242
 
 import MySQLdb
 import configparser
