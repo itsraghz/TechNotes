@@ -63,3 +63,45 @@ Successfully installed mysqlclient-1.4.6
 C:\rags\TechNotes\pythonNotes\samplePgms\db (master)
 ?
 ```
+
+## Packtpub Python Workshop Recommendation
+
+*Note*: The python home directory seemed to have been taken as `C:\python38` which I presume should have been the side effect of installing the `*Anaconda Python Installer*`. Need to check if there are any errors during the course.
+
+```
+C:\Users\ragha\Downloads
+¿ pip install matplotlib seaborn numpy
+Collecting matplotlib
+  Downloading matplotlib-3.2.1-cp38-cp38-win_amd64.whl (9.2 MB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 9.2 MB 1.1 MB/s
+Collecting seaborn
+  Downloading seaborn-0.10.0-py3-none-any.whl (215 kB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 215 kB 1.3 MB/s
+Collecting numpy
+  Downloading numpy-1.18.2-cp38-cp38-win_amd64.whl (12.8 MB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 12.8 MB 2.2 MB/s
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.2.0-cp38-none-win_amd64.whl (58 kB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 58 kB 722 kB/s
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 67 kB 509 kB/s
+Collecting python-dateutil>=2.1
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 227 kB 3.3 MB/s
+Collecting cycler>=0.10
+  Downloading cycler-0.10.0-py2.py3-none-any.whl (6.5 kB)
+Collecting scipy>=1.0.1
+  Downloading scipy-1.4.1-cp38-cp38-win_amd64.whl (31.0 MB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 31.0 MB 70 kB/s
+Collecting pandas>=0.22.0
+  Downloading pandas-1.0.3-cp38-cp38-win_amd64.whl (8.9 MB)
+     |¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿| 8.9 MB 297 kB/s
+Requirement already satisfied: six>=1.5 in c:\python38\lib\site-packages (from python-dateutil>=2.1->matplotlib) (1.14.0)
+Requirement already satisfied: pytz>=2017.2 in c:\python38\lib\site-packages (from pandas>=0.22.0->seaborn) (2019.3)
+Installing collected packages: kiwisolver, pyparsing, python-dateutil, numpy, cycler, matplotlib, scipy, pandas, seaborn
+Successfully installed cycler-0.10.0 kiwisolver-1.2.0 matplotlib-3.2.1 numpy-1.18.2 pandas-1.0.3 pyparsing-2.4.7 python-dateutil-2.8.1 scipy-1.4.1 seaborn-0.10.0
+
+C:\Users\ragha\Downloads
+¿
+```
