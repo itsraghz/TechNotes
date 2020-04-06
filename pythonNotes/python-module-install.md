@@ -66,7 +66,7 @@ C:\rags\TechNotes\pythonNotes\samplePgms\db (master)
 
 ## Packtpub Python Workshop Recommendation
 
-*Note*: The python home directory seemed to have been taken as `C:\python38` which I presume should have been the side effect of installing the `*Anaconda Python Installer*`. Need to check if there are any errors during the course.
+*Note*: The python home directory seemed to have been taken as `C:\python38` which I presume should have been the side effect of installing the *`Anaconda Python Installer`*. Need to check if there are any errors during the course.
 
 ```
 C:\Users\ragha\Downloads

@@ -13,7 +13,7 @@
 ### Main Encryption logic
 
  * The Python Crytography module is installed via `PIP` - Python Installation Package
- * The API Class `Fernet` inside the cryptography pacakge is used - for the `*Symmetric Encryption*` - using a single key to encrypt and decrypt the data.
+ * The API Class `Fernet` inside the cryptography pacakge is used - for the *`Symmetric Encryption`* - using a single key to encrypt and decrypt the data.
  * The Fernet class generates a key - for encryption and decryption. 
  * The generated key is stored in a separate file - `key.key` (user defined file name) for the safe retrieval during the decryption
  * The Fernet class deals with the data in *binary* format. _Conversion of the data to and from binary_ is essential, for both the `data` and the `key`
