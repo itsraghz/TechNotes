@@ -31,6 +31,8 @@
 ### Variables
   
   * Python is completely object oriented, and not "statically typed". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.
+  * Python variables are dynamically typed. Meaning ,they get a datatype during the runtime depending on the value they are assigned with.
+
 
 ### Data types
 
