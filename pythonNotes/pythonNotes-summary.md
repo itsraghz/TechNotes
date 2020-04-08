@@ -53,6 +53,15 @@ Type "help", "copyright", "credits" or "license" for more information.
  * There are a few restrictions on the naming conventions. A variable in Python can*not* start with _numbers_, _most_ special characters, _keywords_, or _built-in types_. Variables also can't contain spaces in between if it has more than one word. Example: `my name` is not a valid name, rather it can be given as `my_name`. 
  * According to Python conventions, it's best to use lowercase letters and to avoid special characters altogether as they will often cause errors.
 
+#### Multiple Variable Assignment
+
+ * Python has a special way or an easy shortcut to let you assign the initial values to more than one variable in the same line, which is a terse, easy syntax, as follows. 
+ ```
+ x, y = 5, 8
+ ```
+ * The above example assings the value `5` to the variable `x` and the value 8` to the variable `y`` respectively.
+ * It is also called as **`Pythonic`** way. Pythonic is a term used to describe code written in the optimum readable format. 
+
 ### Keywords
 
  * Keywords are the reserved words that have a special meaning to the compiler and they can't be used for the other/normal variables in a Python program/script. For exaample, `int` is a special word (reserved word or a keyword) that indicates that the variable following will have a numeral value associated with it. 
@@ -65,6 +74,19 @@ print (keyword.kwlist)
  You get the following output.
  ```
 ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+ ```
+
+### Comments
+
+ * Comments are extra block of codes that do *NOT* run. They are meant to clarify the code for the readers.
+ * In Python, any text following by a pound/hash symbol (`#`) on a single line is considered as a comment. 
+ * The comment can be either inline (as part of the executable statement - in the middle) or at the beginning of the line.
+ * The characters if any present after the `#` symbol are ignored and not executed. 
+ * Example: 
+ ```
+ # This is a comment
+ # the below statements assigns the value 5 to the variable x
+ x = 5
  ```
 
 ### Data types
