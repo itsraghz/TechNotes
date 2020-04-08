@@ -63,6 +63,8 @@
 
   * Java Unit Testing - http://tutorials.jenkov.com/java-unit-testing/index.html
   * Testing Asynchronous Operations in Spring With JUnit 5 and Byteman - https://dzone.com/articles/testing-asynchronous-operations-in-spring-with-jun-1
+  * Migrating from JUnit 4 to JUnit 5: Important Differences and Benefits - https://blogs.oracle.com/javamagazine/migrating-from-junit-4-to-junit-5-important-differences-and-benefits?source=:em:nw:mt::RC_WWMK190726P00001:NSL400044496&elq_mid=159020&sh=092620192605261326151826080826092605261326131406071906292107021914&cmid=WWMK190726P00001C0008
+  * 
 
 ### Git 
   * Git tutorial - https://riptutorial.com/Download/git.pdf
@@ -84,6 +86,11 @@
   * https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
   * https://help.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases
 
+### Gradle
+
+  * https://gradle.com/enterprise/resources/intro-gradle-day-1/
+  * https://gradle.com/enterprise/resources/intro-gradle-day-2/
+
 ### Spring, Spring Boot related courses
   * Spring Boot, Hibernate, MySQL - CRUD Application - https://bushansirgur.in/complete-crud-application-with-spring-boot-hibernate-and-mysql/
   * Java & Databases: Guide to JDBC, Hibernate and Spring Data - https://www.marcobehler.com/guides/java-databases-jdbc-hibernate-spring-data
@@ -100,11 +107,32 @@
   * JIRA Course : https://www.sitepoint.com/premium/courses/setting-up-a-real-world-project-in-jira-3012/lesson/2/step/1 
   * Effective JIRA Tutorial - https://www.idalko.com/jira-guide/?omhide=true&utm_source=autopilot&utm_medium=email 
 
+### Python
+
+  * https://jupyter-notebook.readthedocs.io/en/stable/public_server.html
+  *
+
+### Data Science
+
+  * https://towardsdatascience.com/linear-regression-understanding-the-theory-7e53ac2831b5
+  * Supervised Learning: Basics of Linear Regression - https://towardsdatascience.com/supervised-learning-basics-of-linear-regression-1cbab48d0eba
+  * 
 ### CI/CD - Jenkins
 
   * Running Jenkins with native SSL/HTTPs - https://wiki.jenkins.io/pages/viewpage.action?pageId=135468777
   * Enable HTTPS on Jenkins - https://jansipke.nl/enable-https-jenkins/
-  
+
+#### CI/CD Pipeline
+
+  * https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch
+
+#### Jenkins - PHP
+
+  * http://jenkins-php.org/
+  * https://docs.gitlab.com/ee/ci/examples/php.html
+  * http://blogs.quovantis.com/setting-a-php-project-in-jenkins/
+  * https://modess.io/jenkins-php/
+
 ### HTTPS, SSL 
 
   * Everything about HTTPS and SSL (Java) - https://dzone.com/articles/ssl-in-java
@@ -185,6 +213,10 @@
   * https://dzone.com/articles/spring-security-chapter-1?edition=585298&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202020-03-11
 
 ## Open Source Tools
+
+### Elastic Search
+
+ * An Introduction to ElasticSearch : https://medium.com/better-programming/an-introduction-to-elasticsearch-4999b2a752e9
 
 ### ASCIIDoctor
   * https://leanpub.com/awesomeasciidoctornotebook/read_full

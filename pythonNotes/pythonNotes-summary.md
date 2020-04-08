@@ -85,9 +85,12 @@ print (keyword.kwlist)
  * Example: 
  ```
  # This is a comment
- # the below statements assigns the value 5 to the variable x
+ # the below statement assigns the value 5 to the variable x
  x = 5
+
+ pi = 3.14 # the value 3.14 is assigned to the variable pi, and this is an inline comment
  ```
+ * As a best practice, it is very well recommended to make an appropriate comment throughout your program to make the code legible to others.
 
 ### Data types
 
