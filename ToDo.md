@@ -125,6 +125,7 @@
 #### CI/CD Pipeline
 
   * https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch
+  * https://dzone.com/storage/assets/13180156-continuous-delivery-jenkins-pipeline-refcard.pdf?utm_source=dzone&utm_medium=dedicated_email
 
 #### Jenkins - PHP
 
