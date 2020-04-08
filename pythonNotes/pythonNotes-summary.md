@@ -32,7 +32,40 @@
   
   * Python is completely object oriented, and not "statically typed". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.
   * Python variables are dynamically typed. Meaning ,they get a datatype during the runtime depending on the value they are assigned with.
+  * The following code snippet shows the dynamic data type allocation in action.
+```
+C:\Users\ragha\.jupyter {git}{hg}
+{lamb} python
+Python 3.8.0 (tags/v3.8.0:fa919fd, Oct 14 2019, 19:37:50) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> y = 10
+>>> type(y)
+<class 'int'>
+>>> y =  y - 10.0
+>>> y
+0.0
+>>> type (y)
+<class 'float'>
+>>>
+```
+ * Reassigning variables in terms of themselves. Use `+=` shorthand operator to assign the value of the variable to itself after the operation being performed (here it is an addition). Example: `x += 1` is equivalent to `x = x + 1`.
+ * Variable naming convention is recommended to have an indicative of their meaning/purpose like `name`,`age` etc., than just a short form of `x`, `y` etc.,
+ * There are a few restrictions on the naming conventions. A variable in Python can*not* start with _numbers_, _most_ special characters, _keywords_, or _built-in types_. Variables also can't contain spaces in between if it has more than one word. Example: `my name` is not a valid name, rather it can be given as `my_name`. 
+ * According to Python conventions, it's best to use lowercase letters and to avoid special characters altogether as they will often cause errors.
 
+### Keywords
+
+ * Keywords are the reserved words that have a special meaning to the compiler and they can't be used for the other/normal variables in a Python program/script. For exaample, `int` is a special word (reserved word or a keyword) that indicates that the variable following will have a numeral value associated with it. 
+ * To get to know the list of keywords in the currently running version of python, you can use the following code snippet.*Note*: `keyword` is a module (a different pacckage that contains the variable `kwlist`) and it is not by default (naturally) available in your current Python script. Hence, it needs to be expliciltly made available (hence the name *import*) via the keyword `import`.
+
+ ```
+import keyword
+print (keyword.kwlist)
+ ```
+ You get the following output.
+ ```
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+ ```
 
 ### Data types
 
