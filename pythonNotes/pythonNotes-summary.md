@@ -92,6 +92,17 @@ print (keyword.kwlist)
  ```
  * As a best practice, it is very well recommended to make an appropriate comment throughout your program to make the code legible to others.
 
+### docstring
+
+ * Docstrings, short for document strings, state what a given document, such as a program, a function, or a class, actually does. The primary difference in syntax between a docstring and a comment is that docstrings are intended to be written over multiple lines, which can be accomplished with triple quotes. They also introduce a given document, so they are placed at the top.
+ * Here is an example of a docstring:
+```
+"""
+This document will explore why comments are particularly useful when writing and reading code.
+"""
+```
+ * When you execute this cell, nothing really happens. Docstrings, like comments, are designed as information for developers reading and writing code; they have nothing to do with the output of code.
+
 ### Data types
 
 #### Numeric Types 
