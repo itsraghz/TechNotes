@@ -124,7 +124,7 @@ This document will explore why comments are particularly useful when writing and
  * Escape Sequence Characters
 
    | Escape Sequence |  Meaning        | 
-   | :------------- :| :--------------:|
+   | --------------  | --------------- |
    | \newline        | Ignored         |
    | \\\\            | Backslash(\)    |
 
