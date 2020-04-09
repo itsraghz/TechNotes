@@ -127,6 +127,16 @@ This document will explore why comments are particularly useful when writing and
    | --------------  | --------------- |
    | \newline        | Ignored         |
    | \\\\            | Backslash(\)    |
+   | \'              | Single Quote (')|
+   | \"		     | Double Quote (")|
+   | \n		     | ASCII Linefeed (LF) |
+   | \r		     | ASCII Carriage Return |
+   | \t		     | ASCII Horizontal Tab |
+   | \v 	     | ASCII Vertical Tab |
+
+ * The multiplication and addition operators work with strings as well.
+ * In particular, the + operator combines two strings into one and is referred to as string concatenation
+ * The * operator, for multiplication, repeats a string.
 
 ## f-String
 
