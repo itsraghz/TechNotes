@@ -113,7 +113,20 @@ This document will explore why comments are particularly useful when writing and
  * Python types can be obtained explicitly by using `type()` with a value inside it as a parameter. Example: `type(10)` gives `int`.
  * Any mathematical operations on {int, float} (example: int + flat) gives a `float`, otherwise the information/data will be lost. When possible, Python converts types to preserve information. Example : `5 + 3.14` gives `8.14` and NOT `8`.
  * Conversion: The datatype / value can be converted from one to another using an appropriate method whose name bears the datatype. Example: `int(7.99999)` gives the floating value as an integer as `7`. Similarly, `float(6)` gives back `6.0`.
- * 
+ *
+
+#### String 
+
+ * In Python, anything that goes between 'single' or "double" quotes is considered a string. 
+ * Strings are commonly used to express words, but they have many other uses, including displaying information to the user and retrieving information from a user.
+ * Although strings may use single or double quotes, a given string must be internally consistent. That is, if a string starts with a single quote, it must end with a single quote. The same is true of double quotes.
+ * Python uses the backslash character, \, called an escape sequence in strings, to allow for the insertion of any type of quote inside of strings. The character that follows the backslash in an escape sequence may be interpreted as mentioned in Python's official documentation, which follows. Of particular note is \n, which is used to create a new line.
+ * Escape Sequence Characters
+
+   | Escape Sequence |  Meaning        | 
+   | :------------- :| :--------------:|
+   | \newline        | Ignored         |
+   | \\\\            | Backslash(\)    |
 
 ## f-String
 
