@@ -126,6 +126,9 @@
 
   * https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch
   * https://dzone.com/storage/assets/13180156-continuous-delivery-jenkins-pipeline-refcard.pdf?utm_source=dzone&utm_medium=dedicated_email
+  * https://zwischenzugs.com/2017/04/23/things-i-wish-i-knew-before-using-jenkins-pipelines/
+  * https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin
+  * https://www.edureka.co/blog/jenkins-pipeline-tutorial-continuous-delivery
 
 #### Jenkins - PHP
 
@@ -133,6 +136,13 @@
   * https://docs.gitlab.com/ee/ci/examples/php.html
   * http://blogs.quovantis.com/setting-a-php-project-in-jenkins/
   * https://modess.io/jenkins-php/
+
+## PHP
+
+### PHP Unit Testing
+
+  * https://code.tutsplus.com/tutorials/hands-on-unit-testing-with-phpunit--net-27454
+  * https://www.startutorial.com/articles/view/phpunit-beginner-part-1-get-started
 
 ### HTTPS, SSL 
 
