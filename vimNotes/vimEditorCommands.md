@@ -5,6 +5,7 @@
 | Sl No. | Date | Author | Remarks |
 | --- | --- | --- | --- |
 | 1 | 22 Feb 2020 | Raghavan Muthu | Initial Version |
+| 2 | 10 Apr 2020 | Raghavan Muthu | Vim Command History Added |
 
 #Todo - for pending few of the commands 
 
@@ -215,3 +216,23 @@ Yes. If you copy and paste it via Yanking, the cursor have to be set a line befo
     - `:set ff=unix` and then `:wq`. Now your file is back to the good-old-Unix-way. `ff`- file format (suppose)
     - If you need to bring back to DOS encoding, you can type `:set ff=dos` and then `:wq`
     - Alternate is to use the full format in the command `:set fileformats=dos`
+
+## How you would get the previously typed command in Vi/Vim editor?
+
+ Ref URL: https://stackoverflow.com/questions/8928070/vim-show-my-last-command-command
+
+  * Hit the colon (`:`) and then use the up arrow to start going back through previous commands. You can use the `up/down` arrows too to move around the list.
+
+## How would you get the previously searched patterns in Vi/Vim editor?
+
+ * while (`:`) and up/down arrows show command history, (`/`) up/down arrows show search patterns history. 
+ * `/q` will show you command history in Vim. `q/` will show you history of searches.
+
+## How would you display/show the whitespaces , tabs in Vi/Vim editor? 
+
+ * Use the following command in the `Command` Mode to show the whitespaces and tabs in the file opened. `:set listchars=space:_,tab:>~ list`. 
+ * You will now see spaces as colored _ characters, and tabs as a single > followed by as many ~s as needed.
+
+## How do you covert the tabs into spaces in Vi/Vim editor?
+
+* Apply the following command : `:1,$s/\t/  /g` - whereas the `1,$` will apply this rule from the line number 1 to end of file (`$`), and `s` to search, and `\t` for the tab character, and `'/  /'` to replace with two whitespaces (if required you can make it one space) and `g` stands for global change.
