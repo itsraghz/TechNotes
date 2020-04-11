@@ -1,0 +1,240 @@
+Turbo C , Borland C
+
+*  C - Current
+ * CPP - Advanced
+------------------------------
+Let Us C by YPK ,  - easy for student, bit elaborate and interesting programs, 
+ANSI C by E Balagurusamy (Reference Textbook), - college/school students very easy to refer, primarily academic, limited scope
+ Programming C by Herbert Schildt - Ref library for all.
+
+## Session 1 - 11 Apr 2020 Saturday
+Basics
+  History of C
+  Importance of C
+  Disadvantages of C (will see later) 
+Hello World / Addition of two numbers
+Life Cycle of a C Program - Compiler(gcc) and Interpreter (./a.out)
+------------
+## Session 2, Session # 3
+Getting input from user (keyboard)
+Data Types - int, char, float, etc.,
+Programs on all the data types
+---
+## Session 4
+Arrays 
+---
+## Session 5
+Branching - if, if else, switch
+Looping - for, while
+-----
+## Session 6, 7 , 8 
+Patterns Programs (Pyramid,etc.) - develop a good logic 
+---
+## Session 9
+Struct  - composite 
+-----
+## Session 10, 11
+Advanced
+  File I/O 
+## Session 12
+  Graphics  - Limited
+## Session 13, 14, 15
+  Pointers - Important and bit tough.
+--
+## Session 16, 17
+Data Structures in C
+  Stack
+  Queue
+ Linked List
+-----
+## Session 18
+Advancded Programs  
+   Number System conversion (Decimal to Binary, Binary to Octal)
+ 
+## Session 20 
+Real time Projects
+   Book Management System
+   Student Registration System
+   Word Game  etc.,
+=========================================================
+
+
+
+
+3 + 5 = 8
+3 + 5 + 6 = 14 
+3 + 5 + 6 + 8 = 22
+ 
+
+ 1, 4, 5, 6, 7, 19, 20, 33, 24, 55, 61, 181, 20, 11, 3 
+ 
+ == Manual
+ 
+ Program 
+ Computer 
+  - extended version of a calculator
+  - stupid device, dumb terminal (no thinking capacity on its own)
+ 
+ CPU, ALU, Memory,
+ Brain, Memory, Eyes, Ears, Nose
+ 
+ 1, 4, 5, 6, 7, 19, 20, 33, 24, 55, 61, 181, 20, 11, 3 == Sum (245)
+ 
+ Assembly Language
+ computer can understand only one Language - Binary (0,1) (electronic signals) (BIT - Binary Digit)
+ Instruction - through Assembly Language
+   Command : MOVE, LOAD, STORE
+   
+   3 + 5  = 8
+   LOAD 3    (LOW LEVEL)
+   LOAD 5
+   MOVE -- only for computers
+   -----------------------------------------
+  Take 3 and 5 (HIGH LEVEL)
+  Add 3 and 5 and store in Sum
+  
+  -- Conversion from HIGH To LOW level is needed (Compilation)
+  
+  
+  
+  
+  1 + 2 = 3
+  
+ I am a boy. My name is Gokul. I am learning C Programming language now. (in English).
+ 
+ C Programming Language (like English)
+ 
+ int main()
+ {
+    a = 2;
+    b = 3;
+    c = a + b;
+ }
+ 
+
+ //like a door to a house.
+ // or logging into a computer 
+ // 5, 3.14 (PI), Y/N, Gokul, 17 Years
+ // ALU
+
+
+MongoDB Atlas is the only true global, multi-cloud database service.
+ads served ethically 
+About • FAQ • Blog • Terms of Use • Contact Us • GDB Tutorial • Credits • Privacy
+© 2016 - 2020 GDB Online
+       Language   
+main.c
+??
+  
+input
+main.c:15:5: warning: incompatible implicit declaration of built-in function ‘printf’               
+main.c:15:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’                         
+5 
+
+// Problem : Addition of two numbers
+
+// like a door to a house.
+// or logging into a computer 
+// 5, 3.14 (PI), Y/N, Gokul, 17 Years
+// ALU
+
+//Input - a, b 
+//Output - c (screen)
+
+
+//like thalikkara petti , in C it is called as Header file (library file)
+//stdio.h -  has all the functions related to input and Output
+#include <stdio.h>
+ int main() //entry point to a program in C
+ {
+    int a = 2; // int- holds a whole digit of number value 
+    int b = 3;
+    int c = a + b;
+    printf("%d", c);  // to display the output, %d - format specifier for the output
+    // printf is a library function where we have all similar functions
+ }
+ 
+
+
+About • FAQ • Blog • Terms of Use • Contact Us • GDB Tutorial • Credits • Privacy
+© 2016 - 2020 GDB Online
+       Language   
+main.c
+??
+  
+input
+
+
+5                                                                                                   
+                                                                                                    
+...Program finished with exit code 0                                                                
+Press ENTER to exit console.
+
+
+raghs@LAPTOP-63DBKP7Q:~$ ls -ltrh
+total 0
+-rw-rw-rw- 1 raghs raghs 94 Apr 11 20:02 Addition.c
+raghs@LAPTOP-63DBKP7Q:~$ cat Addition.c
+#include <stdio.h>
+
+int main()
+{
+        int a = 2;
+        int b = 3;
+        int c = a + b;
+        printf ("%d", c);
+}
+raghs@LAPTOP-63DBKP7Q:~$ gcc Addition.c
+raghs@LAPTOP-63DBKP7Q:~$ ls -ltrh
+total 12K
+-rw-rw-rw- 1 raghs raghs   94 Apr 11 20:02 Addition.c
+-rwxrwxrwx 1 raghs raghs 8.2K Apr 11 20:03 a.out
+
+
+
+
+GCC - GNU C Compiler. 
+gcc.exe  - executable C compiler (binary) 
+1. Diretly download the Turbo C  executbale for Windows (for linux it is mostly available already) 
+WLS - Windows for Linux SubSystem 
+
+
+Linux
+=====
+gcc Addition.c ==> produces a.out (called intermediate file) 
+   Addition.c                                      -----------> a.out                  ---------> excecution
+    Source code (high level)                          (low level)                           output of the program (display in screen)
+
+./a.out = to execute/run the program Addition.c
+gcc Subtraction.c =>produces a.out (replaces the first version of the program in a.out, now it will have substraction instead of Addition)
+gcc Addition.c -o Addition.out ==> produces Addition.out (to have a meaningful compiled version of the source code, and also to avoid the replaement of the file a.out)
+./Addition.out ==> to execute the intermediate file 
+./Substraction.out 
+
+
+Windows - Turbo C editor
+======================
+F5 - Compile the program (equivalent to gcc)
+F9 - Run the program (execute - equivalent to ./)
+
+
+ // gcc Addition.c => generates a.out file
+ // Addition.c - for human
+ // a.out - for computer
+
+
+VI editor
+=======
+1. vi addition.c
+2. press i to come to insert mode
+3. start typing the program (normal backspace everythign will work)
+4. Press ESc key to coem back to command mode (default mode)
+5. Press ':wq' (command  to write (save) and quit (exit))
+
+
+https://developerinsider.co/c-and-cpp-insider/
+https://developerinsider.co/download-turbo-c-for-windows-7-8-8-1-and-windows-10-32-64-bit-full-screen/
+https://www.onlinegdb.com/online_c_compiler
+
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+

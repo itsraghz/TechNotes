@@ -167,7 +167,11 @@
 ### JAM Stack
  
   * What is the JAMstack? An Introduction for the non-developer : https://medium.com/better-programming/what-is-the-jamstack-d3f854919ab6
-  
+
+### Web Components
+
+ * https://www.webcomponents.org/introduction
+
 ## Big Data 
 
 ### Apache Kafka
