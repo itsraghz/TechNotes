@@ -5,7 +5,7 @@
 ## Operating System Commands
 
 | Command  |  Purpose  | Remarks |
-| :------ :| :-------: | :-----: |
+| ------ | ------- | ----- |
 | `ls`     | * To list the files in a directory. | * Similar to the `dir` command in Windows. * The output will just contain only the file names. |
 | `ls -l`  | * to have a long listing of files in a directory | The output will have all the files and the other attributes such as the user, group, file size, modified date etc., |
 | `ls -ltr`| * To have a long listing (`l`) of files, arranged in the reverse order (`r`) based on the modification time (`t`) of each file.  | * Useful to see the files in their modification order. |
