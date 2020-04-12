@@ -1,6 +1,6 @@
 # Syllabus
 
-## Session 1 - 11 Apr 2020 Saturday
+## Session 1
 
  * Basics
   * History of C
@@ -12,13 +12,13 @@
    * Online C Compiler
    * GNU C Compiler in *WLS* (Windows for Linux SubSystem) - using Ubuntu 18.04 LTS version on Windows 10.
 
-## Session 2 - 12 Apr 2020 Sunday
+## Session 2
  
  * Revision of Day 1
  * Demo of a C Program in *Turbo C* editor on Windows 10. 
  * Getting input from user (keyboard)
- * Data Types - int, char, float, etc., *Note:* Discussed on float and int-vs-float. Rest is TBD.
- * Programs on all the data types *Note*: Program on float data type. Rest is TBD.
+ * Data Types - int, char, float, etc., 
+ * Programs on all the data types 
 
 ## Session 3
 
