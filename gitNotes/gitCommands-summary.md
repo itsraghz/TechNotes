@@ -5,7 +5,7 @@
 | `git init` | creates or reinitiates a git repo on the folder where this command is executed | See a folder called `.git` created. |
 | `git config` | Shows the git config menu and the list of options to invoke | Parent command |
 | `git config --list` | Lists down all the configurations in the System | |
-| `git status` | Shows the status of the repository/snapshot with respect to the previous commit made | |
+| `git status` | Shows the status of the repository/snapshot with respect to the previous commit made | It basically two different type of files *`untracked`* and *`modified`*. Untracked is the files which were not present in the latest snapshot/commit of the repo but which are newly added and yet to be commited. _Modified_ is the set of files which were earlier present in the snapshot/commit of the repo but modified recently. |
 | `git log` | Shows the summary of all git commits made so far in the repo. | Shows the commit Id and the commit message in the descending order.  |
 | `git log --oneline` | Shows the summary of all git commit so far made, in a concise manner. | Shows the shortened version of the commitId but that is unique enough to identify it individually. |
 | `git add file1 file2` | adds the files `file1` and `file2` to the git repo. | The file are space separated |
@@ -22,7 +22,8 @@
 | `git show HEAD~1` | to show the commit id which is `1` level down from `HEAD` pointer.| You can specify any number after the tilde symbol (`~`) to get to that level of commit from the `HEAD` pointer. |
 | git push | push the contents of the repository (delta change if is not the initial commmit) from the staging area to the remote repo.| It might ask you to enter the credentials to authenticate to the repo.  |
 | `git checkout file1` | undo the changes on the `file1`. | Can do `git checkout .` or `git checkout \*` for making the undo checkin of more than one file, in the current snapshot. All the changes being done in those files will be reverted. *Safest of the other alternative commands* like `git revert`, `git reset` as we cannot change or delete the previous commits in checkout. |
-| `git checkout commitId` | checkouts the repo with the specific commit mentioned by `commitId`. | Traversing to a specific point in time in the repo timelines, like *System Restore* in the Windows OS.|
+| `git checkout commitId` | checks out the repo with the specific commit mentioned by `commitId`. | Traversing to a specific point in time in the repo timelines, like *System Restore* in the Windows OS. It shows the message in the terminal that *You are in detached *HEAD*, meaning the HEAD is no longer pointing to the latest commit in the repo. Also the pointer is changed on the repo that shows the recent commit where we had checked out to. You can verify the status using the `git log --oneline` where you see the commit entires uptil this commitId. _Internally the pointers are adjusted and not like the rest of the commits are deleted._|
+| `git checkout master` | Bring back the workspace to the latest snapshot, by making the HEAD pointing to the `master` branch. | The next immediate option for `git checkout commitId` to bring back the workspace in the consistent state. The pointer now shows the `(masater)` for the repo. You can verify again with the `git log --oneline` where you see that the workspace restores all the commits uptil the very latest. *Checkout is very safe as  it is _READ_ONLY_ command, and we cannot do any change or delete the previous commits*. |
 | `git reverse` | | |
 | `git reset` | | |
 | `git fetch` | | |
