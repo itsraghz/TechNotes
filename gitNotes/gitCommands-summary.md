@@ -21,7 +21,8 @@
 | `git show commitId` | similar to `git show HEAD`, it shows the details of the commit pointed to by the `commitId. | Example: `git show 889ddc7` will show the commit id `889ddc7`. | 
 | `git show HEAD~1` | to show the commit id which is `1` level down from `HEAD` pointer.| You can specify any number after the tilde symbol (`~`) to get to that level of commit from the `HEAD` pointer. |
 | git push | push the contents of the repository (delta change if is not the initial commmit) from the staging area to the remote repo.| It might ask you to enter the credentials to authenticate to the repo.  |
-| `git checkout file1` | undo the changes on the `file1`. | Can do `git checkout .` or `git checkout \*` for making the undo checkin of more than one file, in the current snapshot. All the changes being done in those files will be reverted. | Safest of the other alternative commands like `git revert`, `git reset` as it does not do any active changes in the repository instead it just adjusts the pointer. |
+| `git checkout file1` | undo the changes on the `file1`. | Can do `git checkout .` or `git checkout \*` for making the undo checkin of more than one file, in the current snapshot. All the changes being done in those files will be reverted. *Safest of the other alternative commands* like `git revert`, `git reset` as we cannot change or delete the previous commits in checkout. |
+| `git checkout commitId` | checkouts the repo with the specific commit mentioned by `commitId`. | Traversing to a specific point in time in the repo timelines, like *System Restore* in the Windows OS.|
 | `git reverse` | | |
 | `git reset` | | |
 | `git fetch` | | |
