@@ -1,5 +1,10 @@
 # Apache Spark
 
+## Useful Links
+
+ * https://sparkbyexamples.com/
+ * https://data-flair.training/blogs/spark-tutorial/
+
 ## Introduction
 
 ## Operations 
