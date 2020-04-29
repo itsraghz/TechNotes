@@ -172,7 +172,21 @@
 
  * https://www.webcomponents.org/introduction
 
+### Cache/Caching
+
+ * https://levelup.gitconnected.com/everything-you-need-to-know-about-caching-system-design-932a6bdf3334
+
+## General 
+
+### Advice, Best Practices, Tips
+
+ * https://medium.com/better-programming/12-ideas-for-programming-projects-too-dangerous-not-to-build-514e3212ab77
+
 ## Big Data 
+
+### NoSQL Related - MongoDB etc., 
+
+ * https://medium.com/@mathur.rajat30/multi-document-transactions-in-mongodb-acid-compliance-f2ad437fd550
 
 ### Apache Kafka
 
