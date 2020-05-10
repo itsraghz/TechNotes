@@ -1,0 +1,1 @@
+[2020-05-10_15-30-27_PM_IST] - Test message to be written to a log file

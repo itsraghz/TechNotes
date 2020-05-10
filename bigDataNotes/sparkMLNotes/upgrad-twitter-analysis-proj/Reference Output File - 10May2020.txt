@@ -1,0 +1,104 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/ragha/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/ragha/.m2/repository/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/05/10 16:36:15 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+20/05/10 16:36:15 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Naive Bayes Classifier:
+-----------------------
+
+Test Accuracy = 53 %
+
+Training Accuracy = 59 %
+
+Weighted Precision  = 53 %
+
+Weighted Recall = 53 %
+
+F1 Score = 53 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  205|
+|  male|        female|  326|
+|female|        female|  558|
+|  male|          male|  455|
+| brand|         brand|  492|
+|female|          male|  314|
+| brand|          male|  162|
+|female|         brand|  204|
+| brand|        female|  130|
+|   djs|           djs|    1|
++------+--------------+-----+
+
+
+
+
+Decision Tree Classifier:
+-------------------------
+
+Test Accuracy = 48 %
+
+Training Accuracy = 60 %
+
+Weighted Precision  = 49 %
+
+Weighted Recall = 48 %
+
+F1 Score = 48 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  102|
+|  male|        female|  512|
+|female|        female|  712|
+|  male|          male|  372|
+| brand|         brand|  293|
+|female|          male|  272|
+| brand|          male|  233|
+|   djs|          male|    1|
+|female|         brand|   92|
+| brand|        female|  258|
++------+--------------+-----+
+
+
+
+
+Random Forrest Classifier:
+--------------------------
+
+Test Accuracy = 50 %
+
+Training Accuracy = 71 %
+
+Weighted Precision  = 51 %
+
+Weighted Recall = 50 %
+
+F1 Score = 50 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  120|
+|  male|        female|  517|
+|female|        female|  739|
+|  male|          male|  349|
+| brand|         brand|  348|
+|female|          male|  229|
+| brand|          male|  205|
+|   djs|          male|    1|
+|female|         brand|  108|
+| brand|        female|  231|
++------+--------------+-----+
+
+
+
+
