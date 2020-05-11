@@ -1,0 +1,116 @@
+Ratio: 70:30
+===========  Execution Started =============
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/ragha/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/ragha/.m2/repository/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Number of records in the dataset : 20050
+Schema Inferred from the dataset : 
+root
+ |-- _unit_state: string (nullable = true)
+ |-- _trusted_judgments: integer (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- gender:confidence: double (nullable = true)
+ |-- description: string (nullable = true)
+ |-- text: string (nullable = true)
+
+Number of records in the dataset - after drop : 16224
+Number of records in the dataset - after filtering out gender : 15522
+20/05/11 17:01:21 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+20/05/11 17:01:21 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Naive Bayes Classifier:
+-----------------------
+
+Test Accuracy = 54 %
+
+Training Accuracy = 60 %
+
+Weighted Precision  = 53 %
+
+Weighted Recall = 54 %
+
+F1 Score = 53 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  350|
+|  male|        female|  545|
+|female|        female|  947|
+|  male|          male|  723|
+| brand|         brand|  834|
+|female|          male|  459|
+| brand|          male|  267|
+|female|         brand|  326|
+| brand|        female|  219|
++------+--------------+-----+
+
+
+
+
+Decision Tree Classifier:
+-------------------------
+
+Test Accuracy = 45 %
+
+Training Accuracy = 61 %
+
+Weighted Precision  = 46 %
+
+Weighted Recall = 45 %
+
+F1 Score = 44 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  202|
+|  male|        female|  951|
+|female|        female| 1164|
+|  male|          male|  465|
+| brand|         brand|  484|
+|female|          male|  416|
+| brand|          male|  386|
+|female|         brand|  152|
+| brand|        female|  450|
++------+--------------+-----+
+
+
+
+
+Random Forrest Classifier:
+--------------------------
+
+Test Accuracy = 49 %
+
+Training Accuracy = 74 %
+
+Weighted Precision  = 50 %
+
+Weighted Recall = 49 %
+
+F1 Score = 48 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  189|
+|  male|        female|  813|
+|female|        female| 1103|
+|  male|          male|  616|
+| brand|         brand|  564|
+|female|          male|  480|
+| brand|          male|  412|
+|female|         brand|  149|
+| brand|        female|  344|
++------+--------------+-----+
+
+
+
+
+===========  Execution Completed =============

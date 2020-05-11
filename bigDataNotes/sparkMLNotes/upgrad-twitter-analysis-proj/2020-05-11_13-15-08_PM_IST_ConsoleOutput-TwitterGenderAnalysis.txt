@@ -1,0 +1,57 @@
+[2020-05-11_13-15-08_PM_IST] - ===========  Execution Started =============
+[2020-05-11_13-16-21_PM_IST] - Number of records in the dataset : 20050
+[2020-05-11_13-16-21_PM_IST] - Schema Inferred from the dataset : 
+[2020-05-11_13-16-24_PM_IST] - Number of records in the dataset - after drop : 16224
+[2020-05-11_13-16-28_PM_IST] - Number of records in the dataset - after filtering out gender : 15522
+[2020-05-11_13-27-37_PM_IST] - Naive Bayes Classifier:
+[2020-05-11_13-27-37_PM_IST] - -----------------------
+[2020-05-11_13-27-37_PM_IST] - 
+[2020-05-11_13-27-37_PM_IST] - Test Accuracy = 54 %
+[2020-05-11_13-27-37_PM_IST] - 
+[2020-05-11_13-27-37_PM_IST] - Training Accuracy = 60 %
+[2020-05-11_13-27-37_PM_IST] - 
+[2020-05-11_13-27-37_PM_IST] - Weighted Precision  = 53 %
+[2020-05-11_13-27-37_PM_IST] - 
+[2020-05-11_13-27-37_PM_IST] - Weighted Recall = 54 %
+[2020-05-11_13-27-37_PM_IST] - 
+[2020-05-11_13-27-37_PM_IST] - F1 Score = 53 %
+[2020-05-11_13-27-37_PM_IST] - 
+[2020-05-11_13-27-37_PM_IST] - Confusion Matrix:
+[2020-05-11_13-27-58_PM_IST] - 
+[2020-05-11_13-27-58_PM_IST] - 
+[2020-05-11_13-27-58_PM_IST] - 
+[2020-05-11_13-30-06_PM_IST] - Decision Tree Classifier:
+[2020-05-11_13-30-06_PM_IST] - -------------------------
+[2020-05-11_13-30-06_PM_IST] - 
+[2020-05-11_13-30-06_PM_IST] - Test Accuracy = 45 %
+[2020-05-11_13-30-06_PM_IST] - 
+[2020-05-11_13-30-06_PM_IST] - Training Accuracy = 61 %
+[2020-05-11_13-30-06_PM_IST] - 
+[2020-05-11_13-30-06_PM_IST] - Weighted Precision  = 46 %
+[2020-05-11_13-30-06_PM_IST] - 
+[2020-05-11_13-30-06_PM_IST] - Weighted Recall = 45 %
+[2020-05-11_13-30-06_PM_IST] - 
+[2020-05-11_13-30-06_PM_IST] - F1 Score = 45 %
+[2020-05-11_13-30-06_PM_IST] - 
+[2020-05-11_13-30-06_PM_IST] - Confusion Matrix:
+[2020-05-11_13-30-23_PM_IST] - 
+[2020-05-11_13-30-23_PM_IST] - 
+[2020-05-11_13-30-23_PM_IST] - 
+[2020-05-11_13-32-08_PM_IST] - Random Forrest Classifier:
+[2020-05-11_13-32-08_PM_IST] - --------------------------
+[2020-05-11_13-32-08_PM_IST] - 
+[2020-05-11_13-32-08_PM_IST] - Test Accuracy = 50 %
+[2020-05-11_13-32-08_PM_IST] - 
+[2020-05-11_13-32-08_PM_IST] - Training Accuracy = 73 %
+[2020-05-11_13-32-08_PM_IST] - 
+[2020-05-11_13-32-08_PM_IST] - Weighted Precision  = 50 %
+[2020-05-11_13-32-08_PM_IST] - 
+[2020-05-11_13-32-08_PM_IST] - Weighted Recall = 50 %
+[2020-05-11_13-32-08_PM_IST] - 
+[2020-05-11_13-32-08_PM_IST] - F1 Score = 49 %
+[2020-05-11_13-32-08_PM_IST] - 
+[2020-05-11_13-32-08_PM_IST] - Confusion Matrix:
+[2020-05-11_13-32-32_PM_IST] - 
+[2020-05-11_13-32-32_PM_IST] - 
+[2020-05-11_13-32-32_PM_IST] - 
+[2020-05-11_13-32-33_PM_IST] - ===========  Execution Completed =============

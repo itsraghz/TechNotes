@@ -1,0 +1,108 @@
+===========  Execution Started =============
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/ragha/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/ragha/.m2/repository/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+ipNumber of records in the dataset : 20050
+Schema Inferred from the dataset : 
+root
+ |-- _unit_state: string (nullable = true)
+ |-- _trusted_judgments: integer (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- gender:confidence: double (nullable = true)
+ |-- description: string (nullable = true)
+ |-- text: string (nullable = true)
+
+Number of records in the dataset - after drop : 16224
+Number of records in the dataset - after filtering out gender : 15522
+
+---------------------------------------------------------------
+Splitting the dataset ......
+=============================
+Training Dataset Ratio : 0.6
+Testing Dataset Ratio : 0.4
+Seed : 2
+Training data frame count : 9385
+Testing data frame count : 6137
+---------------------------------------------------------------
+
+20/05/11 22:31:48 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+20/05/11 22:31:48 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+----------------------------
+## Naive Bayes Classifier ##
+----------------------------
+Test Accuracy = 53 %
+Training Accuracy = 61 %
+Weighted Precision  = 53 %
+Weighted Recall = 53 %
+F1 Score = 53 %
+
+Confusion Matrix :
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  457|
+|  male|        female|  746|
+|female|        female| 1231|
+|  male|          male| 1009|
+| brand|         brand| 1027|
+|female|          male|  608|
+| brand|          male|  357|
+|female|         brand|  381|
+| brand|        female|  321|
++------+--------------+-----+
+
+
+------------------------------
+## Decision Tree Classifier ##
+------------------------------
+Test Accuracy = 45 %
+Training Accuracy = 62 %
+Weighted Precision  = 46 %
+Weighted Recall = 45 %
+F1 Score = 44 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  246|
+|  male|        female| 1236|
+|female|        female| 1444|
+|  male|          male|  730|
+| brand|         brand|  603|
+|female|          male|  577|
+| brand|          male|  551|
+|female|         brand|  199|
+| brand|        female|  551|
++------+--------------+-----+
+
+
+-----------------------------------------
+## Random Forest Classifier Evaluation ##
+-----------------------------------------
+Test Accuracy = 48 %
+Training Accuracy = 74 %
+Weighted Precision  = 49 %
+Weighted Recall = 48 %
+F1 Score = 47 %
+
+Confusion Matrix:
++------+--------------+-----+
+|gender|predictedLabel|count|
++------+--------------+-----+
+|  male|         brand|  246|
+|  male|        female| 1307|
+|female|        female| 1564|
+|  male|          male|  659|
+| brand|         brand|  728|
+|female|          male|  450|
+| brand|          male|  380|
+|female|         brand|  206|
+| brand|        female|  597|
++------+--------------+-----+
+
+
+===========  Execution Completed =============
