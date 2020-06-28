@@ -6,6 +6,8 @@
 | --- | --- | --- | --- |
 | 1 | 22 Feb 2020 | Raghavan Muthu | Initial Version |
 | 2 | 10 Apr 2020 | Raghavan Muthu | Vim Command History Added |
+| 3 | 28 Jun 2020 | Raghavan Muthu | Vim Commands Added |
+|   |             |                |  1. Search for the next/previous occurrence of a word |
 
 #Todo - for pending few of the commands 
 
@@ -71,9 +73,21 @@ and `A` will keep the editor in `Append` mode.
 To make `Vi` editor start at a particular line in a file, add `+<line_number>` as a prefix to the file name while you invoke `Vi` / `Vim` in the
 command line to open the file. 
 
-> To open a file named `foo.txt` and take the cursor the 6th line, issue the command `*vi +6 foo.txt*`. 
+> To open a file named `foo.txt` and take the cursor to the 6th line, issue the command `*vi +6 foo.txt*`. 
 
-## How to navigate word by word in the current line in Vi editor?
+## How to open a particular file in Vi editor and let the cursor point to a specific word? 
+To make `Vi` editor start at a particular word in a file, add `+/<word_to_search_for>` as a prefix to the file name while you invoke `Vi` / `Vim` in the
+command line to open the file. **Remember:** This is `case sensitive` search.  
+
+> To open a file named `foo.txt` and take the cursor to (first occurrence of the) word 'text', issue the command `*vi +/text foo.txt*`. 
+
+In case, there is no word matching the case you had supplied while opening the file in the Command Line, the Vi/Vim editor says that 'there is no such pattern'
+
+```
+E486: Pattern not found: <word_to_search_for> 
+```
+
+# How to navigate word by word in the current line in Vi editor?
 > Change to the Command mode by pressing the `Esc` key at first, if required. 
 
 Press `w` in `Command Mode` to navigate (traverse) the cursor word by word in a forward direction.  
