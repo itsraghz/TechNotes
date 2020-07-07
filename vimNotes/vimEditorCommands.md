@@ -249,4 +249,10 @@ Yes. If you copy and paste it via Yanking, the cursor have to be set a line befo
 
 ## How do you covert the tabs into spaces in Vi/Vim editor?
 
-* Apply the following command : `:1,$s/\t/  /g` - whereas the `1,$` will apply this rule from the line number 1 to end of file (`$`), and `s` to search, and `\t` for the tab character, and `'/  /'` to replace with two whitespaces (if required you can make it one space) and `g` stands for global change.
+* Apply the following command : `:1,$s/\t/  /g` - whereas the `1,$` will apply this rule from the line number 1 to end of file (`$`), and `s` to search, and `\t` for the tab character, and `'/  /'` to replace with two whitespaces (if required you can make it one space) and `g` stands for global change.i
+
+## Does Vi/Vim have an auto save option?
+
+ * https://vi.stackexchange.com/questions/830/does-vim-autosave
+ * https://vim.fandom.com/wiki/Auto_save_files_when_focus_is_lost
+
