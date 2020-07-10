@@ -191,6 +191,17 @@ There are a few scenarios we should *NOT use* the `rebase`.
 
  > The originanl commits are eventually garbage collected by Git. 
 
+#### Rebase Vs Merge 
+ 
+  When you have a delta changes on master branch onc a new branch has been created and you want to merge them in to the branch, 
+  you can do both the ways - `rebase` and `merge`. But both of them have got pros and cons.
+
+ | Option | Strategy | Remarks |
+ | ------ | -------- | ------- | 
+ | Rebase | Rebase   | The commits will be in a linear sequence and branch-wise. First it goes for all master branch commits and then to the branch commits. |
+ | Merge  | Recursive| The commits will be entwined across branches to keep the commits in sync with the timelines. It is timeline based and NOT the branch focused. |
+
+
 ### Commands to be used for the rebase
 
  | Command  | Description |
@@ -199,10 +210,11 @@ There are a few scenarios we should *NOT use* the `rebase`.
  | git merge-base ticket1 master | Get the original base of the "ticket1" branch created from master |
  | git rebase -i <commitId> | Start the rebase from the commit ID (which is the SHA) |
  | git rebase master | Pull in changes from the master branch then replay branch commits after |  
+ | git reflog | For the complete details between the `squash`, `rebase` etc,. |
 
 *Example* 
 
- When you issue a `git rebase` command, Git will present you a file wiht the list of commit Ids (SHA References) for you to suggest the further proceedings.
+ When you issue a `git rebase` command, Git will present you a file with the list of commit Ids (SHA References) for you to suggest the further proceedings. To start with, Git will assume that you would like to `pick` each commit - meaning *you will consider the commits for merging*. However, we can override it with `squash`  - meaning to *merge the commits*.
 
  ```
  pick 123A4d commit 1 in ticket1 branch
@@ -223,6 +235,56 @@ commit 2 in ticket1 branch
 completed ticket1
 ```
 
- You can choose whichever message you wat by deleting th rest and save the file. Git will then do the actual rebase with the new commits along with the message you had chosen. 
+ You can choose whichever message you want by deleting the rest and save the file. Git will then do the actual rebase with the new commits along with the message you had chosen. 
+
+### `git reflog`
+ 
+ Issuing a `git reflog` helps you understand all the changes happened behind the scenes
+
+```
+admin@LenovaG51-35 MINGW64 /c/raghs/prfsnl/GitHubRepos/gitPractices/rbc (ticket1)
+$ git log --oneline
+8539625 (HEAD -> ticket1) completed ticket1
+e1f85b1 work in progress for ticket1
+f72fdc3 first commit on ticket1
+c22599d (master) initial file in master
+
+admin@LenovaG51-35 MINGW64 /c/raghs/prfsnl/GitHubRepos/gitPractices/rbc (ticket1)
+$ git merge-base ticket1 master
+c22599db352d4752fa5b2e861235c1e70909e9fd
+
+admin@LenovaG51-35 MINGW64 /c/raghs/prfsnl/GitHubRepos/gitPractices/rbc (ticket1)
+$ git rebase -i c22599d
+[detached HEAD 1c1acc5] completed ticket1
+Date: Fri Jul 10 15:36:11 2020 +0530
+1 file changed, 3 insertions(+)
+create mode 100644 ticket1file.txt
+Successfully rebased and updated refs/heads/ticket1.
+
+admin@LenovaG51-35 MINGW64 /c/raghs/prfsnl/GitHubRepos/gitPractices/rbc (ticket1)
+$ git log --oneline
+1c1acc5 (HEAD -> ticket1) completed ticket1
+c22599d (master) initial file in master
+
+admin@LenovaG51-35 MINGW64 /c/raghs/prfsnl/GitHubRepos/gitPractices/rbc (ticket1)
+$ git reflog
+1c1acc5 (HEAD -> ticket1) HEAD@{0}: rebase (finish): returning to refs/heads/ticket1
+1c1acc5 (HEAD -> ticket1) HEAD@{1}: rebase (squash): completed ticket1
+85c741b HEAD@{2}: rebase (squash): # This is a combination of 2 commits.
+f72fdc3 HEAD@{3}: rebase (start): checkout c22599d
+8539625 HEAD@{4}: commit: completed ticket1
+e1f85b1 HEAD@{5}: commit: work in progress for ticket1
+f72fdc3 HEAD@{6}: checkout: moving from master to ticket1
+c22599d (master) HEAD@{7}: checkout: moving from ticket1 to master
+f72fdc3 HEAD@{8}: commit: first commit on ticket1
+c22599d (master) HEAD@{9}: checkout: moving from master to ticket1
+c22599d (master) HEAD@{10}: commit (initial): initial file in master
+
+admin@LenovaG51-35 MINGW64 /c/raghs/prfsnl/GitHubRepos/gitPractices/rbc (ticket1)
+$
+
+```
+
+> *Note*: Please make a note of the SHA Ids, as they are different before and after the rebase on the branch.
 
 
