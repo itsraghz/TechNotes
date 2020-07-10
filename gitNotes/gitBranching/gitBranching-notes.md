@@ -170,17 +170,59 @@ There are a few scenarios we should *NOT use* the `rebase`.
  
     `<CommitRef#1>` 
 
-*Branch Ticket1* (created from <CommitRef1>)
+*Branch Ticket1* (created from `CommitRef#1`)
 
-    ```<CommitRef#1> ---  <BranchCommit#1> ---- <BranchCommit#2> --- <BranchCommit#3>```
+    `<CommitRef#1> ---  <BranchCommit#1> ---- <BranchCommit#2> --- <BranchCommit#3>`
 
 *Rebase - Squash Commit in Master*
 
  You can use the *squash* to combine or merge the 2nd and 3rd commit into the 1st commit, so that it appears as one commit. 
 
-   ```<CommitRef#1> --- <MergedBranchCommits>```
+   `<CommitRef#1> --- <MergedBranchCommits>`
 
-### Rebase branch from Master
+### Rebase Branch from Master
 
- If you perform a `git rebase` from master to a different branch (that has got its own commits off from master), then 
+ If you perform a `git rebase` from master to a different branch (that has got its own commits off from master), then the 
+ changes if any present in the master post the branch was created, then the rebase helps us get those commits in master gets
+ merged into the branch in a linear or sequential fashion and then the specific commits on the branch are attached to this 
+ commmit from master. 
+
+ Note that `rebase` does *not move* the commits rather it creates a *copy* of those commits, so that it can change the parent..
+
+ > The originanl commits are eventually garbage collected by Git. 
+
+### Commands to be used for the rebase
+
+ | Command  | Description |
+ | -------- | ------------- |
+ | git log --oneline | 	See the branch history in a precise manner. The --oneline flag helps to chop off the details other than summary |
+ | git merge-base ticket1 master | Get the original base of the "ticket1" branch created from master |
+ | git rebase -i <commitId> | Start the rebase from the commit ID (which is the SHA) |
+ | git rebase master | Pull in changes from the master branch then replay branch commits after |  
+
+*Example* 
+
+ When you issue a `git rebase` command, Git will present you a file wiht the list of commit Ids (SHA References) for you to suggest the further proceedings.
+
+ ```
+ pick 123A4d commit 1 in ticket1 branch
+ squash 3441E3 commit 2 in ticket1 branch
+ squash 4472E1 completed ticket1
+ ```
+
+ When you save the file, it will merge the 2nd and 3rd commits into 1st commit and asks you further for the actual commit message for the merging. 
+
+```
+# This is the 1st commit message
+commit 1 in ticket1 branch
+
+# This is the 2nd commit message
+commit 2 in ticket1 branch
+
+# This is the 3rd commit message 
+completed ticket1
+```
+
+ You can choose whichever message you wat by deleting th rest and save the file. Git will then do the actual rebase with the new commits along with the message you had chosen. 
+
 
