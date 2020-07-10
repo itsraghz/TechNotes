@@ -136,3 +136,51 @@ deleted.
 
  *Example*: `git compare master ticket1`
 
+## Git Rebase
+
+ The `git rebase` command helps you to organize the command history in the local repository to keep it succinct. Typically it is used to clean up the interim commits and histories while merging the changies to a different branch, thereby letting us focus on the end results alone.
+
+ For example, you can treat this like reading a rought draft of your notes Vs the final copy of the notes, which makes sense when you ship the final product from a specific branch to a master branch. 
+
+ > Note: Rebase has got the following nuances. 
+ > * It is an advanced feature and it is NOT MANDATORY. 
+ > * It can cause problems when you are working in a distributed team/environment
+
+There are a few scenarios where we might to use the `rebase`
+
+  * Clean up local history before sharing it with a branch - for personal resaons most probably.
+  * Pulling changes into your branch from another branch *without performing a merge*.
+
+There are a few scenarios we should *NOT use* the `rebase`.
+ 
+  * Do NOT use rebase on a public branch, as it can cause lot of confusion and rework.
+  * Check the team guidelines before you use `rebase` on a public/team/distributed repository
+
+### Squash a commit 
+
+ Squashing a commit is the way to clean up the historical commits by making a brand new commit from all the previous ones. 
+
+ Git actually performs the following behind the scenes
+
+  * Create a new commit
+  * Copy all the contents from the rest of all previous/available commits
+  * Asks for a commit message for the new commit (optionally)
+
+*Branch Master*
+ 
+    `<CommitRef#1>` 
+
+*Branch Ticket1* (created from <CommitRef1>)
+
+    ```<CommitRef#1> ---  <BranchCommit#1> ---- <BranchCommit#2> --- <BranchCommit#3>```
+
+*Rebase - Squash Commit in Master*
+
+ You can use the *squash* to combine or merge the 2nd and 3rd commit into the 1st commit, so that it appears as one commit. 
+
+   ```<CommitRef#1> --- <MergedBranchCommits>```
+
+### Rebase branch from Master
+
+ If you perform a `git rebase` from master to a different branch (that has got its own commits off from master), then 
+
