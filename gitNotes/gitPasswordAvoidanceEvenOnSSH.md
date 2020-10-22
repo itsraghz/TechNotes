@@ -10,11 +10,14 @@ Generally this would be an issue if the remote repo is set with the `https://` i
 git remote set-url origin git@github.com:username/repo.git
 ```
 
- My situation was a bit different as even when I set the remote repo with `ssh` it keeps asking for a password. The suggestion is to issue the `ssh-add` after you invoke the `ssh agent`.
+ My situation was a bit different as even when I set the remote repo with `ssh` it keeps asking for a password. The suggestion is to issue the `ssh-add` after you invoke the `ssh agent`. Ref : https://stackoverflow.com/a/18348125/1001242
+
+ > Note: Someone suggested to store the authentication info with the `credential-helper` but I was not comfortable with it.
+   Reference : https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
 
 ## Screenshots
 
-  Please see the `images` folder for the relevant screenshots. 
+  Please see the `images` folder for the relevant screenshots.
 
 ## Command Output
 
