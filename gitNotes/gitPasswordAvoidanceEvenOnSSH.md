@@ -14,6 +14,7 @@ git remote set-url origin git@github.com:username/repo.git
 
  > Note: Someone suggested to store the authentication info with the `credential-helper` but I was not comfortable with it.
    Reference : https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
+   https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/
 
 ## Screenshots
 
