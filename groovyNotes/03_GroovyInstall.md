@@ -1,4 +1,4 @@
-[Home](./) 
+[Home](./)
 
 # Groovy Installation
 
@@ -49,3 +49,11 @@ Groovy Version: 3.0.7 JVM: 14.0.2 Vendor: Oracle Corporation OS: Windows 10
 ```
 
 ## Use it
+
+You can start using Groovy in the following ways.
+
+| Execution  | Invocation | Remarks |
+| ---------- | ---------- | ------- |
+| Groovysh - REPL | 
+| groovyConsole   |
+| Groovy compiler in Terminal |
