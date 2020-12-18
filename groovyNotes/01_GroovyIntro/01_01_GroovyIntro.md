@@ -16,3 +16,9 @@ Groovy…​
 * makes writing shell and build scripts easy with its powerful processing primitives, OO abilities and an Ant DSL
 * increases developer productivity by reducing scaffolding code when developing web, GUI, database or console applications
 * simplifies testing by supporting unit testing and mocking out-of-the-box
+
+## Summary
+
+In a nutshell,
+
+> Groovy is a feature-rich, Java-friendly dynamic language for the Java platform

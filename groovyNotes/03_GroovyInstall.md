@@ -2,6 +2,16 @@
 
 # Groovy Installation
 
+## Dependency
+
+Ensure you have the following in your machine.
+
+* Appropriate and compatible version of *Java* installed on your machine, as Groovy runs on JVM.
+* `JAVA_HOME` environment variable is set
+* `%JAVA_HOME%\bin` is appended to the `PATH` environment variable.
+
+## Installation of Groovy
+
 Installing Groovy is very easy in the modern versions.
 
 Being a Java product, it is available as a JAR (Java Archive File) for use.
@@ -54,6 +64,6 @@ You can start using Groovy in the following ways.
 
 | Execution  | Invocation | Remarks |
 | ---------- | ---------- | ------- |
-| Groovysh - REPL | 
+| Groovysh - REPL |
 | groovyConsole   |
 | Groovy compiler in Terminal |
