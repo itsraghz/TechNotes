@@ -108,3 +108,8 @@ groovy:000> s2
 ```
 
 ## Summary / Conclusion
+
+
+## References
+
+* [Groovysh - Apache Documentation](https://groovy-lang.org/groovysh.html)

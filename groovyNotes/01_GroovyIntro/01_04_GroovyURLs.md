@@ -8,9 +8,27 @@
 * https://onecompiler.com/cheatsheets/groovy
 * Release Notes for Groovy 3 -> https://groovy-lang.org/releasenotes/groovy-3.0.html
 
+### API
+
+* *GDK* - Groovy Development Kit -> https://groovy-lang.org/gdk.html
+* Groovy's enhanced *JDK* - *groovy-jdk* (Java Development Kit) -> https://groovy-lang.org/groovy-dev-kit.html
+
 ### Online Groovy Compiler and Playground
 
 * https://groovyconsole.appspot.com/
 * https://onecompiler.com/groovy
 * https://groovy-playground.appspot.com/
 * https://groovyide.com/cpi
+
+### Good, Useful References
+
+* Mr Haki's *Groovy Goodness* posts -> https://blog.mrhaki.com/search/label/Groovy%3AGoodness
+* Mr Haki's Groovy Goodness GitHub page -> https://github.com/mrhaki/Groovy-Goodness
+* http://docs.groovy-lang.org/latest/html/api/groovy/lang/MetaClass.html
+* https://stackoverflow.com/questions/5212442/how-to-get-classpath-in-groovy
+* https://stackoverflow.com/questions/17946763/how-to-get-all-the-variables-of-a-groovy-object-or-class
+
+## Books
+
+* Programming in Groovy / Groovy 2 by Dr Venkat Subramanian from Pragmatic Programmers
+* Groovy in Action from Manning Publications
