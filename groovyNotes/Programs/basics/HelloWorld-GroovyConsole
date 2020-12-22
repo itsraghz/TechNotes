@@ -1,0 +1,9 @@
+println "Hello, World"
+
+s1 = "Hello"
+s2 = "Groovy"
+
+println s1
+print s2
+
+println s1 + ", " + s2
