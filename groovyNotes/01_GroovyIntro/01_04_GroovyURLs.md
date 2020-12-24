@@ -27,6 +27,8 @@
 * http://docs.groovy-lang.org/latest/html/api/groovy/lang/MetaClass.html
 * https://stackoverflow.com/questions/5212442/how-to-get-classpath-in-groovy
 * https://stackoverflow.com/questions/17946763/how-to-get-all-the-variables-of-a-groovy-object-or-class
+* https://www.infoq.com/articles/groovy-3-new-features-java/
+* https://medium.com/@pranitsawant01/learn-groovy-in-minutes-28f01a9928e5
 
 ## Books
 
