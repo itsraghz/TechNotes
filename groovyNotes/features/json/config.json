@@ -1,0 +1,1 @@
+{"config":{"database":{"host":"example.com","port":3306,"type":"MySQL","user":"dbUser","pass":"dbPass","driver":"com.mysql.jdbc.Driver"},"threadPool":10,"useBridge":"Y"}}

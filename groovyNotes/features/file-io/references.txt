@@ -1,0 +1,6 @@
+the java.io.File class : http://docs.groovy-lang.org/latest/html/groovy-jdk/java/io/File.html
+the java.io.InputStream class: http://docs.groovy-lang.org/latest/html/groovy-jdk/java/io/InputStream.html
+the java.io.OutputStream class: http://docs.groovy-lang.org/latest/html/groovy-jdk/java/io/OutputStream.html
+the java.io.Reader class: http://docs.groovy-lang.org/latest/html/groovy-jdk/java/io/Reader.html
+the java.io.Writer class: http://docs.groovy-lang.org/latest/html/groovy-jdk/java/io/Writer.html
+the java.nio.file.Path class: http://docs.groovy-lang.org/latest/html/groovy-jdk/java/nio/file/Path.html

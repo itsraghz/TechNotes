@@ -1,0 +1,15 @@
+{
+	"employee" :
+	{
+		"firstName" : "Raghavan",
+		"lastName"  : "Muthu",
+		"age" : 35,
+		"country": "India",
+		"department" : "Technology",
+		"project" : 
+		{
+			"name" : "Payroll Automation",
+			"manager" : "Mark"
+		}
+	}
+}

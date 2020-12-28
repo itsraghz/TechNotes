@@ -4,4 +4,4 @@ rm -rf *.class
 javac *.java
 ls -ltrh
 java BookBeanTest
-
+java BookBeanTest0

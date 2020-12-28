@@ -1,0 +1,10 @@
+Today Date : Mon Dec 28 23:12:49 IST 2020
+vowelsList : [a, e, i, o, u]
+vowelsList size : 5
+-------------------------
+a
+e
+i
+o
+u
+-------------------------
