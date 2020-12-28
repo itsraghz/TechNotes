@@ -13,9 +13,10 @@ git remote set-url origin git@github.com:username/repo.git
 
  My situation was a bit different as even when I set the remote repo with `ssh` it keeps asking for a password. The suggestion is to issue the `ssh-add` after you invoke the `ssh agent`. Ref : https://stackoverflow.com/a/18348125/1001242
 
- > Note: Someone suggested to store the authentication info with the `credential-helper` but I was not comfortable with it.
-   Reference : https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
-   https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/
+ > Note: Someone suggested to store the authentication info with the `credential-helper` but I was not comfortable with it.\ 
+   *Reference :*
+    * https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
+    * https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/
 
 ## Screenshots
 
