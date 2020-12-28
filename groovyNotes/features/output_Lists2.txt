@@ -1,0 +1,63 @@
+[Red Sox, Yankees, Orioles, [Rays, Blue Jays]]
+[Rays, Blue Jays]
+===========================
+Properties of a List 
+============================
+List is of type : class java.util.ArrayList
+[class:class java.util.ArrayList, empty:false]
+Is cities empty? false
+[New York, Boston, Cleveland, Seattle]
+Spread dot Operator -> [8, 6, 9, 7]
+Abbreviation : [new, bos, cle, sea]
+New Hampshire
+[New York, Boston, Cleveland, Seattle]
+[New York, Cleveland, Seattle]
+[]
+Cities list has : [New York, Boston, Cleveland, Seattle]
+Spread dot Operator -> [8, 6, 9, 7]
+At least one city whose name is < 7 characters ? true
+Whethere all the city names are of < 10 characters ? true
+ 
+========================================
+ .....   JOIN Method of a List .....     
+==========================================
+cities.join(',') returns -> New York,Boston,Cleveland,Seattle
+ 
+========================================================
+ .....   Plus, Minus Methods of a String List .....     
+========================================================
+fruitsList1 has : [Apple, Orange, Banana, Jackfruit]
+fruitsList2 has : [Strawberry, Pomegranate, Banana, Chickoo]
+fruitsList3 has : [Strawberry, Pomegranate, Chickoo]
+fruitsList1.plus(fruitsList2) -> [Apple, Orange, Banana, Jackfruit, Strawberry, Pomegranate, Banana, Chickoo]
+fruitsList1.minus(fruitsList2) -> [Apple, Orange, Jackfruit]
+fruitsList1.minus(fruitsList3) -> [Apple, Orange, Banana, Jackfruit]
+
+fruitsList1+fruitsList2 -> [Apple, Orange, Banana, Jackfruit][Strawberry, Pomegranate, Banana, Chickoo]
+fruitsList1-fruitsList2 -> [Apple, Orange, Banana, Jackfruit]
+ 
+========================================================
+ .....   Plus, Minus Methods of a Numeric List .....     
+========================================================
+numList1 has : [5, 1, 2, 4]
+numList2 has : [3, 6, 9, 2]
+numList3 has : [3, 6, 9]
+numList1.plus(numList2) -> [5, 1, 2, 4, 3, 6, 9, 2]
+numList1.minus(numList2) -> [5, 1, 4]
+numList1.minus(numList3) -> [5, 1, 2, 4]
+
+numList1+numList2 -> [5, 1, 2, 4][3, 6, 9, 2]
+numList1-numList2 -> [5, 1, 2, 4]
+________________________________
+[INPUT] List : [6, 2, 4, 0, 1, 9, 7, 5, 8, 3]
+________________________________
+List is of type : class java.util.ArrayList
+Size of the list : 10
+Sorted List : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Min number in the list : 0
+Max number in the list : 9
+First number in the list : 0
+Last number in the list : 9
+Sum of the items in the list : 45
+Average of the items in the list : 4.5
+________________________________

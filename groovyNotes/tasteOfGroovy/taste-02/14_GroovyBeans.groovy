@@ -4,10 +4,21 @@
 
 class BookBean {
   String title
+  private String nameOfAuthor //camelCase
+  
+   BookBean(title) {
+     this.title = title
+  }
+  
+  String getNameOfAuthor(){
+     println "....getNameOfAuthor() invoked"
+  }
 }
 
 def groovyBook = new BookBean()
 groovyBook.setTitle('Groovy in Action')
+println groovyBook.nameOfAuthor
+println groovyBook.getNameOfAuthor()
 assert groovyBook.getTitle() == 'Groovy in Action'
 println groovyBook.title
 println groovyBook.getTitle()

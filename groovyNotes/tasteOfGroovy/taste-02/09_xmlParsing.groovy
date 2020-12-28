@@ -7,6 +7,12 @@ the Groovy Command which mostly has the current directory set in the CLASSPATH e
 
 def customers = new XmlSlurper().parse(new File('C://raghs//prfsnl//groovyPgms//tasteOfGroovy//taste-02//customers.xml'))
 
+// customers > corporate
+// cusotmers > customer
+println customers.size()
+println customers.corporate.size()
+println customers.consumer.size()
+
 for (customer in customers.corporate.customer) {
   println "${customer.@name} works for ${customer.@company}"
 }
