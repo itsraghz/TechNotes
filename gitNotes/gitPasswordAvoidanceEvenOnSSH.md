@@ -1,5 +1,6 @@
+# Git SSH Password Issue
 
-# Git keeps asking the password whenever I type the commands like `git push`, `git pull`, `git fetch` etc., even after setting my remote with `ssh`
+## Git keeps asking the password whenever I type the commands like `git push`, `git pull`, `git fetch` etc., even after setting my remote with `ssh`
 
 Generally this would be an issue if the remote repo is set with the `https://` instead of `ssh` and it goes away as long as you set your remote-repo with the *SSH* with the following command.
 
