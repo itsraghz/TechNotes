@@ -4,7 +4,7 @@ def baseDir = '.'
 new File(baseDir,'haiku.txt').withWriter('utf-8') { writer ->
     writer.writeLine 'Into the ancient pond'
     writer.writeLine 'A frog jumps'
-    writer.writeLine 'Waterâ€™s sound!'
+    writer.writeLine 'Water’s sound!'
 }
 
 /* Best way to write into a File in Groovy */

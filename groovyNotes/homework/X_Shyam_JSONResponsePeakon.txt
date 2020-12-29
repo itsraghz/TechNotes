@@ -1,0 +1,908 @@
+{
+  "schemas": [
+    "urn:ietf:params:scim:api:messages:2.0:ListResponse"
+  ],
+  "itemsPerPage": 50,
+  "startIndex": 1,
+  "totalResults": 22,
+  "Resources": [
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/d45dbd56c392360574d01aeb559f3519a113406e",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10477097",
+        "created": "2020-11-10T01:18:01.782Z",
+        "lastModified": "2020-11-10T01:18:01.782Z"
+      },
+      "id": "employee_10477097",
+      "externalId": "5511",
+      "userName": "testemail1234@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 11",
+        "givenName": "55",
+        "familyName": "11"
+      },
+      "emails": [
+        {
+          "value": "testemail1234@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005723",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/281cfd5ff6a2b7201e12cfa53ea80fcf80a3b745",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10477098",
+        "created": "2020-11-10T01:22:01.881Z",
+        "lastModified": "2020-11-10T01:22:01.881Z"
+      },
+      "id": "employee_10477098",
+      "externalId": "5512",
+      "userName": "testemail1235@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 12",
+        "givenName": "55",
+        "familyName": "12"
+      },
+      "emails": [
+        {
+          "value": "testemail1235@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005724",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/9c4eb15e88cd0077e80df806b138c61bfafaae2c",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10477099",
+        "created": "2020-11-10T01:26:01.834Z",
+        "lastModified": "2020-11-10T01:26:01.834Z"
+      },
+      "id": "employee_10477099",
+      "externalId": "5513",
+      "userName": "testemail1236@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 13",
+        "givenName": "55",
+        "familyName": "13"
+      },
+      "emails": [
+        {
+          "value": "testemail1236@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005725",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/cfc09b935f6f27075eac32079d499648e3fe4e72",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10479299",
+        "created": "2020-11-10T01:55:01.823Z",
+        "lastModified": "2020-11-10T01:55:01.823Z"
+      },
+      "id": "employee_10479299",
+      "externalId": "5514",
+      "userName": "testemail1237@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 13",
+        "givenName": "55",
+        "familyName": "13"
+      },
+      "emails": [
+        {
+          "value": "testemail1237@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005726",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/501f2ad2d369286e0abb45b377d8063aed0967eb",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10479801",
+        "created": "2020-11-10T02:15:02.246Z",
+        "lastModified": "2020-11-10T02:15:02.246Z"
+      },
+      "id": "employee_10479801",
+      "externalId": "5517",
+      "userName": "testemail1239@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 16",
+        "givenName": "55",
+        "familyName": "16"
+      },
+      "emails": [
+        {
+          "value": "testemail1239@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005729",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/f3849a2571f723b92b872033606cc3c3eb907574",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10479300",
+        "created": "2020-11-10T02:07:01.761Z",
+        "lastModified": "2020-11-10T02:07:01.761Z"
+      },
+      "id": "employee_10479300",
+      "externalId": "5516",
+      "userName": "testemail1238@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 16",
+        "givenName": "55",
+        "familyName": "16"
+      },
+      "emails": [
+        {
+          "value": "testemail1238@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005728",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/2d25495b9682d0c8bf63cfd2b55cff45da245e24",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10480458",
+        "created": "2020-11-10T02:23:01.829Z",
+        "lastModified": "2020-11-10T02:23:01.829Z"
+      },
+      "id": "employee_10480458",
+      "externalId": "5518",
+      "userName": "testemail1240@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 18",
+        "givenName": "55",
+        "familyName": "18"
+      },
+      "emails": [
+        {
+          "value": "testemail1240@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005730",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/183f7b0a01a0b8dca4d13bafbbcbb4bdf7a04c8c",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10487623",
+        "created": "2020-11-10T05:01:01.790Z",
+        "lastModified": "2020-11-10T05:01:01.790Z"
+      },
+      "id": "employee_10487623",
+      "externalId": "5519",
+      "userName": "testemail1241@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 19",
+        "givenName": "55",
+        "familyName": "19"
+      },
+      "emails": [
+        {
+          "value": "testemail1241@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005739",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/15946e4126d888330562f41e360e97af842819ec",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10487624",
+        "created": "2020-11-10T05:18:01.946Z",
+        "lastModified": "2020-11-10T05:18:01.946Z"
+      },
+      "id": "employee_10487624",
+      "externalId": "5520",
+      "userName": "testemail5520@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "55 20",
+        "givenName": "55",
+        "familyName": "20"
+      },
+      "emails": [
+        {
+          "value": "testemail5520@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "1005520",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/21e1f65a3f99abcd41234963c4bf2bc467368120",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10475968",
+        "created": "2020-11-10T00:35:01.997Z",
+        "lastModified": "2020-11-10T00:35:01.997Z"
+      },
+      "id": "employee_10475968",
+      "externalId": "1234",
+      "userName": "emailaddress@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Adam Test",
+        "givenName": "Adam",
+        "familyName": "Test"
+      },
+      "emails": [
+        {
+          "value": "emailaddress@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "2456",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/5f93f70b081d942fe3d8320ebec913a264a3feea",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11139588",
+        "created": "2020-11-23T23:58:46.648Z",
+        "lastModified": "2020-11-23T23:58:46.648Z"
+      },
+      "id": "employee_11139588",
+      "externalId": "33446",
+      "userName": "testshyamandethan@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Adam Test",
+        "givenName": "Adam",
+        "familyName": "Test"
+      },
+      "emails": [
+        {
+          "value": "testshyamandethan@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "33446",
+        "department": "Performance Management"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/a8dfa9b05eb8eaea105e4498362841ba19029286",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11149211",
+        "created": "2020-11-24T05:59:17.343Z",
+        "lastModified": "2020-11-24T05:59:49.720Z"
+      },
+      "id": "employee_11149211",
+      "externalId": null,
+      "userName": "declan.riddell@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Declan Riddell",
+        "givenName": "Declan",
+        "familyName": "Riddell"
+      },
+      "emails": [
+        {
+          "value": "declan.riddell@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": null
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {}
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/226e05d89addf843b5ab094665a405711b716c7f",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11138459",
+        "created": "2020-11-23T23:23:47.480Z",
+        "lastModified": "2020-11-23T23:25:16.685Z"
+      },
+      "id": "employee_11138459",
+      "externalId": null,
+      "userName": "ethan.dai@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Ethan Dai",
+        "givenName": "Ethan",
+        "familyName": "Dai"
+      },
+      "emails": [
+        {
+          "value": "ethan.dai@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "504354"
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "DOB": "1999-01-01T00:00:00.000Z"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/6ebf08b1226391ae3eb664ffe4c4e85312d624a5",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11407790",
+        "created": "2020-11-29T23:04:59.433Z",
+        "lastModified": "2020-11-29T23:04:59.433Z"
+      },
+      "id": "employee_11407790",
+      "externalId": "SAPTEST123",
+      "userName": "test.json1@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "JSON TEST",
+        "givenName": "JSON",
+        "familyName": "TEST"
+      },
+      "emails": [
+        {
+          "value": "test.json1@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": null
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {}
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/29441b5a000ad579f3acaee67126f4d64529a3ad",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11141090",
+        "created": "2020-11-24T00:06:50.253Z",
+        "lastModified": "2020-11-24T00:12:45.617Z"
+      },
+      "id": "employee_11141090",
+      "externalId": "601152",
+      "userName": "pavan1234@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Pawan Test2",
+        "givenName": "Pawan",
+        "familyName": "Test2"
+      },
+      "emails": [
+        {
+          "value": "pavan1234@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "-",
+        "department": "Commercial Finance",
+        "manager": {
+          "value": "employee_11139588"
+        }
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Commercial Finance",
+        "Manager": "testshyamandethan@medibank.com.au"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/42c18e29adaa8ea046a7e09780d34787175791b3",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_10128444",
+        "created": "2020-11-02T16:59:36.143Z",
+        "lastModified": "2020-11-05T00:09:38.453Z"
+      },
+      "id": "employee_10128444",
+      "externalId": null,
+      "userName": "shyamsundar.viswanathan@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Shyam Viswanathan",
+        "givenName": "Shyam",
+        "familyName": "Viswanathan"
+      },
+      "emails": [
+        {
+          "value": "shyamsundar.viswanathan@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": null
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {}
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/87d1be2d1258e6954c2dff6c8950a4b3c85e713b",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11407791",
+        "created": "2020-11-29T23:11:07.038Z",
+        "lastModified": "2020-11-29T23:11:07.207Z"
+      },
+      "id": "employee_11407791",
+      "externalId": "323888",
+      "userName": "test.employee3@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Test Employee",
+        "givenName": "Test",
+        "familyName": "Employee"
+      },
+      "emails": [
+        {
+          "value": "test.employee3@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "222223",
+        "division": "Medibank Private Limited",
+        "department": "Retention & Member Engagement",
+        "manager": {
+          "value": "employee_11149211"
+        }
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "M",
+        "Entity": "Medibank Private Limited",
+        "Award": "Com Law BFI Award",
+        "Local Office": "MELB. 720 Bourke St",
+        "State": "VIC",
+        "Employment Type": "Full-Time Fixed Term",
+        "Separation reason": "Involuntary - End of Fixed Term Employment",
+        "Job Level (band)": "6s",
+        "Business Unit": "Customer & Portfolio",
+        "Division": "Marketing",
+        "Department": "Retention & Member Engagement",
+        "Manager": "declan.riddell@medibank.com.au",
+        "Separation date": "2020-11-15T00:00:00.000Z",
+        "DOB": "1999-08-01T00:00:00.000Z",
+        "Tenure": "2020-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/4615eed19d029913c33196e2bf9c6b805a374ba6",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11407792",
+        "created": "2020-11-29T23:15:55.187Z",
+        "lastModified": "2020-11-29T23:15:55.317Z"
+      },
+      "id": "employee_11407792",
+      "externalId": "323889",
+      "userName": "test.employee4@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Test Employee",
+        "givenName": "Test",
+        "familyName": "Employee"
+      },
+      "emails": [
+        {
+          "value": "test.employee4@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "222245",
+        "division": "Medibank Private Limited",
+        "department": "Retention & Member Engagement",
+        "manager": {
+          "value": "employee_11149211"
+        }
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "M",
+        "Entity": "Medibank Private Limited",
+        "Award": "Com Law BFI Award",
+        "Local Office": "MELB. 720 Bourke St",
+        "State": "VIC",
+        "Employment Type": "Full-Time Fixed Term",
+        "Separation reason": "Involuntary - End of Fixed Term Employment",
+        "Job Level (band)": "6s",
+        "Business Unit": "Customer & Portfolio",
+        "Division": "Marketing",
+        "Department": "Retention & Member Engagement",
+        "Manager": "declan.riddell@medibank.com.au",
+        "Separation date": "2020-11-15T00:00:00.000Z",
+        "DOB": "1999-08-01T00:00:00.000Z",
+        "Tenure": "2020-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/6f9b27a2316756db125ef135448fa92a1338d530",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11407793",
+        "created": "2020-11-29T23:20:51.614Z",
+        "lastModified": "2020-11-29T23:20:51.614Z"
+      },
+      "id": "employee_11407793",
+      "externalId": "323890",
+      "userName": "test.employee5@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Test Employee",
+        "givenName": "Test",
+        "familyName": "Employee"
+      },
+      "emails": [
+        {
+          "value": "test.employee5@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": null
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {}
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/d28c32eff8773a56750b8d18ce5cad71c3923c9b",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11407794",
+        "created": "2020-11-29T23:26:54.019Z",
+        "lastModified": "2020-11-29T23:26:54.019Z"
+      },
+      "id": "employee_11407794",
+      "externalId": "323891",
+      "userName": "test.employee10@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Test Employee",
+        "givenName": "Test",
+        "familyName": "Employee"
+      },
+      "emails": [
+        {
+          "value": "test.employee10@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": null
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {}
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/486b2ad36d3a7b47abe869c280a2732684f285c2",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11407795",
+        "created": "2020-11-29T23:44:54.381Z",
+        "lastModified": "2020-11-29T23:44:54.508Z"
+      },
+      "id": "employee_11407795",
+      "externalId": "323893",
+      "userName": "test.employee11@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Test Employee",
+        "givenName": "Test",
+        "familyName": "Employee"
+      },
+      "emails": [
+        {
+          "value": "test.employee11@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "222280",
+        "division": "Medibank Private Limited",
+        "department": "Retention & Member Engagement",
+        "manager": {
+          "value": "employee_11149211"
+        }
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "M",
+        "Entity": "Medibank Private Limited",
+        "Award": "Com Law BFI Award",
+        "Local Office": "MELB. 720 Bourke St",
+        "State": "VIC",
+        "Employment Type": "Full-Time Fixed Term",
+        "Separation reason": "Involuntary - End of Fixed Term Employment",
+        "Job Level (band)": "6s",
+        "Business Unit": "Customer & Portfolio",
+        "Division": "Marketing",
+        "Department": "Retention & Member Engagement",
+        "Manager": "declan.riddell@medibank.com.au",
+        "Separation date": "2020-11-15T00:00:00.000Z",
+        "DOB": "1999-08-01T00:00:00.000Z",
+        "Tenure": "2020-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:peakon:2.0:User"
+      ],
+      "meta": {
+        "resourceType": "User",
+        "version": "W/00d5a959f6ee1fddac2ff94f099dbac02be83cde",
+        "location": "https://api.staging-peakon.com/scim/v2/Users/employee_11145434",
+        "created": "2020-11-24T01:07:02.928Z",
+        "lastModified": "2020-11-24T01:07:40.428Z"
+      },
+      "id": "employee_11145434",
+      "externalId": null,
+      "userName": "vijay.seethamraju@medibank.com.au",
+      "locale": null,
+      "timezone": null,
+      "name": {
+        "formatted": "Vijay Seethamraju",
+        "givenName": "Vijay",
+        "familyName": "Seethamraju"
+      },
+      "emails": [
+        {
+          "value": "vijay.seethamraju@medibank.com.au"
+        }
+      ],
+      "phoneNumbers": [],
+      "active": true,
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "506243",
+        "department": "Performance Management",
+        "manager": {
+          "value": "employee_11138459"
+        }
+      },
+      "urn:ietf:params:scim:schemas:extension:peakon:2.0:User": {
+        "Gender": "Male",
+        "Department": "Performance Management",
+        "Manager": "ethan.dai@medibank.com.au",
+        "Tenure": "2017-09-25T00:00:00.000Z",
+        "DOB": "1980-03-19T00:00:00.000Z"
+      }
+    }
+  ]
+}
