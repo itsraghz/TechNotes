@@ -1,0 +1,11 @@
+--------------------
+Date: 31:12:2020
+Time: 12:44
+Phone number: +6594819630
+Message: [PyWhatKit] Automated - This is a test message
+--------------------
+Date: 31:12:2020
+Time: 13:0
+Phone number: +6594819630
+Message: [PyWhatKit] Automated - This is a test message
+--------------------

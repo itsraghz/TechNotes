@@ -2,7 +2,7 @@
 
 // format to specify the data\
 // a data carrier (like XML) 
-// MIME Type - application/json, similar to plain/text
+// MIME Type - 'application/json', similar to plain/text
 
 // data specified in a key,value pair { key: value} and more than one will be comma separated
 // a key and value will be separated by a semicolon (':')
@@ -83,7 +83,6 @@ println jsonOutputObj.properties
 // JsonSlurper - to read a JSON Literal and give a JSON Object
 // --------------------------------------
 import groovy.json.JsonSlurper
-
 
 def teacherJsonTxt = '{"Name" : "Raghavan", "age" : 40, "subject": ["Java", "Groovy"]}'
 jsonObjFromSlurper = new JsonSlurper().parseText(teacherJsonTxt)
