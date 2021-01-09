@@ -97,8 +97,8 @@ def printMapKeyValues(map) {
     println "printMapKeyValues() - map contains : " + map
     map.keySet().each {
         if(it.equals("PAN")){
-            maskDigits(map.get(it))
-            println it + " --> " + "*************"
+            def maskedData = maskDigits(map.get(it))
+            println it + " --> " + maskedData
         } else {
             // map.it will try to fetch the value of key named 'it'. The dot notation is very specific
             // map.get(it) will try to get the value of the key supplied by the variable 'it' which is a closure iteration here
@@ -119,8 +119,9 @@ def maskDigits(data) {
         maskedData<<it
         println index + ": " + it
     }
-    println "[**] Masked Data : " + maskedData + ", flattened : " + maskedData.flatten()
-    println "%%%%%%%%%%%%%%"    
+    println "[**] Masked Data : " + maskedData + ", flattened : " +  maskedData.join("")
+    println "%%%%%%%%%%%%%%"   
+    return maskedData.join("") 
 }
 
 /*printObject(myList)
