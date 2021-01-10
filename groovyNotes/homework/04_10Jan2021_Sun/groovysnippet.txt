@@ -1,0 +1,28 @@
+def phoneMap = [:], emailMap = [:], personP = [:], personE = [:], personPhone = [:], personEmail = [:], phoneBMap = [:], emailBMap = [:],  PIDEXTMap = [:];
+	String isPrimary = ""; String str = "";
+
+	def doc = new XmlSlurper().parseText( stringBody );
+	def employees = doc.CompoundEmployee, persons, employments, relations, phones, emails;
+
+	for( employee in employees ){
+		personID = employee.person.person_id_external;
+		persons =  employee.person;
+		employments = employee.person.employment_information;
+		phones = employee.person.phone_information;
+		emails = employee.person.email_information;
+		personP = [:]; personPhone = [:]; personEmail = [:];
+		personE = [:];
+		PIDEXT = [:];
+		
+		for ( person in persons){
+			PIDEXTMap[personID.toString()] = person.person_id_external.toString();
+		}
+		for ( phone in phones){
+			str = "";
+			if (phone.isPrimary.toString() != null)
+				isPrimary = phone.isPrimary.toString();
+			else
+				isPrimary = "";
+
+			if (isPrimary == "true"){
+				personP[phone.phone_type.toString()] = is

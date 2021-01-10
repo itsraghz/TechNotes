@@ -1,0 +1,14 @@
+<root>
+    <CompoundEmployee>
+        <Person>
+            <EmploymentInformation>
+                <Company>
+                </Company>
+            <EmploymentInformation>
+            <PhoneInformation>
+            </PhoneInformation>
+            <EmailInformation>
+            </EmailInformation>
+        </Person>
+    </CompoundEmployee>
+</root>
