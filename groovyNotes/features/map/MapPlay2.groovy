@@ -195,7 +195,7 @@ def emp1 = new Employee(employeeId: 1001, firstName: 'Raghavan', lastName: 'Muth
 //println "Employee instance person1 is : "+ emp1
 def employeeTypeMap = new LinkedHashMap<Integer, Employee>()
 employeeTypeMap = [1001: emp1]
-//printMapProperties(employeeTypeMap)
+printMapProperties(employeeTypeMap)
 
 
 printMapKeyValues(PersonMap)
