@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Problem Statements
+    ===================
+    1. Find whether a customer is active or not and update the IsActive Flag, based on his Order History
+        whether the last made order is within the last quarter
+    2. Find whether the Total Order value of a customer is intact, depending on sum value of each Product
+        order based on its quantity * price - discountPercentage if any applicable.
+    3. Find out all the male customers
+    4. Find out all the female customers who are of age less than 30
+    5. Find out all the male customers in the country Australia
+    6. Find out all the customers who made an order more than 10,000 INR so far
+    7. Find out the customer who made the highest purchase in Dec 2020
+    8. Find out the customer who had ordered Almonds (irrespective of the quantity)
+-->
+<Customers>
+    <Customer>
+        <FirstName>Raghavan</FirstName>
+        <LastName>Muthu</LastName>
+        <Age>40</Age>
+        <Gender>Male</Gender>
+        <City>Chenani</Country>
+        <Country>India</Country>
+        <CustomerSince>2019-01-01</CustomerSince>
+        <IsActive>Y</IsActive> <!-- Can be computed based on the Order History -->
+        <Orders>
+            <Order>
+                <Date>2020-12-01</Date>
+                <Total>221</Total>
+                <Currency>INR</Currency>
+                <PaymentMode>Cash</PaymentMode>
+                <Products>
+                    <Product>
+                        <Name>Toothbrush</Name>
+                        <Brand>Colgate</Brand>
+                        <Quantity>2</Quantity>
+                        <Weight></Weight>
+                        <Currency>INR</Currency>
+                        <Price>20</Price>
+                        <DiscountPercentage></DiscountPercentage>
+                    </Product>
+                    <Product>
+                        <Name>Almond</Name>
+                        <Brand>Reliance</Brand>
+                        <Quantity>2</Quantity>
+                        <Weight>500gms</Weight>
+                        <Currency>INR</Currency>
+                        <Price>400</Price>
+                        <DiscountPercentage>5%</DiscountPercentage>
+                    </Product>                    
+                </Products>
+            </Order>
+        </Orders>
+    </Customer>
+</Customers>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employees>
+    <Employee>
+        <FirstName>Raghavan</FirstName>
+        <LastName>Muthu</LastName>
+        <Age>40</Age>
+        <Gender>Male</Gender>
+        <EmployeeId>2351</EmployeeId>
+        <StartDate>2020-01-01</StartDate>
+        <EndDate></EndDate> <!-- Active Employee -->
+        <Trainer>Y</Trainer>
+        <City>Chennai</City>
+        <Country>India</Country>
+        <Manager>Y</Manager>
+        <SkillSet>
+            <Technology>
+                <Name>Java</Name>
+                <Topics>Core Java,OOP, Multithreading, Exception, Collections, JDBC</Topics>
+                <Expertise>Expert</Expertise>
+            </Technology>
+            <Technology>
+                <Name>Groovy</Name>
+                <Topics>Scripting, Groovy-Java Integration, Closures, GroovySQL, MarkupBuilder</Topics>
+                <Expertise>Intermediate</Expertise>
+            </Technology>           
+            <Technology>
+                <Name>Cloud AWS</Name>
+                <Topics>Cloud Computing, AWS, EC2, S3, Elastic IP, Billing</Topics>
+                <Expertise>Beginner</Expertise>
+            </Technology>              
+        </SkillSet>
+        <Projects>
+            <Project>
+                <Name>Next Gen</Name>
+                <Acronym>NG</Acronym>
+                <Manager>John Doe</Manager>
+                <Location>Sydney</Location>
+                <Country>Australia</Country>
+                <StartDate>2020-01-01</StartDate>
+                <EndDate></EndDate><!-- Meaning, he is still actively working --> 
+                <Currency>USD</Currency>
+                <HourlyRate>80</HourlyRate>                
+            </Project>
+            <Project>
+                <Name>Project Timesheet Tracking</Name>
+                <Acronym>PTS</Acronym>
+                <Manager>Lee Brown</Manager>
+                <Location>Sydney</Location>
+                <Country>Australia</Country>
+                <StartDate>2020-03-01</StartDate>
+                <EndDate>2020-11-30</EndDate>
+                <Currency>AUD</Currency>
+                <HourlyRate>40.50</HourlyRate>
+            </Project>            
+        </Projects>
+    </Employee>
+    <Employee>
+        <FirstName>Shyam</FirstName>
+        <LastName>Viswanathan</LastName>
+        <Age>38</Age>
+        <Gender>Male</Gender>
+        <EmployeeId>4587</EmployeeId>
+        <StartDate>2020-06-01</StartDate>
+        <EndDate></EndDate> <!-- Active Employee -->
+        <Trainer>Y</Trainer>
+        <City>Chennai</City>
+        <Country>India</Country>
+        <Manager>N</Manager>
+        <SkillSet>
+            <Technology>
+                <Name>Java</Name>
+                <Topics>Core Java,OOP, Multithreading, Exception, Collections, JDBC</Topics>
+                <Expertise>Expert</Expertise>
+            </Technology>
+            <Technology>
+                <Name>Groovy</Name>
+                <Topics>Scripting, Groovy-Java Integration, Closures, GroovySQL, MarkupBuilder</Topics>
+                <Expertise>Intermediate</Expertise>
+            </Technology>           
+            <Technology>
+                <Name>Cloud AWS</Name>
+                <Topics>Cloud Computing, AWS, EC2, S3, Elastic IP, Billing</Topics>
+                <Expertise>Beginner</Expertise>
+            </Technology>              
+        </SkillSet>
+        <Projects>
+            <Project>
+                <Name>Next Gen</Name>
+                <Acronym>NG</Acronym>
+                <Manager>John Doe</Manager>
+                <Location>Sydney</Location>
+                <Country>Australia</Country>
+                <StartDate>2020-01-01</StartDate>
+                <EndDate></EndDate><!-- Meaning, he is still actively working --> 
+                <Currency>USD</Currency>
+                <HourlyRate>80</HourlyRate>                
+            </Project>
+            <Project>
+                <Name>Project Timesheet Tracking</Name>
+                <Acronym>PTS</Acronym>
+                <Manager>Lee Brown</Manager>
+                <Location>Sydney</Location>
+                <Country>Australia</Country>
+                <StartDate>2020-03-01</StartDate>
+                <EndDate>2020-11-30</EndDate>
+                <Currency>AUD</Currency>
+                <HourlyRate>40.50</HourlyRate>
+            </Project>            
+        </Projects>
+    </Employee>    
+</Employees>
