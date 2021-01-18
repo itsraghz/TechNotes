@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root>
+    <node1>
+        <value1>AA</value1>
+        <value2>123</value2>
+    </node1>
+    <node2>
+        <value1>AA</value1>
+        <value2>999</value2>
+    </node2>
+    <node3>
+        <value1>AB</value1>
+        <value2>456</value2>
+    </node3>
+    <node4>
+        <value1>AB</value1>
+        <value2>888</value2>
+    </node4>
+</root>
