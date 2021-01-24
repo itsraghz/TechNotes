@@ -29,9 +29,6 @@
 * https://stackoverflow.com/questions/17946763/how-to-get-all-the-variables-of-a-groovy-object-or-class
 * https://www.infoq.com/articles/groovy-3-new-features-java/
 * https://medium.com/@pranitsawant01/learn-groovy-in-minutes-28f01a9928e5
-* https://www.timroes.de/groovy-tutorial-for-java-developers
-* https://www.timroes.de/groovy-tutorial-for-java-developers-part2-closures
-* https://www.timroes.de/groovy-tutorial-for-java-developers-part3-collections
 
 ## Books
 
