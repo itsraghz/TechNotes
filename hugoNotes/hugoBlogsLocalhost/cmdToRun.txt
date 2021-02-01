@@ -1,0 +1,2 @@
+hugo new site quick-start # new site with config.toml (default) 
+hugo new site quick-start --format=yaml # new site with the config.file in yaml format (overridden)  
