@@ -1,0 +1,1 @@
+Spring Boot Rest Demo project based on the Spring.io guides available at https://spring.io/guides/gs/rest-service/ with a few customizations on my own.
