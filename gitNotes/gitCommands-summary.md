@@ -6,6 +6,7 @@
 | `git config` | Shows the git config menu and the list of options to invoke | Parent command |
 | `git config --list` | Lists down all the configurations in the System | |
 | `git status` | Shows the status of the repository/snapshot with respect to the previous commit made | It basically two different type of files *`untracked`* and *`modified`*. Untracked is the files which were not present in the latest snapshot/commit of the repo but which are newly added and yet to be commited. _Modified_ is the set of files which were earlier present in the snapshot/commit of the repo but modified recently. |
+| `git status -s` | Shows the short summary of the files names and the mode (A, M etc.,) on the console, than the long verbose text. | Helpful when you really want to know the files alone, for a quick output. |
 | `git log` | Shows the summary of all git commits made so far in the repo. | Shows the commit Id and the commit message in the descending order.  |
 | `git log --oneline` | Shows the summary of all git commit so far made, in a concise manner. | Shows the shortened version of the commitId but that is unique enough to identify it individually. |
 | `git add file1 file2` | adds the files `file1` and `file2` to the git repo. | The file are space separated |
