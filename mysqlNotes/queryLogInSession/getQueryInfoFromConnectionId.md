@@ -9,7 +9,7 @@ The below SQL query and results explains the steps involved in getting to know t
 ## SQL Query Execution and Results
 
 ```sql
-mysql -D itsraghz --user=raghs --password=RaghsMySQL12#
+c:\mysql> mysql -D itsraghz --user=raghs --password=<Password>
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 340
 Server version: 10.1.13-MariaDB mariadb.org binary distribution
