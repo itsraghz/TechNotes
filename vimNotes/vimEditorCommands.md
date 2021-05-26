@@ -294,3 +294,5 @@ Issue the command `%s/word/newWord/g` where the command elements means the follo
 Change to command mode by pressing the `Esc` key if you are in the Insert/Visual mode.
 
 Issue the command `:%s/\<word\>\C/newWord/g` where it will replace only `word` with `newWord` leaving others like `Word`, `WORD` etc., unreplaced.
+
+> Refer https://stackoverflow.com/questions/1778501/find-and-replace-whole-words-in-vim for more details
