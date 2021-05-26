@@ -10,7 +10,9 @@
 |   |             |                |  1. Search for the next/previous occurrence of a word |
 | 4 | 19 Oct 2020 | Raghavan Muthu | Vim Commands Added |
 |   |             |                |  1. Delete all contents of the file |
-
+| 5 | 26 May 2021 | Raghavan Muthu | Vim Commands Added |
+|   |             |                |  1. Find and Replace a whole word |
+|   |             |                |  1. Find and Replace a whole word - Case Sensitive |
 #Todo - for pending few of the commands
 
 ## How many modes are available in Vi editor?
@@ -266,3 +268,28 @@ Yes. If you copy and paste it via Yanking, the cursor have to be set a line befo
 
   * Press `gg` to bring the cursor to the 1st line 1st character of the file. Press `dG` to `delete globally`.
   * Issue the command `1, $d` (Issue this as `:1, $d` actually)
+
+## How to find and replace a word in Vi/Vim editor ?
+
+  Change to Command mode by pressing `Esc` key if you are in the Insert/Visual mode.
+  It is the very basic pre-requisite for issuing any commands to the Vi/Vim editor.
+
+  Issue the command `%s/word/newWord/g` where the command elements means the following
+    * `%s` means `substitute`
+    * `<word>` &rarr; the word to look for (find , search for)
+    * `<newWord>` &rarr; the word to be replaced
+    * `g` &rarr; meaning a global replace (in the entire file)
+
+ > Refer https://vim.fandom.com/wiki/Search_and_replace for more options
+ 
+## How do I find and replace a whole word in Vi/Vim editor?
+
+ Change to command mode by pressing the `Esc` key if you are in the Insert/Visual mode.
+
+ Issue the command `%s/\<word\>/newWord/g` which will replace the occurrences of the whole word of the `word` in the current file and not the partial or substring references.
+
+## How do I find and replace a whole world in a case sensitive manner in Vi/Vim editor?
+
+Change to command mode by pressing the `Esc` key if you are in the Insert/Visual mode.
+
+Issue the command `:%s/\<word\>\C/newWord/g` where it will replace only `word` with `newWord` leaving others like `Word`, `WORD` etc., unreplaced.
