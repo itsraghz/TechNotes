@@ -275,6 +275,7 @@ Change to Command mode by pressing `Esc` key if you are in the Insert/Visual mod
 It is the very basic pre-requisite for issuing any commands to the Vi/Vim editor.
 
 Issue the command `%s/word/newWord/g` where the command elements means the following
+
    -  `%s` means `substitute`
    -  `<word>` &rarr; the word to look for (find , search for)
    - `<newWord>` &rarr; the word to be replaced
