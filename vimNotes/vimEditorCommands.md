@@ -275,13 +275,13 @@ Yes. If you copy and paste it via Yanking, the cursor have to be set a line befo
   It is the very basic pre-requisite for issuing any commands to the Vi/Vim editor.
 
   Issue the command `%s/word/newWord/g` where the command elements means the following
-    * `%s` means `substitute`
-    * `<word>` &rarr; the word to look for (find , search for)
-    * `<newWord>` &rarr; the word to be replaced
-    * `g` &rarr; meaning a global replace (in the entire file)
+     -  `%s` means `substitute`
+     -  `<word>` &rarr; the word to look for (find , search for)
+     - `<newWord>` &rarr; the word to be replaced
+     -  `g` &rarr; meaning a global replace (in the entire file)
 
  > Refer https://vim.fandom.com/wiki/Search_and_replace for more options
- 
+
 ## How do I find and replace a whole word in Vi/Vim editor?
 
  Change to command mode by pressing the `Esc` key if you are in the Insert/Visual mode.
