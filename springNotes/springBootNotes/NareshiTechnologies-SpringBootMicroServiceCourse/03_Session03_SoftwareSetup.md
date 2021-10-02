@@ -31,6 +31,12 @@ Session 3
 
 > Dont forget to `Update Maven Project` - either by pressing `Alt + F5` ,or `Right Click -> Maven -> Update Project` for the settings to take effect. 
 
+### Maven Tutorials by Mr Raghu in Naresh IT YouTube Channel 
+
+* https://www.youtube.com/watch?v=9eJAvApRAI0
+* https://www.youtube.com/watch?v=jOykBjSl1X0
+* https://www.youtube.com/watch?v=iLwuhbnFPqo
+
 ## Spring Gradle Project Creation / Setup 
 
 > Search in YouTube in the "NareshIT YouTube Channel" with "Raghu Gradle"
@@ -52,5 +58,11 @@ Session 3
 
 > No plugins are needed to be downloaded separately, as they come built in with the STS. 
 
+
+
+### Gradle Tutorials by Mr Raghu in Naresh IT YouTube Channel 
+
+* https://www.youtube.com/watch?v=xQQ982rgP9c
+* https://www.youtube.com/watch?v=1B3KXwZYThI
 
 
