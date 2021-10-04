@@ -47,6 +47,52 @@ The file name can be anything but it should be of type `.xml`.
 </beans>
 ```
 
+
+*Student.java*
+
+```java
+/**
+ * 
+ */
+package com.raghsonline.springcore;
+
+/**
+ * @author raghs
+ *
+ */
+public class Student {
+
+	private String name;
+	private String location;
+
+	
+	public Student() {		
+		super();
+		System.out.println("Student Class Constructor Invoked");
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		System.out.println("Student Class setName() Invoked");
+		this.name = name;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		System.out.println("Student Class setLocation() Invoked");
+		this.location = location;
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", location=" + location + "]";
+	}	
+
+}
+```
+
 ## Spring Container and Types 
 
 There are two types. 
