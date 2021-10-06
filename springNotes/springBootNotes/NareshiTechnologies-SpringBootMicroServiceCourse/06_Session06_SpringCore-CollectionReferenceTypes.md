@@ -93,6 +93,10 @@ public class Product {
 
 ## Spring Core - Set 
 
+```java
+
+```
+
 ## Spring Core - Map 
 
 ```java
@@ -150,3 +154,10 @@ Spring Boot & MS @ 7:30 AM | Mr. Raghu
 * Day-6: https://youtu.be/41j3ylw7Zq4
 * Day-7: https://youtu.be/TospBHUvu_M
 * Day-8: https://youtu.be/ajctkgqX7zk
+
+## Homework 
+
+Spring Core Annotation and Autowired - YouTube videos in NareshIT 'Spring Core Raghu' 
+
+* NareshIT YouTube Channel - Java Tutorials | by Mr. Raghu - https://www.youtube.com/playlist?list=PLVlQHNRLflP9XSWeY4x4FLwnL3UOIxnTr
+
