@@ -1,7 +1,7 @@
-# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT 
+# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT
 
-Session 07
-07 Oct 2021 Thu
+Session 07 \
+07 Oct 2021 Thu \
 7 30 AM IST - 08 45 AM IST
 
 > Spring Boot & MS @ 7:30 AM (IST) by `Mr.Raghu_NEW` Link \
@@ -12,19 +12,19 @@ Session 07
 
 *  Reference Type Dependency  - Has-a Relationship - Tag: <ref>
 
-* IS-A - Inheritance using extends/implements linked with the classes 
-* HAS-A - Association using one class/interface as a data type , and create variable in other class. 
+* IS-A - Inheritance using extends/implements linked with the classes
+* HAS-A - Association using one class/interface as a data type , and create variable in other class.
 
 
-## Example 
+## Example
 
-An `Employee` class will have an `Address` class. 
+An `Employee` class will have an `Address` class.
 
 * Employee - Parent
-* Address - Child. 
+* Address - Child.
 * Employee `HAS-A` variable of `Address`.
 
-### Syntax 
+### Syntax
 
 ```xml
 <bean id="childObj" class="FQCN"
@@ -39,13 +39,13 @@ An `Employee` class will have an `Address` class.
 </bean>
 ```
 
-### Java Class 
+### Java Class
 
 *Child class* - `Address.java`
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -57,13 +57,13 @@ public class Address {
 
 	private String houseNo;
 	private String location;
-	
+
 	// Alt + Shift + S > o > D (Deselect All) > OK
 	public Address() {
 		super();		
 		System.out.println("Address class Instantiated");
-	}	
-	
+	}
+
 	// Alt + Shift + S > r > A (Select All) > OK
 	public String getHouseNo() {
 		return houseNo;
@@ -88,7 +88,7 @@ public class Address {
 	public String toString() {
 		System.out.println("Address toString() invoked");
 		return "Address [houseNo=" + houseNo + ", location=" + location + "]";
-	}	
+	}
 }
 ```
 
@@ -96,7 +96,7 @@ public class Address {
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -108,7 +108,7 @@ public class Employee {
 
 	private int empId;
 	private String empName;
-	
+
 	private Address addr;
 
 	public Employee() {
@@ -146,11 +146,11 @@ public class Employee {
 	public String toString() {
 		System.out.println("Employee toString() invoked");
 		return "Employee [empId=" + empId + ", empName=" + empName + ", addr=" + addr + "]";
-	}	
+	}
 }
 ```
 
-### Config file 
+### Config file
 
 *Config* : `beans.xml`
 
@@ -159,7 +159,7 @@ public class Employee {
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- 1. Child class -->
@@ -171,7 +171,7 @@ public class Employee {
 			<value>KKDI, TN</value>
 		</property>
 	</bean>
-	
+
 	<!-- 2. Parent class  -->
     <bean id="emp" class="com.raghsonline.springcore.bean.Employee">
     	<property name="empId">
@@ -188,13 +188,13 @@ public class Employee {
 </beans>
 ```
 
-### Test Class 
+### Test Class
 
 *Test Class* : `Test.java`
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -217,7 +217,7 @@ public class Test {
 }
 ```
 
-### Execution and Output 
+### Execution and Output
 
 ```java
 Address class Instantiated
@@ -230,4 +230,3 @@ Employee toString() invoked
 Address toString() invoked
 Employee [empId=2351, empName=Raghavan, addr=Address [houseNo=F-1, location=KKDI, TN]]
 ```
-

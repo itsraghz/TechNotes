@@ -1,7 +1,7 @@
-# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT 
+# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT
 
-Session 09
-11 Oct 2021 Mon
+Session 09 \
+11 Oct 2021 Mon \
 7 30 AM IST - 08 45 AM IST
 
 > Spring Boot & MS @ 7:30 AM (IST) by `Mr.Raghu_NEW` Link \
@@ -10,9 +10,9 @@ Session 09
 
 # Agenda
 
-* Annotation Configuration Continuation 
+* Annotation Configuration Continuation
 
-## App Config Class 
+## App Config Class
 
 *  A Java class is used for configuration, but annotated with `@Configuration` for its purpose.
 
@@ -24,19 +24,19 @@ class AppConfig {
 }
 ```
 
-> `@Component` lets the Spring Container creates an instance of the Bean. 
+> `@Component` lets the Spring Container creates an instance of the Bean.
 
 ## StereoType Annotation - `@Component`
 
 ## Supporting Annotation - `@Value`
 
-* Direct Values in code - not a good approach 
-* Reading values from property files - Recommended and Important 
+* Direct Values in code - not a good approach
+* Reading values from property files - Recommended and Important
 * SpEL - Spring Expression Language
 
-### Demo - `@Value` - direct 
+### Demo - `@Value` - direct
 
-#### Spring Bean 
+#### Spring Bean
 
 *File*: `Product.java`
 
@@ -48,17 +48,17 @@ import org.springframework.stereotype.Component;
 
 @Component("pob")
 public class Product {
-	
+
 	@Value("101")
 	private Integer pId;
-	
+
 	@Value("PEN")
 	private String pCode;
-	
+
 	public Product() {
 		System.out.println("Product constructor invoked.");
 	}
-	
+
 	@Override
 	public String toString() {
 		System.out.println("Product toString() invoked.");
@@ -75,14 +75,14 @@ package com.raghsonline.springcore.config;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration	
-@ComponentScan(basePackages =  "com.raghsonline.springcore")	
+@Configuration
+@ComponentScan(basePackages =  "com.raghsonline.springcore")
 public class AppConfig {
 
 }
 ```
 
-#### Test class 
+#### Test class
 
 *Test.java*
 
@@ -100,7 +100,7 @@ public class Test {
 		ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 		Object obj = ac.getBean("pob");
 		System.out.println(obj);
-		
+
 		((AnnotationConfigApplicationContext) ac).close();
 	}
 }
@@ -118,7 +118,7 @@ Product [pId=101, pCode=PEN]
 
 `@PropertySource("classpath:app.properties")`
 
-### Demo - `@Value`  from config file 
+### Demo - `@Value`  from config file
 
 > The location : `src/main/resources`
 
@@ -156,19 +156,19 @@ import org.springframework.stereotype.Component;
 
 @Component("dbCon")
 public class MyDataSource {
-	
+
 	@Value("${my.app.driver}")
 	private String driver;
-	
-	@Value("${my.app.url}")
-	private String url;	
 
-	@Value("${my.app.un}")	
+	@Value("${my.app.url}")
+	private String url;
+
+	@Value("${my.app.un}")
 	private String username;
-	
+
 	@Value("${my.app.pwd}")
-	private String password;	
-	
+	private String password;
+
 	@Override
 	public String toString() {
 		return "MyDataSource [driver=" + driver + ", url=" + url + ", username=" + username + ", password=" + password
@@ -214,13 +214,13 @@ public class Test {
 		ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 		Object obj = ac.getBean("dbCon");
 		System.out.println(obj);
-		
+
 		((AnnotationConfigApplicationContext) ac).close();
 	}
 }
 ```
 
-#### Console Output 
+#### Console Output
 
 ```java
 MyDataSource [driver=OracleDriver, url=jdbc-orcl-xyz, username=raghs, password=RagPwd!]
@@ -229,14 +229,14 @@ MyDataSource [driver=OracleDriver, url=jdbc-orcl-xyz, username=raghs, password=R
 # Notes
 
 * If a key is not present in the `@Value` annotation, the value is treated as a literal string - `${my.app.driver}` for example.
-* If a key is not present in the `@Value` annotation for a numeric variable (`int port` for ex), the Spring Container will throw a `ParseException` 
+* If a key is not present in the `@Value` annotation for a numeric variable (`int port` for ex), the Spring Container will throw a `ParseException`
 	as it would not be able to convert that to an interger parameter/member for the `port`.
 
 ## Loading Multiple Properties
 
-It is possible with the *repeated annotation* and / or an `Array` format. 
+It is possible with the *repeated annotation* and / or an `Array` format.
 
-### Syntax 1 - Repeated 
+### Syntax 1 - Repeated
 
 ```java
 @PropertySource("classpath:jdbc.properties")
@@ -245,7 +245,7 @@ It is possible with the *repeated annotation* and / or an `Array` format.
 @PropertySource("classpath:security.properties")
 ```
 
-### Syntax 2 - Array 
+### Syntax 2 - Array
 
 ```
 @PropertySource({
@@ -260,9 +260,9 @@ public class AppConfig {
 ```
 
 > The order of configuring the `.properties` file matter. If at all a same key has been configured in more than one file, the value of the key
-> will be considered/preferred from the config file loaded at last. 
+> will be considered/preferred from the config file loaded at last.
 
-### Example 
+### Example
 
 #### Config file - new one `email.properties`
 
@@ -297,10 +297,10 @@ public class AppConfig {
 }
 ```
 
-#### Console Output 
+#### Console Output
 
 ```
 MyDataSource [driver=MySQLDriver-Email, url=jdbc-orcl-xyz, username=raghs, password=RagPwd!]
 ```
 
-> *Note*: Careful observation will tell you that the value for `driver` has changed to `MySQLDriver. 
+> *Note*: Careful observation will tell you that the value for `driver` has changed to `MySQLDriver.

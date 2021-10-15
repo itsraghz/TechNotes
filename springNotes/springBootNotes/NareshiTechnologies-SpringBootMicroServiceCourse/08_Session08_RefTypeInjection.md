@@ -1,7 +1,7 @@
-# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT 
+# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT
 
-Session 08
-09 Oct 2021 Sat
+Session 08 \
+09 Oct 2021 Sat \
 7 30 AM IST - 08 45 AM IST
 
 > Spring Boot & MS @ 7:30 AM (IST) by `Mr.Raghu_NEW` Link \
@@ -10,22 +10,22 @@ Session 08
 
 # Agenda
 
-* Reference Type Injection 
-  * Example : `Product` has a `Vendor` 
-  * wiring 
-* Annotation Configuration 
+* Reference Type Injection
+  * Example : `Product` has a `Vendor`
+  * wiring
+* Annotation Configuration
 
-## Revision of Reference Type Injection 
+## Revision of Reference Type Injection
 
-### Spring Bean 
+### Spring Bean
 
-#### Vendor Bean 
+#### Vendor Bean
 
 *File*: `Vendor.java`
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -37,7 +37,7 @@ public class Vendor {
 
 	private int id;
 	private String name;
-	
+
 	public Vendor() {
 		super();
 		System.out.println("Vendor is created");
@@ -62,17 +62,17 @@ public class Vendor {
 	@Override
 	public String toString() {
 		return "Vendor [id=" + id + ", name=" + name + "]";
-	}	
+	}
 }
 ```
 
-#### Product Bean 
+#### Product Bean
 
 *File*: `Product.java`
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -81,11 +81,11 @@ package com.raghsonline.springcore.bean;
  *
  */
 public class Product {
-	
+
 	private int id;
 	private String code;
 	private Vendor ven;
-	
+
 	public Product() {		
 		super();
 		System.out.println("Product is created");
@@ -119,7 +119,7 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", code=" + code + ", ven=" + ven + "]";
-	}	
+	}
 }
 ```
 
@@ -132,7 +132,7 @@ public class Product {
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- 1. Child class -->
@@ -140,7 +140,7 @@ public class Product {
 		<property name="id" value="101"/>
 		<property name="name" value="RaghsOnline" />		
 	</bean>
-	
+
 	<!-- 2. Parent class  -->
     <bean id="productObj" class="com.raghsonline.springcore.bean.Product">
 		<property name="id" value="101"/>
@@ -159,7 +159,7 @@ public class Product {
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -180,7 +180,7 @@ public class Test {
 }
 ```
 
-### Output 
+### Output
 
 ```java
 Vendor is created
@@ -198,7 +198,7 @@ Product [id=101, code=PEN, ven=Vendor [id=101, name=RaghsOnline]]
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- 1. Child class -->
@@ -206,7 +206,7 @@ Product [id=101, code=PEN, ven=Vendor [id=101, name=RaghsOnline]]
 		<property name="id" value="101"/>
 		<property name="name" value="RaghsOnline" />		
 	</bean>
-	
+
 	<!-- 2. Parent class  -->
     <bean id="productObj" class="com.raghsonline.springcore.bean.Product">
 		<property name="id" value="101"/>
@@ -223,10 +223,10 @@ Product [id=101, code=PEN, ven=Vendor [id=101, name=RaghsOnline]]
 ```java
 Vendor is created
 Product is created
-Product [id=101, code=PEN, ven=null]	
+Product [id=101, code=PEN, ven=null]
 ```
 
-#### Scenario 2 - Alter the object sequences 
+#### Scenario 2 - Alter the object sequences
 
 First declare the parent bean `productObj` and then the child - `vendorObj`  in the `config.xml` file
 
@@ -237,9 +237,9 @@ First declare the parent bean `productObj` and then the child - `vendorObj`  in 
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
+
 	<!-- 2. Parent class  -->
     <bean id="productObj" class="com.raghsonline.springcore.bean.Product">
 		<property name="id" value="101"/>
@@ -248,7 +248,7 @@ First declare the parent bean `productObj` and then the child - `vendorObj`  in 
     		<ref bean="vendorObj"/>
     	</property>
     </bean>
-    
+
   <!-- 1. Child class -->
 	<bean id="vendorObj" class="com.raghsonline.springcore.bean.Vendor">
 		<property name="id" value="101"/>
@@ -271,26 +271,26 @@ Product [id=101, code=PEN, ven=Vendor [id=101, name=RaghsOnline]]
 > *Note : * The order of creating the objects (Parent,Child) is immaterial. However they both should have been created,
 > prior to establishing the link (injecting the dependency).
 
-## Annotation 
+## Annotation
 
-* StereoType  - There are 5 types - used to create object to a given Programmer class. 
-  * `@Component` - object creation 
+* StereoType  - There are 5 types - used to create object to a given Programmer class.
+  * `@Component` - object creation
   * `@Repository` - creating object + database operations (Implicit in SpringBoot)
   * `@Service` - creating object +  Operations/Logics + Transaction Management
-  * `@Controller` - Creating object + Web Applications + HTTP Operations 
+  * `@Controller` - Creating object + Web Applications + HTTP Operations
   * `@RestController` - Creating Object + REST API creation (Web Services)
-  
+
 > Common Operation : Creating Objects
 
 > They are for Programmer defined classes only, and *NOT* for the predefined classes.
 
-> We must provide one common package 
+> We must provide one common package
 
-### Example 
+### Example
 
 *Gradle Project * : `Spring5CoreAnnotationExGradle`
 
-#### Build File 
+#### Build File
 
 *File Name :* `build.gradle`
 
@@ -316,17 +316,17 @@ targetCompatibility = 14
 
 dependencies {
 	// https://mvnrepository.com/artifact/org.springframework/spring-context
-	implementation group: 'org.springframework', name: 'spring-context', version: '5.3.10'	
+	implementation group: 'org.springframework', name: 'spring-context', version: '5.3.10'
 }
 ```
 
-#### Java Class 
+#### Java Class
 
 *File Name*: `Product.java`
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -346,13 +346,13 @@ public class Product {
 }
 ```
 
-### Java class 
+### Java class
 
 *File Name :* `Person.java`
 
 ```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.bean;
 
@@ -372,15 +372,15 @@ public class Person {
 }
 ```
 
-> Notice that the `@Component` annotation does not have any value inside. 
+> Notice that the `@Component` annotation does not have any value inside.
 
-### Test Class 
+### Test Class
 
 *File Name *: `Test.java`
 
-```java 
+```java
 /**
- * 
+ *
  */
 package com.raghsonline.springcore.test;
 
@@ -398,29 +398,27 @@ public class Test {
 		ac.refresh();
 		Object ob = ac.getBean("Product");
 		System.out.println(ob);
-		
-		/* 
-		 * If the @Component was given a name, by default the object name is same 
+
+		/*
+		 * If the @Component was given a name, by default the object name is same
 		 * as that of the Class, but with the letter in small case!
 		 */
 		Object ob2 = ac.getBean("person");
 		System.out.println(ob2);
-		
+
 		((AnnotationConfigApplicationContext)ac).close();
 	}
 }
 ```
 
-### Console Output 
+### Console Output
 
 ```java
 Product is created
 Person is created
 ```
 
-## Homework 
+## Homework
 
 > Spring Core Session - 1 | By Mr. Raghu -> https://www.youtube.com/watch?v=xusQhpQuODk \
 > Spring Core Session - 2 | By Mr. Raghu -> https://www.youtube.com/watch?v=-FlszP92JVM
-
-

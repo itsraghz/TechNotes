@@ -1,37 +1,37 @@
-# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT 
+# SpringBoot MicroServices - Session by Mr Raghu, Naresh IT
 
-Session 06
-06 Oct 2021 Wed
+Session 06 \
+06 Oct 2021 Wed \
 7 30 AM IST - 08 45 AM IST
 
 > Zoom Link (Old - Used for the Demo) : https://us02web.zoom.us/w/89992674319?tk=jMFucLHR5gPkDbXBf4XKrurDoKUkGFZu3u1yihkHNG8.DQMAAAAU8_s8DxZwSlg4UEozQlRjTzcxMmZtSnpXZEVnAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA#success
 
 
-# Agenda 
+# Agenda
 
-* Spring Core - Collection and References Dependency Types 
+* Spring Core - Collection and References Dependency Types
 
-## Collection Types 
+## Collection Types
 
 | Tyype | Tag | Implementation (Selected by Spring Container) |
 | ---- | --- | -------------- |
-| List  |  <list>  | ArrayList | 
+| List  |  <list>  | ArrayList |
 | Set   |  <set>  | LinkedHashSet |
-| Map   |  <map>  | LinkedHashMap | 
+| Map   |  <map>  | LinkedHashMap |
 | Properties | <props> | N/A |
 
-### New Project in Spring Tool Suite (STS) IDE 
+### New Project in Spring Tool Suite (STS) IDE
 
 *Project* : Spring5CoreCollectionsEx
 
-* Create a new Maven Project 
+* Create a new Maven Project
 * Update the `pom.xml` file with the following
   * Java Dependency from the default 5 to 11
   * Spring Core dependencies
-* Ctrl+A, Ctrl+I, Ctrl+S (Indentaion) 
-* Update the Maven Project 
+* Ctrl+A, Ctrl+I, Ctrl+S (Indentaion)
+* Update the Maven Project
 
-### Java Bean - Product 
+### Java Bean - Product
 
 ```java
 package in.nareshit.bean;
@@ -41,22 +41,22 @@ import java.util.List;
 public class Product {
   private int id;
   private List<String> codes;
-  
-  
+
+
   //Default Constructor
-  
+
   //Getters and Setters
-  
+
   //toString() method
 }
 ```
 
-### Config file 
+### Config file
 
 *File*: `config.xml`
 
 ```xml
-... Prolog 
+... Prolog
 <beans>
   <bean id="pob" class="in.nareshit.bean.Product">
     <property name="id">
@@ -74,30 +74,30 @@ public class Product {
 
 ```
 
-### Test Class 
+### Test Class
 
 > property.getClass().getName() - to see the actual implementation class.
 
-## Core Java 
+## Core Java
 
 * Map Interface
-* Entry Interface (Inner Interface) `Map.Entry`, 
-  * Entry<String,String> has a Key, Value 
+* Entry Interface (Inner Interface) `Map.Entry`,
+  * Entry<String,String> has a Key, Value
 * Iterate a Map using Iterator
 
-### Example Program 
+### Example Program
 
 ```java
 
 ```
 
-## Spring Core - Set 
+## Spring Core - Set
 
 ```java
 
 ```
 
-## Spring Core - Map 
+## Spring Core - Map
 
 ```java
 ```
@@ -114,7 +114,7 @@ public class Product {
   </bean>
 ```
 
-## Spring Core - Properties 
+## Spring Core - Properties
 
 ```java
 package in.nareshit.bean;
@@ -140,24 +140,23 @@ public class Product {
 
 ## Notes/ Pointers
 
-* If a list or set has only one value, the `<list>` or `<set>` tags are optional in the `config.xml` file. 
+* If a list or set has only one value, the `<list>` or `<set>` tags are optional in the `config.xml` file.
 
-## Links 
+## Links
 
 Spring Boot & MS @ 7:30 AM | Mr. Raghu
 
 * Day-1: https://youtu.be/sWj8zY-iits
 * Day-2: https://youtu.be/1R11lpSWKf4
-* Day-3: Not Recorded 
+* Day-3: Not Recorded
 * Day-4: https://youtu.be/bTrPAyqZ8e8
 * Day-5: https://youtu.be/Lw0bRSVCrxw
 * Day-6: https://youtu.be/41j3ylw7Zq4
 * Day-7: https://youtu.be/TospBHUvu_M
 * Day-8: https://youtu.be/ajctkgqX7zk
 
-## Homework 
+## Homework
 
-Spring Core Annotation and Autowired - YouTube videos in NareshIT 'Spring Core Raghu' 
+Spring Core Annotation and Autowired - YouTube videos in NareshIT 'Spring Core Raghu'
 
 * NareshIT YouTube Channel - Java Tutorials | by Mr. Raghu - https://www.youtube.com/playlist?list=PLVlQHNRLflP9XSWeY4x4FLwnL3UOIxnTr
-
