@@ -112,8 +112,8 @@ RaspberryPi 4 with 4GB RAM.
 
 ## Wifi Details
 
-http://192.168.0.1 - Router Admin Console for Act Fibernet
-Password : act@123
+* http://192.168.0.1 - Router Admin Console for Act Fibernet
+* Password : <Refer-RaghsPHP-Application>
 
 Wifi SSID (Service Set Identifier) - RaghsACTFibernet / act12345 (WPA2-Personal)
 
