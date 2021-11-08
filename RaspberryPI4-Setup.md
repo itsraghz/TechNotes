@@ -107,7 +107,7 @@ RaspberryPi 4 with 4GB RAM.
 
 ## Raspberry PI 
 
-> ssh pi@<IP> [Password: <Verify-RaghsPHP-Application>]
+> ssh pi@<IP> [Password: <Verify-RaghsPHP-Application>]\                                                                              
 > su raghs [new user created on the PI4 box]
 
 ## Wifi Details
@@ -274,7 +274,6 @@ Note: This you can get it from `arp -a` command
 
 The VNC immediately gets you the acutal *remote control* of the GUI desktop of the Raspberry PI 4. You can have the entire desktop of the Raspberry PI at your hands now, with which you can continue to the use the System in the usual manner.
 
-```
 # Shutdown
 
 Whenever possible you should be shutting down the Raspberry PI in a proper and graceful way, which can prevent the device maintain a proper health and also not getting corrupted. 
