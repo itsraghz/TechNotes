@@ -42,18 +42,21 @@ Spring Boot : Web MVC UI
    executed output is replaced back(rendering)
 
 -----filename.html------------------
+```html
 <html xmlns:th="https://www.thymeleaf.org/">
   <head>  </head>
   <body>
 
   </body>
 </html>
+```
 =========================================
 *) If a tag has prefix 'th' then , it is a Thymeleaf tag.
   Its definition exist at NameSpace(location) [xmlns]
    ex: thymeleaf.org
 
 --Symbols ------------------------
+```
  @   --- URL/Path/Location
 
  $   --- Read data from Model (Controller--->Model-->UI)
@@ -61,6 +64,7 @@ Spring Boot : Web MVC UI
  *   --- Link (Form input with Object-field binding)
 
  #   --- to use pre-defined objects of thymeleaf
+ ```
 -------------------------------------
 
 th:text="${data}"  => given data is read from Model and print
@@ -70,15 +74,16 @@ th:text="${data}"  => given data is read from Model and print
 *) Here th means thymeleaf, fixed prefix.
 
 --For Each Loop--
-th:each="tempVariable:${collectionKeyName}"
+`th:each="tempVariable:${collectionKeyName}"`
 equal java code
+```java
 for(Type tempVariable: collectionKeyName) {
 
 }
-
+```
 ==============================================================
 *) Spring Boot Thymeleaf Dependency need to be added in pom.xml
-  [ spring-boot-starter-thymeleaf ]
+  [ `spring-boot-starter-thymeleaf` ]
 
 *) Spring boot has given default configuration for Thymeleaf
    (C) ThymeleafProperties
@@ -86,27 +91,29 @@ for(Type tempVariable: collectionKeyName) {
        DEFAULT SUFFIX = ".html"
 
 *) We can even modify them using keys
+```java
 spring.thymeleaf.prefix=/WEB-INF/pages/
 spring.thymeleaf.suffix=.html
-
+```
 --------------------------------------------------
 HyperLink:-
-<a th:href=" @{/fullPath} " > ___ </a>
+`<a th:href=" @{/fullPath} " > ___ </a>`
 
 Adding Image (Location /static folder)
-<img th:src=" @{/fullPath} " />
+`<img th:src=" @{/fullPath} " />`
 
 Link a CSS File
-<link rel="stylesheet" th:href="@{/fullPath"}/>
+`<link rel="stylesheet" th:href="@{/fullPath"}/>`
 
 Link a Java Script File:-
-<script th:src="@{/fullPath}"></script>
+`<script th:src="@{/fullPath}"></script>`
 
 =======================code========================
 Name : SpringBoot2ThymeleafEx
 Dep  : Web, Lombok, Devtools, Thymeleaf
 
 a. Entity
+```java
 package in.nareshit.raghu.entity;
 
 import lombok.AllArgsConstructor;
@@ -122,8 +129,10 @@ public class Employee {
 	private String empName;
 	private Double empSal;
 }
+```
 
 b. Controller
+```java
 package in.nareshit.raghu.controller;
 
 import java.util.Arrays;
@@ -165,21 +174,27 @@ public class EmployeeController {
 		return "EmpInfo";
 	}
 }
+```
 
 c. UI Files
 ---/static/css/custom.css-----
+```css
 .myd{
 	color : green;
 	border: 2px solid red;
 	background-color: pink;
 }
+```
 ---/static/myjs/message.js---
+```js
 alert('HELLO');
+```
 ----------------------------
 ---/static/images/NIT.jpg--
 (add an image here)
 
 --/templates/EmpData.html-----------
+```html
 <html xmlns:th="https://www.thymeleaf.org/">
  <head>
   <title>Document</title>
@@ -211,8 +226,10 @@ alert('HELLO');
   <a th:href="@{/employee/info}"> CLICK HERE! </a>
  </body>
 </html>
+```
 ----------------------------------------------
 ---/templates/EmpInfo.html---------------------------
+```html
 <html xmlns:th="https://www.thymeleaf.org/">
  <head>
   <title>Document</title>
@@ -224,26 +241,34 @@ alert('HELLO');
  	<div class="myd"> EMPLOYEE INFO PAGE </div>
  </body>
 </html>
+```
 =========================================================
 Thymeleaf Forms are Bi-directional Forms.
 They can submit data into ModelAttribute, even read from Model.
 
+```
        Form <---> Object
+```
 
 S#1 Link A Form with Object
 
+```html
  <form th:action="@{/fullPath}" method="" th:object="${objName}">
 
  </form>
+```
 
 S#2 Link Input with Variable
- <input type="" th:field="*{variable}"/>
+```
+	<input type="" th:field="*{variable}"/>
+```
 
 ===code============
-Name : SpringBoot2ThymeleafExForms
+Name : *SpringBoot2ThymeleafExForms*
 Dep  : Web, Lombok, Devtools, Thymeleaf
 
 a. Entity class
+```java
 package in.nareshit.raghu.entity;
 
 import lombok.AllArgsConstructor;
@@ -259,8 +284,10 @@ public class Employee {
 	private String empName;
 	private Double empSal;
 }
+```
 
 b. Controller
+```java
 package in.nareshit.raghu.controller;
 
 import org.springframework.stereotype.Controller;
@@ -282,8 +309,11 @@ public class EmployeeController {
 		return "EmpEdit";
 	}
 }
+```
 
 c. UI : EmpEdit.html
+
+```html
 <html>
 	<head></head>
 	<body>
@@ -298,5 +328,7 @@ c. UI : EmpEdit.html
 		</form>
 	</body>
 </html>
+```
+
 *) Run app and enter URL:
 http://localhost:8080/employee/edit
