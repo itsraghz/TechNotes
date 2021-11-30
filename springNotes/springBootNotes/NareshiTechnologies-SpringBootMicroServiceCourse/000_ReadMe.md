@@ -12,3 +12,4 @@ and copied text from the Google Classroom for the later days.
 | 43  | Session 43 | 25 Nov 21, Thu  | SpringBootMVCJPAMySQL Mini Project Part-01 | SpringBoot2WebMvcMySQLCrudEx | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDMwNTI0ODMzOTcx/details) |
 | 44  | Session 44 | 26 Nov 21, Fri  | SpringBootMVCJPAMySQL Mini Project Part-02 | SpringBoot2WebMvcMySQLCrudEx | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDMwNjU4MzExNTE1/details) |
 | 45  | Session 45 | 27 Nov 21, Sat  | SpringBootMVCJPAMySQL Mini Project Part-03 | SpringBoot2WebMvcMySQLCrudEx | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDM3ODExMzYxMTAz/details) |
+| 46  | Session 46 | 30 Nov 21, Mon  | SpringBoot Web Error Handling Intro | SpringBoot2WebMvcMySQLCrudEx | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDM4NDA4MTU3Mjgy/details) |
