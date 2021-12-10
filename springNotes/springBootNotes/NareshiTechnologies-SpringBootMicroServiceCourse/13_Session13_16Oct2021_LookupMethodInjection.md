@@ -15,7 +15,7 @@ Parent and child objects using HAS-A relation.
 ## Case Study
 
 * Parent (Singleton) - Child (Prototype) -- Reference between parent and child has an issue.  
-  * The link from Parent to Child is not updated with the new object Created,instead it holds on to the 1st child object
+  * The link from Parent to Child is not updated with the new object Created, instead it holds on to the 1st child object
   * Reason : Parent object scope is Singleton - the reference assigned during the Parent object creation will be fixed.
 * Rest of the other combinations work fine in Spring Core.
 * Solution : Use Lookup Method Injection.
@@ -181,4 +181,4 @@ TokenService [token=Token [id=7876]]
 
 # Task
 
-* Find a solution for this problem? How will you avoid the child object being referred with the first instance itself, despite being declared as a `prototype` in the `config.xml` ? 
+* Find a solution for this problem? How will you avoid the child object being referred with the first instance itself, despite being declared as a `prototype` in the `config.xml` ?

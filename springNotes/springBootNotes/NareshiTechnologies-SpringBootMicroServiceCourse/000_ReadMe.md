@@ -15,3 +15,4 @@ and copied text from the Google Classroom for the later days.
 | 46  | Session 46 | 30 Nov 21, Mon  | SpringBoot Web Error Handling Intro | SpringBoot2WebMvcMySQLCrudEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDM4NDA4MTU3Mjgy/details) |
 | 47  | Session 47 | 06 Dec 21, Mon  | SpringBoot Web Error Handling Intro | SpringBoot2WebMvcMySQLCrudEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQyMTI4ODYwNDM2/details) |
 | 48  | Session 47 | 07 Dec 21, Tue  | WebServices Overview | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQyNDkwNTU1Njcx/details) |
+| 48  | Session 47 | 07 Dec 21, Tue  | SpringBoot ReST Introduction | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ1NTU5OTA4OTM3/details) |
