@@ -14,5 +14,6 @@ and copied text from the Google Classroom for the later days.
 | 45  | Session 45 | 27 Nov 21, Sat  | SpringBootMVCJPAMySQL Mini Project Part-03 (Ajax) | SpringBoot2WebMvcMySQLCrudEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDM3ODExMzYxMTAz/details) |
 | 46  | Session 46 | 30 Nov 21, Mon  | SpringBoot Web Error Handling Intro | SpringBoot2WebMvcMySQLCrudEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDM4NDA4MTU3Mjgy/details) |
 | 47  | Session 47 | 06 Dec 21, Mon  | SpringBoot Web Error Handling Intro | SpringBoot2WebMvcMySQLCrudEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQyMTI4ODYwNDM2/details) |
-| 48  | Session 47 | 07 Dec 21, Tue  | WebServices Overview | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQyNDkwNTU1Njcx/details) |
-| 48  | Session 47 | 07 Dec 21, Tue  | SpringBoot ReST Introduction | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ1NTU5OTA4OTM3/details) |
+| 48  | Session 48 | 07 Dec 21, Tue  | WebServices Overview | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQyNDkwNTU1Njcx/details) |
+| 49  | Session 49 | 10 Dec 21, Fri  | SpringBoot ReST Introduction | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ1NTU5OTA4OTM3/details) |
+| 50  | Session 50 | 11 Dec 21, Sat  | SpringBoot ReST Producer | SpringBoot2RestProducerBasicEx| Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ1ODM2ODg4NzI1/details) |
