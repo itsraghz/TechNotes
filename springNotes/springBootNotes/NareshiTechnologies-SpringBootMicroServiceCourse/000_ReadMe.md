@@ -17,3 +17,4 @@ and copied text from the Google Classroom for the later days.
 | 48  | Session 48 | 07 Dec 21, Tue  | WebServices Overview | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQyNDkwNTU1Njcx/details) |
 | 49  | Session 49 | 10 Dec 21, Fri  | SpringBoot ReST Introduction | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ1NTU5OTA4OTM3/details) |
 | 50  | Session 50 | 11 Dec 21, Sat  | SpringBoot ReST Producer | SpringBoot2RestProducerBasicEx| Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ1ODM2ODg4NzI1/details) |
+| 51  | Session 51 | 13 Dec 21, Mon  | Spring ReST MediaType Annotations | SpringBoot2ReSTProducerOutputEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ2MDM1NTM3NjQ3/details) |
