@@ -70,6 +70,7 @@ Name : SpringBoot2ReSTProducerOutputEx
 Dep  : Web, Lombok, Devtools
 
 a. Entity
+```
 package in.nareshit.raghu.entity;
 
 import lombok.AllArgsConstructor;
@@ -85,8 +86,10 @@ public class Employee {
 	private String empName;
 	private Double empSal;
 }
+```
 ---------------
 b. RestController
+```
 package in.nareshit.raghu.rest;
 
 import java.util.Arrays;
@@ -137,23 +140,28 @@ public class EmployeeRestController {
 		return response;
 	}
 }
+```
 ---------------
 
 *) Run app and enter URL as:
+```
 http://localhost:8080/employee/find
 http://localhost:8080/employee/all
-
+```
 
 --To work with XML ------------------
 S#1 Add below Dependency in pom.xml
+```xml
 <dependency>
     <groupId>com.fasterxml.jackson.dataformat</groupId>
     <artifactId>jackson-dataformat-xml</artifactId>
 </dependency>
+```
 
 S#2 While making Request send Header
    Accept = application/xml
 
+```
 ----------POSTMAN---------------------------------
 GET | http://localhost:8080/employee/find | SEND
 --------------------------------------------------
@@ -161,7 +169,7 @@ GET | http://localhost:8080/employee/find | SEND
    Key            Val
  [Accept]        [application/xml]
 ---------------------------------------------------
-
+```
 *) if jackson-dataformat-xml dependency not exist in classpath/pom.xml
    then we try to request for Accept = application/xml,
    FC throw 406 - Not Acceptable.
