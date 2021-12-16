@@ -19,4 +19,4 @@ and copied text from the Google Classroom for the later days.
 | 50  | Session 50 | 11 Dec 21, Sat  | SpringBoot ReST Producer | SpringBoot2RestProducerBasicEx| Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ1ODM2ODg4NzI1/details) |
 | 51  | Session 51 | 13 Dec 21, Mon  | Spring ReST MediaType Annotations | SpringBoot2ReSTProducerOutputEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ2MDM1NTM3NjQ3/details) |
 | 52  | Session 52 | 14 Dec 21, Tue  | SpringBoot ReST RequestBody | SpringBoot2RestInputEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ2MzU1OTU4ODEz/details) |
-| 53  | Session 53 | 16 Dec 21, Thu  | SpringBoot ReST RequestBody | SpringBoot2RestPathVariableEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ2OTE3MDU3MjQy/details) |
+| 53  | Session 53 | 16 Dec 21, Thu  | SpringBoot ReST PathVariables | SpringBoot2RestPathVariableEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ2OTE3MDU3MjQy/details) |
