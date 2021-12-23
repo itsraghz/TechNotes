@@ -46,6 +46,7 @@ a. Global Exception handling:-
 
 ----Custom Exception Handler class code------------
 1. Model class
+```
 package in.nareshit.raghu.model;
 
 import lombok.AllArgsConstructor;
@@ -61,9 +62,10 @@ public class ErrorMessage {
 	private String module;
 	private String dateTime;
 }
-
+```
 
 2. Exception Handler code
+```
 package in.nareshit.raghu.handler;
 
 import java.util.Date;
@@ -114,7 +116,7 @@ public class CustomExceptionHandler {
 		e.printStackTrace();
 		throw e; //calls exception handler
 	}
-
+```
 ===================================================================
 Connection Pooling:-
  Group of connection objects which are made on app startup.
@@ -150,6 +152,7 @@ https://github.com/brettwooldridge/HikariCP
   For 10 mins, if a connection is not used for any SQL, then marked as
   IDLE Connection.
 
+```
 ---application.properties----
 spring.datasource.hikari.pool-name=my-custom
 spring.datasource.hikari.maximum-pool-size=30
@@ -157,6 +160,7 @@ spring.datasource.hikari.idle-timeout=45000
 spring.datasource.hikari.connection-timeout=50000
 spring.datasource.hikari.max-lifetime=95000
 ----------------------------------------
+```
 
 *) We can customize all these values using properties file
    with common prefix: spring.datasource.hikari.___=___

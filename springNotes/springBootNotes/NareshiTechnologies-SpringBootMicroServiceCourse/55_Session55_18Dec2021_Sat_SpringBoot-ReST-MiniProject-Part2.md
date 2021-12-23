@@ -35,7 +35,7 @@ Mini Project : Spring Rest + Spring Data JPA
 
 --today modified code---
 1. Repository
-
+```java
 package in.nareshit.raghu.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -51,8 +51,9 @@ public interface ProductRepository
 	@Query("UPDATE Product SET prodVendor=:vendor WHERE prodId=:id")
 	int updateProductVendor(String vendor,Integer id);
 }
-
+```
 2. Service Interface
+```java
 package in.nareshit.raghu.service;
 
 import java.util.List;
@@ -68,8 +69,9 @@ public interface IProductService {
 	void updateProduct(Product p);
 	int updateProductVendor(String vendor,Integer id);
 }
-
+```
 3. ServiceImpl
+```java
 package in.nareshit.raghu.service.impl;
 
 import java.util.List;
@@ -129,7 +131,6 @@ public class ProductServiceImpl implements IProductService {
 		} else {
 			throw new ProductNotFoundException("Product Not exist with id "+p.getProdId());
 		}
-
 	}
 
 	@Override
@@ -143,10 +144,10 @@ public class ProductServiceImpl implements IProductService {
 			throw new ProductNotFoundException("Product Not exist with id "+id);
 		}
 	}
-
 }
-
+```
 4. RestController
+```java
 package in.nareshit.raghu.rest;
 
 import java.util.List;
@@ -235,7 +236,6 @@ public class ProductRestController {
 		return resp;
 	}
 
-
 	//5. update one product
 	@PutMapping("/modify")
 	public ResponseEntity<String> updateProduct(
@@ -278,8 +278,8 @@ public class ProductRestController {
 		}
 		return resp;
 	}
-
 }
+```
 
 5. Entity and Exception class are same as before
 
@@ -298,21 +298,24 @@ Swagger UI : (API/Tool)
 > Swagger is not from Spring Boot, this is 3rd party ie SpringFox company.
 
 Swagger UI
+```xml
 <dependency>
     <groupId>io.springfox</groupId>
     <artifactId>springfox-swagger-ui</artifactId>
     <version>2.9.2</version>
 </dependency>
-
+```
 Swagger 2
+```xml
 <dependency>
 	<groupId>io.springfox</groupId>
 	<artifactId>springfox-swagger2</artifactId>
 	<version>2.9.2</version>
 </dependency>
-
+```
 
 *)Swagger Config:-
+```java
 package in.nareshit.raghu.config;
 
 import java.util.List;
@@ -354,7 +357,7 @@ public class SwaggerConfig {
 				List.of());
 	}
 }
-
+```
 
 *) Run App and enter URL:
 http://localhost:8080/swagger-ui.html
@@ -363,11 +366,14 @@ a. Final Output of Swagger is Docket(Dynamic UI)
 b. select RestControllers from our application
    using one basePackage
 
+```java
    .select()
    .apis(RequestHandlerSelectors.basePackage("in.nareshit.raghu.rest"))
-
+```
 c. Specify common Path to sortout
-   .paths(PathSelectors.ant("/api/**"))
+   ```java
+	 .paths(PathSelectors.ant("/api/**"))
+	 ```
 
 /** indicates any multi-level path : ex: /api/employee/find/email/{id}/{mail}
 
@@ -376,5 +382,9 @@ Q) How can we avoid showing a method at Swagger UI ?
 A) Add @ApiIgnore on top of method.
 
 
-@Api(description="PRODUCT OPERATIONS") : Insted of Showing controller name
-@ApiOperation("CREATING ONE PRODUCT") : Insted of Showing method name at Swagger UI
+```java
+@Api(description="PRODUCT OPERATIONS")
+``` : Insted of Showing controller name
+```java
+@ApiOperation("CREATING ONE PRODUCT")
+``` : Insted of Showing method name at Swagger UI

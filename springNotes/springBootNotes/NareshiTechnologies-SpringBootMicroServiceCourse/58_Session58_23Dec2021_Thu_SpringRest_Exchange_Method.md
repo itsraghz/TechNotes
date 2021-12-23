@@ -124,8 +124,8 @@ public class StudentRestController {
 }
 ```
 =============Consumer Runners===========================================
-```java
 1. GET using Exchange
+```java
 package in.nareshit.raghu.runner;
 
 import org.springframework.boot.CommandLineRunner;
