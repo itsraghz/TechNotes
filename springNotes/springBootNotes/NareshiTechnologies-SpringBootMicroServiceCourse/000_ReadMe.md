@@ -26,3 +26,4 @@ and copied text from the Google Classroom for the later days.
 | 57  | Session 57 | 21 Dec 21, Tue  | SpringBoot Rest Mini Project Part-4 (Spring Boot REST Consumer Ex) | SpringBoot2RestProducerEx, SpringBoot2RestConsumerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ5Nzg0MzYyMjM5/details) |
 | 58  | N/A | 22 Dec 21, Wed  | Task given with the YouTube Links | N/A | N/A | N/A |
 | 59  | Session 58 | 23 Dec 21, Thu  | SpringBoot Rest Mini Project Part-5 (Spring Boot REST Consumer Ex) | SpringBoot2RestProducerEx, SpringBoot2RestConsumerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMDI4NDMwMjU4/details) |
+| 60  | Session 59 | 24 Dec 21, Fri  | SpringBoot Rest Mini Project Part-6 (Spring Boot SL4J) | SpringBoot2RestProducerEx, SpringBoot2RestConsumerEx | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMDk2ODk0NDg0/details) |
