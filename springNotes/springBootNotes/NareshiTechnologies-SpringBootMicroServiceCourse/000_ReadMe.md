@@ -29,3 +29,4 @@ and copied text from the Google Classroom for the later days.
 | 60  | Session 59 | 24 Dec 21, Fri  | SpringBoot Rest Mini Project Part-6 (Spring Boot SL4J) | SpringBoot2RestProducerEx, SpringBoot2RestConsumerEx | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMDk2ODk0NDg0/details) |
 | 61  | Session 60 | 27 Dec 21, Mon  | SpringBoot Rest Monolithic Terms Intro | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMTkyNzYxNDg5/details) |
 | 62  | Session 61 | 28 Dec 21, Tue  | Monolithic Vs MicroServices | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMjQyMzU3MDk2/details) |
+| 63  | Session 62 | 29 Dec 21, Wed  | MicroServices Design Components | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDA2NDE1MDg1MzAz/details) |
