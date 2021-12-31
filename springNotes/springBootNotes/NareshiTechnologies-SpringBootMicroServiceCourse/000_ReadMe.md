@@ -30,3 +30,4 @@ and copied text from the Google Classroom for the later days.
 | 61  | Session 60 | 27 Dec 21, Mon  | SpringBoot Rest Monolithic Terms Intro | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMTkyNzYxNDg5/details) |
 | 62  | Session 61 | 28 Dec 21, Tue  | Monolithic Vs MicroServices | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMjQyMzU3MDk2/details) |
 | 63  | Session 62 | 29 Dec 21, Wed  | MicroServices Design Components | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDA2NDE1MDg1MzAz/details) |
+| 64  | Session 63 | 31 Dec 21, Fri  | SpringCloud Maven Project Dependency | SpringCloudFirstEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUwMzgwOTY5MjQy/details) |
