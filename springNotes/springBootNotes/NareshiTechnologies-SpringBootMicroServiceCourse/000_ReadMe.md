@@ -39,3 +39,4 @@ and copied text from the Google Classroom for the later days.
 | 70  | Session 69 | 08 Jan 22, Sat  | SpringCloud Config Server | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUxNjg3MzgyODg0/details) |
 | 71  | Session 70 | 09 Jan 22, Sun  | SpringCloud Config Server (Revision) | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDMxOTkwNjgzODQ1/details) |
 | 72  | Session 71 | 10 Jan 22, Mon  | SpringCloud Config Server - Demo | SpringCloudConfigServer, SpringCloudOrderService | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUxODYwMzEyMTk0/details) |
+| 73  | Session 72 | 11 Jan 22, Tue  | SpringCloud Config Server - Workflow | SpringCloudConfigServer, SpringCloudOrderService | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUyMjE5NDc4Mjkx/details) |
