@@ -15,11 +15,7 @@ Session 73 \
 * URL to the classroom notes : https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ4MDMxMjAxNDYw/details
 
 ```
-<<<<<<< HEAD
-						Date : 17-01-2022
-=======
-						Date : 11-01-2022
->>>>>>> 5c3a918aa8a6842baa4aea7f9d11d00c96ece644
+						Date : 17-01-2022 
 						Spring Boot 7:30AM
  						    Mr. RAGHU
 -------------------------------------------------------------
