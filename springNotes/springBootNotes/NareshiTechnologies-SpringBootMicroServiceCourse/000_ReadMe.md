@@ -42,3 +42,4 @@ and copied text from the Google Classroom for the later days.
 | 73  | Session 72 | 11 Jan 22, Tue  | SpringCloud Config Server - Workflow | SpringCloudConfigServer, SpringCloudOrderService | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDUyMjE5NDc4Mjkx/details) |
 | 74  | Session 73 | 17 Jan 22, Mon  | SpringCloud Config Server - Revision | SpringCloudConfigServer | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDQ4MDMxMjAxNDYw/details) |
 | 75  | Session 74 | 18 Jan 22, Tue  | Spring Cloud Admin server and Actuator | SpringBootActuatorTest, SpringCloudAdminServerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDU2MDMwMDEwODE1/details) |
+| 76  | Session 75 | 19 Jan 22, Wed  | Message Queues Conceptual Overview | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDU2MzY4NjM2MjQ2/details) |
