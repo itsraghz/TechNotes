@@ -123,7 +123,9 @@ public class TestProducerRunner { //implements CommandLineRunner {
 }
 ```
 *) At main class: `@EnableScheduling`
+
 =====Consumer code======================================================
+
 Name : *SpringBootJmsConsumerEx*
 Dep  : Spring for Apache ActiveMQ 5
 
@@ -157,11 +159,7 @@ public class ConsumerService {
 }
 ```
 
-<<<<<<< HEAD
 3. At main class: `@EnableJms`
-=======
-3. At main class: ``@EnableJms`
->>>>>>> 9950f6be570c1c68c3b0780c3bac346706f61a32
 
 ===Execution order========================
 1. Start ActiveMQ
