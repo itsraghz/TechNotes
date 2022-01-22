@@ -45,6 +45,7 @@ c. Data lose may occure if it is slow/down as it single broker.
 d. Language Dependent. Works only between Java Producer and Consumer.
 
 ====================================================================================
+
 			        *Apache Kafka*
 
 => Open Source, Distributed MQs software given by Apache Vendor.
@@ -60,7 +61,8 @@ d. Language Dependent. Works only between Java Producer and Consumer.
      [ Object --> Serialization --> Network Format (JSON/String) ]
 
 
-==KAFKA S/W COMPONENTS==============
+====KAFKA S/W COMPONENTS==============
+
 1. TOPICS : It is a memory that holds all messages sent by Producer.
              It will store data in Partitions.
 
@@ -82,6 +84,7 @@ d. Language Dependent. Works only between Java Producer and Consumer.
 => Both Producer and Consumer are connected using TopicName only.
 
 --Producer Flow---
+
 1. Producer app holds data in KEY=VAL format. Where KEY=TopicName, V=Data.
 2. It will send data to Kafka S/w
 3. Zookeeper creates one toic at Topics Section.
@@ -93,6 +96,7 @@ d. Language Dependent. Works only between Java Producer and Consumer.
 7. Finally data stored at Topic name.
 
 --Consumer Flow---
+
 8. Now Define one consumer application with same topic name.
    Else data will not be received.
 
