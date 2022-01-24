@@ -46,3 +46,4 @@ and copied text from the Google Classroom for the later days.
 | 77  | Session 76 | 20 Jan 22, Thu  | JMS API - MQs Coding Part (ActiveMQ) | SpringBootJmsProducerEx, SpringBootJmsConsumerEx | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDA2NDE1MDg1MzAz/m/NDU2NzAyNjMzMDEy/details) |
 | 78  | Session 77 | 21 Jan 22, Fri  | JMS API - MQs Coding Part (ActiveMQ) Producer, Consumer | SpringBootJmsProducerEx, SpringBootJmsConsumerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU2NzAyNjMzMDEy/details) |
 | 79  | Session 78 | 22 Jan 22, Sat  | Apache Kafka - Introduction | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU3MzI2MDY2MTEy/details) |
+| 80  | Session 79 | 24 Jan 22, Mon  | Apache Kafka - Producer, Consumer Examples | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU3NTQxMTI4ODYx/details) |
