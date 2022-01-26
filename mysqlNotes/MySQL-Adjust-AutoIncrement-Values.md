@@ -11,8 +11,7 @@ The below SQL command and the results are self-explanatory.
 ```sql
 MariaDB [bkup-packtpub-freelearning]> use packtpub-freelearning;
 Database changed
-MariaDB [packtpub-freelearning]> select Id, created_date, order_date, substr(description, 1, 60) as description, book_id from tbl_free_learning_entry order
-by id desc LIMIT 10;
+MariaDB [packtpub-freelearning]> select Id, created_date, order_date, substr(description, 1, 60) as description, book_id from tbl_free_learning_entry order by id desc LIMIT 10;
 +----+----------------------------+----------------------------+--------------------------------------------------------------+---------+
 | Id | created_date               | order_date                 | description                                                  | book_id |
 +----+----------------------------+----------------------------+--------------------------------------------------------------+---------+
@@ -100,6 +99,7 @@ MariaDB [packtpub-freelearning]> SELECT `AUTO_INCREMENT`
 |             66 |
 +----------------+
 1 row in set (0.00 sec)
+```
 
 ```sql
 MariaDB [packtpub-freelearning]>
