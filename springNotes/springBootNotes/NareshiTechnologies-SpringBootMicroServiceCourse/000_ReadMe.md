@@ -49,3 +49,4 @@ and copied text from the Google Classroom for the later days.
 | 80  | Session 79 | 24 Jan 22, Mon  | Apache Kafka - Producer, Consumer Examples | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU3NTQxMTI4ODYx/details) |
 | 81  | Session 80 | 04 Feb 22, Fri  | Spring Boot + Apache kafka Integration | SpringBootKafka | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY1MTU3MDgwMTA4/details) |
 | 82  | Session 81 | 05 Feb 22, Sat  | Spring Boot + Apache kafka Integration | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY1NDU4Njc3ODg4/details) |
+| 83  | Session 82 | 08 Feb 22, Tue  | Kafka API, Spring Cloud Gateway Intro | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5MDU4Mzc3NDQ0/details) |
