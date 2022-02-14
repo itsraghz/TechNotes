@@ -50,3 +50,4 @@ and copied text from the Google Classroom for the later days.
 | 81  | Session 80 | 04 Feb 22, Fri  | Spring Boot + Apache kafka Integration | SpringBootKafka | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY1MTU3MDgwMTA4/details) |
 | 82  | Session 81 | 05 Feb 22, Sat  | Spring Boot + Apache kafka Integration | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY1NDU4Njc3ODg4/details) |
 | 83  | Session 82 | 08 Feb 22, Tue  | Kafka API, Spring Cloud Gateway Intro | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5MDU4Mzc3NDQ0/details) |
+| 88  | Session 88 | 14 Feb 22, Mon  | SpringSecurity JWT Example | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY5NzIyMzYyMDgz/details) |
