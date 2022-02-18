@@ -50,7 +50,14 @@ and copied text from the Google Classroom for the later days.
 | 81  | Session 80 | 04 Feb 22, Fri  | Spring Boot + Apache kafka Integration | SpringBootKafka | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY1MTU3MDgwMTA4/details) |
 | 82  | Session 81 | 05 Feb 22, Sat  | Spring Boot + Apache kafka Integration | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY1NDU4Njc3ODg4/details) |
 | 83  | Session 82 | 08 Feb 22, Tue  | Kafka API, Spring Cloud Gateway Intro | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5MDU4Mzc3NDQ0/details) |
-| 88  | Session 88 | 14 Feb 22, Mon  | SpringSecurity JWT Example | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY5NzIyMzYyMDgz/details) |
-| 89  | Session 89 | 15 Feb 22, Tue  | SpringOauth 2.x : Open Authorization | SpringBootOAuthFBEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDcwMDczNzU1NDM0/details) |
-| 90  | Session 90 | 16 Feb 22, Wed  | SpringOauth 2.x : Open Authorization | SpringBootOAuthFBEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDYyMDI0MTc5NTY2/details) |
-| 91  | Session 91 | 17 Feb 22, Thu  | SpringBoot Reactive Programming | SpringBootReactiveProducerEx, SpringBootReactiveConsumerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDcwNzc4MjQ0NTM5/details) |
+
+| 84  | Session 83 | 08 Feb 22, Tue  | Kafka API, Spring Cloud Gateway Intro | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5MDU4Mzc3NDQ0/details) |
+| 85  | Session 84 | 08 Feb 22, Tue  | Kafka API, Spring Cloud Gateway Intro | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5MDU4Mzc3NDQ0/details) |
+| 86  | Session 85 | 08 Feb 22, Tue  | Kafka API, Spring Cloud Gateway Intro | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5MDU4Mzc3NDQ0/details) |
+| 87  | Session 86 | 08 Feb 22, Tue  | Kafka API, Spring Cloud Gateway Intro | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5MDU4Mzc3NDQ0/details) |
+
+| 89  | Session 88 | 14 Feb 22, Mon  | SpringSecurity JWT Example | SpringBootKafkaAppEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDY5NzIyMzYyMDgz/details) |
+| 90  | Session 89 | 15 Feb 22, Tue  | SpringOauth 2.x : Open Authorization | SpringBootOAuthFBEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDcwMDczNzU1NDM0/details) |
+| 91  | Session 90 | 16 Feb 22, Wed  | SpringOauth 2.x : Open Authorization | SpringBootOAuthFBEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDYyMDI0MTc5NTY2/details) |
+| 92  | Session 91 | 17 Feb 22, Thu  | SpringBoot Reactive Programming | SpringBootReactiveProducerEx, SpringBootReactiveConsumerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDcwNzc4MjQ0NTM5/details) |
+| 93  | Session 92 | 18 Feb 22, Fri | SpringCloud Mini Project Overview | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NTgxODY3MzIy/details) |
