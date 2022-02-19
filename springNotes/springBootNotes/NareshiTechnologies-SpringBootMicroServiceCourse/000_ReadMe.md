@@ -60,4 +60,5 @@ and copied text from the Google Classroom for the later days.
 | 90  | Session 89 | 15 Feb 22, Tue  | SpringOauth 2.x : Open Authorization | SpringBootOAuthFBEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDcwMDczNzU1NDM0/details) |
 | 91  | Session 90 | 16 Feb 22, Wed  | SpringOauth 2.x : Open Authorization | SpringBootOAuthFBEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDYyMDI0MTc5NTY2/details) |
 | 92  | Session 91 | 17 Feb 22, Thu  | SpringBoot Reactive Programming | SpringBootReactiveProducerEx, SpringBootReactiveConsumerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDcwNzc4MjQ0NTM5/details) |
-| 93  | Session 92 | 18 Feb 22, Fri | SpringCloud Mini Project Overview | N/A | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NTgxODY3MzIy/details) |
+| 93  | Session 92 | 18 Feb 22, Fri | SpringCloud Mini Project Overview | N/A | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NTgxODY3MzIy/details) |
+| 94  | Session 95 | 19 Feb 22, Sat | SpringCloud Mini Project | N/A | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NjMzNDk3ODc2/details) |
