@@ -61,4 +61,6 @@ and copied text from the Google Classroom for the later days.
 | 91  | Session 90 | 16 Feb 22, Wed  | SpringOauth 2.x : Open Authorization | SpringBootOAuthFBEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDYyMDI0MTc5NTY2/details) |
 | 92  | Session 91 | 17 Feb 22, Thu  | SpringBoot Reactive Programming | SpringBootReactiveProducerEx, SpringBootReactiveConsumerEx | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDcwNzc4MjQ0NTM5/details) |
 | 93  | Session 92 | 18 Feb 22, Fri | SpringCloud Mini Project Overview | N/A | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NTgxODY3MzIy/details) |
-| 94  | Session 95 | 19 Feb 22, Sat | SpringCloud Mini Project | N/A | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NjMzNDk3ODc2/details) |
+| 94  | Session 93 | 19 Feb 22, Sat | SpringCloud Mini Project | N/A | N/A | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NjMzNDk3ODc2/details) |
+| 94  | Session 94_0 | 20 Feb 22, Sun | SringBoot MongoDB | SpringBootMongoDbbasicFirstEx, SpringBootCustomQuery | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDczNzExMTc3MTYx/details) |
+| 95  | Session 94 | 22 Feb 22, Tue | Spring Boot Email, Scheduling, main class workflow | SpringbootEmail | Yes | [Google Classroom Link](https://classroom.google.com/u/0/c/NDU3MDMwODMyNzcw/m/NDU5NzA3MjQ2NTUz/details) |
