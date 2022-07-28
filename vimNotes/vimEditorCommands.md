@@ -13,6 +13,9 @@
 | 5 | 26 May 2021 | Raghavan Muthu | Vim Commands Added |
 |   |             |                |  1. Find and Replace a whole word |
 |   |             |                |  1. Find and Replace a whole word - Case Sensitive |
+| 6 | 29 Jul 2022 | Raghavan Muthu | Vim Commands Added |
+|   |             |                |  1. Set wrap/no wrap while searching in a file |
+
 #Todo - for pending few of the commands
 
 ## How many modes are available in Vi editor?
@@ -296,3 +299,10 @@ Change to command mode by pressing the `Esc` key if you are in the Insert/Visual
 Issue the command `:%s/\<word\>\C/newWord/g` where it will replace only `word` with `newWord` leaving others like `Word`, `WORD` etc., unreplaced.
 
 > Refer https://stackoverflow.com/questions/1778501/find-and-replace-whole-words-in-vim for more details
+
+## How do I turn on/off the wrap while searching for a word in file (so that it does / does not start from the beginning of the file)?
+
+Change to command mode by pressing the `Esc` key if you are in the Insert/Visual mode.
+
+Issue the command `%set nowrapscan` to turn off the wrapping of the file, `%set wrapscan` to turn on the wrapping.
+
