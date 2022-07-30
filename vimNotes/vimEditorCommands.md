@@ -15,6 +15,9 @@
 |   |             |                |  1. Find and Replace a whole word - Case Sensitive |
 | 6 | 29 Jul 2022 | Raghavan Muthu | Vim Commands Added |
 |   |             |                |  1. Set wrap/no wrap while searching in a file |
+| 7 | 30 Jul 2022 | Raghavan Muthu | Vim Commands Added |
+|   |             |                |  1. Paste the content before the current line | 
+|   |             |                |   |
 
 #Todo - for pending few of the commands
 
@@ -212,6 +215,13 @@ Press `:set ic` to let Vi editor search in the case insensitive mode, and press 
 ## Is there a difference between copying via yanking (`yy`) and visual mode (`v`) and pasting it?
 
 Yes. If you copy and paste it via Yanking, the cursor have to be set a line before, so that when you press `p` the contents in buffer (clipboard) will be pasted to the next line of the cursor. Whereas if you copy via visual mode, the contents of the buffer will be pasted on the same line of the cursor where you press `p` key.
+
+## How do you paste a line of text before the current cursor position? 
+> Change to the Command mode by pressing the `Esc` key at first, if required.  
+
+Copy the contents by pressing `yy` to yank (and optionally you can add a number if you want to copy more than one line - `<n>yy` - `2yy` to copy 2 lines fromo the current line) and press `P` (captial/ uppercase P) to paste the copied contents above the current line.
+
+If you simply press `p` (small, lowercase 'p'), it would paste the contents after/below the current line. 
 
 ## How to save the file as a new file (Save As) in Vi/Vim editor?
 
