@@ -154,6 +154,8 @@ Follow the steps in order to execute the MongoDB at localhost.
 2. Enable the Access control with the IP Address in the *Network Settings* of the cluster, where you can either temporarily or permanently allow the specific IP Address to connect to the cluster, OR can have an *Open All* Access (`*.*.*.*`) - which is not generally recommended. 
 3. Execute the JAR file with the `mongocluster` profile (`application-mongocluster.properties`).
 
+*Command* : `java -Dspring.profiles.active=mongocluster -jar springdata-mongodb-demo-0.0.1-SNAPSHOT.jar`
+
 ```java
 raghs@Raghs-LegionY540-TPIN:/mnt/c/users/Raghavan Muthu/OneDrive/Documents/prfsnl/springdata-mongodb-demo/target$ java -Dspring.profiles.active=mongocluster
  -jar springdata-mongodb-demo-0.0.1-SNAPSHOT.jar
