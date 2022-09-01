@@ -13,6 +13,12 @@
 | 5 | 26 May 2021 | Raghavan Muthu | Vim Commands Added |
 |   |             |                |  1. Find and Replace a whole word |
 |   |             |                |  1. Find and Replace a whole word - Case Sensitive |
+| 6 | 29 Jul 2022 | Raghavan Muthu | Vim Commands Added |
+|   |             |                |  1. Set wrap/no wrap while searching in a file |
+| 7 | 30 Jul 2022 | Raghavan Muthu | Vim Commands Added |
+|   |             |                |  1. Paste the content before the current line | 
+|   |             |                |   |
+
 #Todo - for pending few of the commands
 
 ## How many modes are available in Vi editor?
@@ -210,6 +216,13 @@ Press `:set ic` to let Vi editor search in the case insensitive mode, and press 
 
 Yes. If you copy and paste it via Yanking, the cursor have to be set a line before, so that when you press `p` the contents in buffer (clipboard) will be pasted to the next line of the cursor. Whereas if you copy via visual mode, the contents of the buffer will be pasted on the same line of the cursor where you press `p` key.
 
+## How do you paste a line of text before the current cursor position? 
+> Change to the Command mode by pressing the `Esc` key at first, if required.  
+
+Copy the contents by pressing `yy` to yank (and optionally you can add a number if you want to copy more than one line - `<n>yy` - `2yy` to copy 2 lines fromo the current line) and press `P` (captial/ uppercase P) to paste the copied contents above the current line.
+
+If you simply press `p` (small, lowercase 'p'), it would paste the contents after/below the current line. 
+
 ## How to save the file as a new file (Save As) in Vi/Vim editor?
 
  There is no direct facility in Vi/Vim editor as in other editors like Notepad to do a 'Save As'. Instead you can issue the command `:w <fileName.txt>` to get the current file saved under a new name. Ensure that the file name being issued in this command is a non-existing file so that Vim creates the new file for you, otherwise it might overwrite the contents of the existing file.
@@ -296,3 +309,10 @@ Change to command mode by pressing the `Esc` key if you are in the Insert/Visual
 Issue the command `:%s/\<word\>\C/newWord/g` where it will replace only `word` with `newWord` leaving others like `Word`, `WORD` etc., unreplaced.
 
 > Refer https://stackoverflow.com/questions/1778501/find-and-replace-whole-words-in-vim for more details
+
+## How do I turn on/off the wrap while searching for a word in file (so that it does / does not start from the beginning of the file)?
+
+Change to command mode by pressing the `Esc` key if you are in the Insert/Visual mode.
+
+Issue the command `%set nowrapscan` to turn off the wrapping of the file, `%set wrapscan` to turn on the wrapping.
+
