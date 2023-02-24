@@ -19,7 +19,7 @@
 |   |             |                |  1. Paste the content before the current line | 
 | 8 | 24 Feb 2023 | Raghavan Muthu | Vim Commands Added  |
 |   |             |                |  1. Open a file with the cursor at the end of the file | 
-
+|   |             |                |  2. Jump 'X' number of lines in the forward/backward direction |
 
 #Todo - for pending few of the commands
 
@@ -69,6 +69,14 @@ Press the `$` key to go the the end of the current line.
 
 By pressing the `$` key in the `Command Mode`, you can navigate to the end of the current line, whereas to go to the end of the file you should
 press the `G$` (`Capital+G`).
+
+## How to jump 'X' lines in the file in forward/backward direction from the current line in Vi/Vim Editor? 
+> Change to the Command mode by pressing the `Esc` key at first, if required.
+
+Press `n` (where `n` is the desired number) and press `k` or `j` to move in either direction.
+
+* Press `k` to move in the backward direction from the cursor line
+* Press `j` to move in the forward direction from the cursor line 
 
 ## How to go to the last line of the file in Vi/Vim editor?
 > Change to the Command mode by pressing the `Esc` key at first, if required.
