@@ -17,7 +17,9 @@
 |   |             |                |  1. Set wrap/no wrap while searching in a file |
 | 7 | 30 Jul 2022 | Raghavan Muthu | Vim Commands Added |
 |   |             |                |  1. Paste the content before the current line | 
-|   |             |                |   |
+| 8 | 24 Feb 2023 | Raghavan Muthu | Vim Commands Added  |
+|   |             |                |  1. Open a file with the cursor at the end of the file | 
+
 
 #Todo - for pending few of the commands
 
@@ -72,6 +74,10 @@ press the `G$` (`Capital+G`).
 > Change to the Command mode by pressing the `Esc` key at first, if required.
 
 Press `:$<Enter>` to take the cursor to the last line of the file opened in Vi editor.  
+
+## How to open a file in Vi/Vim in the Command Line and let the cursor go to the end of the file?
+
+Issue the Command `vi <fileName> +$` to open the file and go to the end of the file (last character in the last line) in the Vi Editor. 
 
 ## How to make the last line of the file editable ? How to go to the last line of the file (end of file) and shift to `insert` mode ?
 > Change to the Command mode by pressing the `Esc` key at first, if required.
