@@ -15,7 +15,7 @@ public class WriteAndMakeExecutableShellScript
         """;
 
 	/* This time, we will write to a different file for a quick comparsion */
-        var path = Files.writeString(Path.of("hello-exec.sh"), script);
+        var path = Files.writeString(Path.of("hello.sh"), script);
 
         System.out.println("File [hello.sh] has been written");
     
