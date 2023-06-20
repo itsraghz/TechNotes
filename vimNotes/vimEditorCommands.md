@@ -295,6 +295,7 @@ If you simply press `p` (small, lowercase 'p'), it would paste the contents afte
 
   * Press `gg` to bring the cursor to the 1st line 1st character of the file. Press `dG` to `delete globally`.
   * Issue the command `1, $d` (Issue this as `:1, $d` actually)
+  * Issue the command `:%d` and press Enter key
 
 ## How to find and replace a word in Vi/Vim editor ?
 
