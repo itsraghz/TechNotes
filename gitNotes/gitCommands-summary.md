@@ -27,5 +27,7 @@
 | `git checkout commitId` | checks out the repo with the specific commit mentioned by `commitId`. | Traversing to a specific point in time in the repo timelines, like *System Restore* in the Windows OS. It shows the message in the terminal that *You are in detached *HEAD*, meaning the HEAD is no longer pointing to the latest commit in the repo. Also the pointer is changed on the repo that shows the recent commit where we had checked out to. You can verify the status using the `git log --oneline` where you see the commit entires uptil this commitId. _Internally the pointers are adjusted and not like the rest of the commits are deleted._|
 | `git checkout master` | Bring back the workspace to the latest snapshot, by making the HEAD pointing to the `master` branch. | The next immediate option for `git checkout commitId` to bring back the workspace in the consistent state. The pointer now shows the `(masater)` for the repo. You can verify again with the `git log --oneline` where you see that the workspace restores all the commits uptil the very latest. *Checkout is very safe as  it is _READ_ONLY_ command, and we cannot do any change or delete the previous commits*. |
 | `git reverse` | | |
-| `git reset` | | |
-| `git fetch` | | |
+| `git reset` | | | |
+| `git fetch` | | | |
+| `git branch -m <old-name> <new-name>` | Rename the local branch from `old-name` to `new-name` | This way you can rename the branch without checking out the branch. | |
+| `git branch -m <new-name>` | Rename the local branch from `old-name` to `new-name` | This way you can rename the branch if you are have already checked out the intended branch. | |
