@@ -29,5 +29,5 @@
 | `git reverse` | | |
 | `git reset` | | | |
 | `git fetch` | | | |
-| `git branch -m <old-name> <new-name>` | Rename the local branch from `old-name` to `new-name` | This way you can rename the branch without checking out the branch. | |
-| `git branch -m <new-name>` | Rename the local branch from `old-name` to `new-name` | This way you can rename the branch if you are have already checked out the intended branch. | |
+| `git branch -m <old-name> <new-name>` | Rename the local branch from `old-name` to `new-name` | This way you can rename the branch _without_ checking out the target/intended branch. | |
+| `git branch -m <new-name>` | Rename the local branch from `old-name` to `new-name` | This way you can rename the branch if you have *already checked out* OR inside the target/intended branch. | |
