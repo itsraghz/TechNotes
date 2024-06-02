@@ -13,23 +13,13 @@ redis-server --version
 Redis server v=7.2.5 sha=00000000:0 malloc=libc bits=64 build=bd81cd1340e80580
 ```
 
-```sh
-➜  github-repos
-redis-cli
-Could not connect to Redis at 127.0.0.1:6379: Connection refused
-not connected>
-```
+> *Note*: Observe the output on line #25 below in the snippet of `INFO` in the `redis-cli` session.
+
+It provides a comprehensive list of all the metadata maintained by Redis, with different segments - `Server`, `Client`, `Memory` etc.,
 
 ```sh
 ➜  github-repos
-brew services start redis
-==> Successfully started `redis` (label: homebrew.mxcl.redis)
-```
-
-➜  github-repos
 redis-cli
-127.0.0.1:6379> PING
-PONG
 127.0.0.1:6379> INFO
 # Server
 redis_version:7.2.5
@@ -244,4 +234,54 @@ cluster_enabled:0
 
 # Keyspace
 127.0.0.1:6379> exit
+```
+
+## What happens when you connect to `redis-cli` but the service is not started?
+
+You get a meaningful error message stating that _Connection refused_.
+
+> *Note*: The error message also gives the port # it attempts to connect to. The port # 6379 is the default port of Redis Server.
+
+```sh
+➜  github-repos
+redis-cli
+Could not connect to Redis at 127.0.0.1:6379: Connection refused
+not connected>
+```
+
+## How will you start the Redis Server? 
+
+You can use `brew services start redis` to get it started. The response is precise and meaningful with the service label.
+
+```sh
+➜  github-repos
+brew services start redis
+==> Successfully started `redis` (label: homebrew.mxcl.redis)
+```
+## How will you verify the Redis Service status?
+
+You can use the command `brew servies list` and `grep` the `redis` on the output, which otherwise may be a long listing of all the services runnning on the machine.
+
+If the `redis` service is running, it shows the output appropriately as follows, with the `plist` (Process List) info in Macbook.
+
+```sh
+➜  redisNotes git:(master) ✗
+brew services list | grep redis
+redis             started         raghavan.muthu ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+```
+
+## How will you stop the Redis Service?
+
+You can use `brew services stop redis` to stop the service.
+
+The output will be precise and meaningful to give you the context.  As it states that the service being shutdown is graceful and it _may take a while_, it is better to verify the service status as well subsequently to ensure that the service is properly stopped.
+
+```sh
+➜  redisNotes git:(master) ✗
+brew services stop redis
+Stopping `redis`... (might take a while)
+==> Successfully stopped `redis` (label: homebrew.mxcl.redis)
+➜  redisNotes git:(master) ✗
+brew services list | grep redis
+redis             none
 ```
