@@ -1,5 +1,9 @@
 # Redis FAQ
 
+## What is Redis, and how it is used?
+
+Redis (_Re_mote _Di_ctionary _S_erver) is an open-source, in-memory data structure store, used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, and sorted sets with range queries. Redis also provides built-in replication, LRU eviction, transactions, and different levels of on-disk persistence.
+
 ## How to check the version of Redis installed?
 
 You can use any of the following
