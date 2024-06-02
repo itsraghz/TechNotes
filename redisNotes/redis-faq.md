@@ -2,7 +2,7 @@
 
 ## What is Redis, and how it is used?
 
-Redis (_Re_mote _Di_ctionary _S_erver) is an open-source, in-memory data structure store, used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, and sorted sets with range queries. Redis also provides built-in replication, LRU eviction, transactions, and different levels of on-disk persistence.
+Redis (*Re*mote *Di*ctionary *S*erver) is an open-source, in-memory data structure store, used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, and sorted sets with range queries. Redis also provides built-in replication, LRU eviction, transactions, and different levels of on-disk persistence.
 
 ## How to check the version of Redis installed?
 
@@ -285,7 +285,12 @@ The output will be precise and meaningful to give you the context.  As it states
 brew services stop redis
 Stopping `redis`... (might take a while)
 ==> Successfully stopped `redis` (label: homebrew.mxcl.redis)
+```
+
+```sh
 ➜  redisNotes git:(master) ✗
 brew services list | grep redis
 redis             none
 ```
+
+The line `redis` with the status `none` confirms that there are no active service for `redis` in the System.
