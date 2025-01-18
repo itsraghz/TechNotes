@@ -1,0 +1,9 @@
+FROM openjdk:17
+
+WORKDIR /app
+COPY DateTimeExample.java .
+
+RUN javac DateTimeExample.java
+
+CMD ["sh", "-c", "echo 'Running on Java 17:' && java -version && echo '---' && java DateTimeExample"]
+

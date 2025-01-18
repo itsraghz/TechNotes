@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  java7:
+    build:
+      context: .
+      dockerfile: Dockerfile.java7
+    container_name: datetime-java7
+
+  java8:
+    build:
+      context: .
+      dockerfile: Dockerfile.java8
+    container_name: datetime-java8
+
+  java11:
+    build:
+      context: .
+      dockerfile: Dockerfile.java11
+    container_name: datetime-java11
+
+  java17:
+    build:
+      context: .
+      dockerfile: Dockerfile.java17
+    container_name: datetime-java17
+
+  java21:
+    build:
+      context: .
+      dockerfile: Dockerfile.java21
+    container_name: datetime-java21
+

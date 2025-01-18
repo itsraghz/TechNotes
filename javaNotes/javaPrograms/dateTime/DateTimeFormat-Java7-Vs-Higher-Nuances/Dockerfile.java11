@@ -1,0 +1,9 @@
+FROM openjdk:11
+
+WORKDIR /app
+COPY DateTimeExample.java .
+
+RUN javac DateTimeExample.java
+
+CMD ["sh", "-c", "echo 'Running on Java 11:' && java -version && echo '---' && java DateTimeExample"]
+

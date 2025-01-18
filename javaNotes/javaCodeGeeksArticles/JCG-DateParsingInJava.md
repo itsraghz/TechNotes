@@ -111,7 +111,7 @@ So it is pretty obvious that we need to transform the input from the String (`ja
 
 Know the Jargons:
 
-* Parsing : Technically, the transformation of data from a raw type / literal String to the actual intended data type is called *Parsing*. We will see how we can actually parse a String to a Date value.
+* *Parsing* : Technically, the transformation of data from a raw type / literal String to the actual intended data type is called *Parsing*. We will see how we can actually parse a String to a Date value.
 
 * *Formatting* : Likewise, when we do the reverse, when converting a Date object to a String, it is called as *formatting*.
 
@@ -151,36 +151,6 @@ public class SimpleDateFormatExample
 }
 ```
 
-```java
-───────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-       │ File: SimpleDateFormatExample.java
-───────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1   │ import java.text.SimpleDateFormat;
-   2   │ import java.text.ParseException;
-   3   │ import java.util.Date;
-   4   │
-   5   │ public class SimpleDateFormatExample
-   6   │ {
-   7   │     public static void main(String... args)
-   8   │     {
-   9   │         System.out.println("SimpleDateFormatExample - main()");
-  10   │         String dateInStr = "2023-06-17";
-  11   │         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-  12   │         Date dateObj = null;
-  13   │         try {
-  14   │             dateObj = sdf.parse(dateInStr);
-  15   │         } catch(ParseException parseException) {
-  16   │             System.err.println("ParseException occurred while parsing a String to a Date");
-  17   │             System.err.println("Error Message : " + parseException.getMessage());
-  18   │         }
-  19   │
-  20   │         System.out.println("Input - Date in String : " + dateInStr);
-  21   │         System.out.println("Output - Date Object parsed : " + dateObj);
-  22   │     }
-  23   │ }
-───────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-```
-
 The program is straight forward where we
 
 * Import the required classes from `java.util.Date` package.
@@ -206,8 +176,8 @@ The set of overloaded constructors are given below for a quick reference.
 
 | Constructor | Description |
 | --------- | ------------- |
-| `SimpleDateFormat()` | Constructs a SimpleDateFormat using the default pattern and date format symbols for the default FORMAT locale. *NOTE*: This method throws a `NullPointerException` when the pattern was not supplied. The Javadoc is not appropriate. |
-| `SimpleDateFormat(String pattern)` | Constructs a SimpleDateFormat using the given pattern and the default date format symbols for the default FORMAT locale. *NOTE*: The Javadoc clearly states that this method will throw a `NullPointerException` if the `pattern` supplied is `null`, and, an `IllegalArgumentException` if the `format` is invalid. |
+| `SimpleDateFormat()` | Constructs a SimpleDateFormat using the default pattern and date format symbols for the default FORMAT locale. |
+| `SimpleDateFormat(String pattern)` | Constructs a SimpleDateFormat using the given pattern and the default date format symbols for the default FORMAT locale. |
 | `SimpleDateFormat(String pattern, DateFormatSymbols formatSymbols)` | Constructs a SimpleDateFormat using the given pattern and date format symbols. |
 | `SimpleDateFormat(String pattern, Locale locale)` | Constructs a SimpleDateFormat using the given pattern and the default date format symbols for the given locale. |
 
@@ -215,7 +185,7 @@ Mostly we would use the 2nd flavor - `SimpleDateFormat(String pattern)` where we
 
 The different but most widely used patterns are given below.
 
-| Date and Time Pattern | Result |
+| Date and Time Pattern |	Result |
 | --------------- | ----------- |
 | `yyyy.MM.dd G 'at' HH:mm:ss z` | 2001.07.04 AD at 12:08:56 PDT |
 | `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
@@ -233,9 +203,35 @@ The different but most widely used patterns are given below.
 
 
 ```java
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Date;
 
+public class TryingOutDatePatterns
+{
+    public static void main(String... args)
+    {
+        String[] dateArray = new String[]{"2023-07-11", "2023-Jul-11"};
+        String[] patternArray = new String[]{"yyyy-MM-dd", "yyyy-MMM-dd"};
+        SimpleDateFormat sdf = null;
+        Date dateObj = null;
+        
+        for(int i=0; i < dateArray.length; i++) 
+        {
+            System.out.println("Date : " + dateArray[i] + " | pattern : " + patternArray[i]);
+            sdf = new SimpleDateFormat(patternArray[i]);        
+            
+            try {
+                dateObj = sdf.parse(dateArray[i]);
+            }catch(ParseException parseException) {
+                System.err.println("Exception occurred while parsing a Date from String");
+                System.err.println("Error Message : " + parseException.getMessage());
+            }
+            System.out.println("Date Object parsed with the pattern [" + patternArray[i] + "] : " + dateObj);
+        }
+    }
+}
 ```
-
 
 *DateFormatSymbols* is a public class for encapsulating localizable date-time formatting data, such as the names of the months, the names of the days of the week, and the time zone data. `SimpleDateFormat` uses `DateFormatSymbols` to encapsulate this information.
 
@@ -245,7 +241,7 @@ Typically you *shouldn't use DateFormatSymbols directly*. Rather, you are encour
 
 ### Converting date strings to Java Date objects
 
-Now that we have seen 
+Now that we have seen
 
 ### Best Practices
 
