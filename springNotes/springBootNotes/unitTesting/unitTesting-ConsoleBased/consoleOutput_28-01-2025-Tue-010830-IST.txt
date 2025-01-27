@@ -1,0 +1,37 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v3.2.2)[0;39m
+
+[2m2025-01-28T01:08:31.177+05:30[0;39m [32m INFO[0;39m [35m74046[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mc.e.unittest.UnitTestDemoApplication    [0;39m [2m:[0;39m Starting UnitTestDemoApplication v1.0.0 using Java 22.0.2 with PID 74046 (/Users/raghavan.muthu/raghs/prfsnl/github-repos/TechNotes/springNotes/springBootNotes/unitTesting/target/unit-test-demo-1.0.0.jar started by raghavan.muthu in /Users/raghavan.muthu/raghs/prfsnl/github-repos/TechNotes/springNotes/springBootNotes/unitTesting)
+[2m2025-01-28T01:08:31.178+05:30[0;39m [32m INFO[0;39m [35m74046[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mc.e.unittest.UnitTestDemoApplication    [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2025-01-28T01:08:31.381+05:30[0;39m [32m INFO[0;39m [35m74046[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mc.e.unittest.UnitTestDemoApplication    [0;39m [2m:[0;39m Started UnitTestDemoApplication in 0.363 seconds (process running for 0.599)
+
+===========================================
+Calculator Operations Demo
+Execution Time: 28-01-2025 01:08:31
+===========================================
+
+Addition Operation
+----------------
+10.50 + 5.50 = 16.00
+
+Subtraction Operation
+--------------------
+10.50 - 5.50 = 5.00
+
+Multiplication Operation
+-----------------------
+10.50 * 5.50 = 57.75
+
+Division Operation
+-----------------
+10.50 / 5.50 = 1.91
+
+===========================================
+Calculator Demo Completed Successfully
+===========================================

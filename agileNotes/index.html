@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Methodologies</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            transition: background-color 0.3s ease;
+        }
+        .dark-mode {
+            background-color: #212529;
+            color: #f8f9fa;
+        }
+        .dark-mode .card {
+            background-color: #343a40;
+            color: #f8f9fa;
+        }
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: inherit;
+        }
+        .content-wrapper {
+            margin-top: 120px;
+        }
+        .nav-tabs .nav-link {
+            color: inherit;
+        }
+        .tab-content {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed-header border-bottom shadow-sm p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h3 mb-0">Software Development Methodologies</h1>
+                <button class="btn btn-outline-primary" id="darkModeToggle">
+                    <i class="bi bi-moon-stars"></i>
+                    Toggle Dark Mode
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <ul class="nav nav-tabs" id="methodologyTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">
+                        <i class="bi bi-house-door"></i> Overview
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="agile-tab" data-bs-toggle="tab" data-bs-target="#agile" type="button" role="tab">
+                        <i class="bi bi-lightning"></i> Agile
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="scrum-tab" data-bs-toggle="tab" data-bs-target="#scrum" type="button" role="tab">
+                        <i class="bi bi-kanban"></i> Scrum
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="waterfall-tab" data-bs-toggle="tab" data-bs-target="#waterfall" type="button" role="tab">
+                        <i class="bi bi-water"></i> Waterfall
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="comparison-tab" data-bs-toggle="tab" data-bs-target="#comparison" type="button" role="tab">
+                        <i class="bi bi-bar-chart"></i> Comparison
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="methodologyTabsContent">
+                <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Welcome to Software Development Methodologies Guide</h2>
+                            <p>This comprehensive guide covers various software development methodologies and frameworks used in the industry today.</p>
+                            <div id="readme-content">
+                                <!-- README.md content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="agile" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="agile-content">
+                                <!-- AGILE_METHODOLOGY.md content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="scrum" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="scrum-content">
+                                <!-- SCRUM_FRAMEWORK.md content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="waterfall" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="waterfall-content">
+                                <!-- WATERFALL_METHODOLOGY.md content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="comparison" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="comparison-content">
+                                <!-- COMPARISON.md content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const icon = darkModeToggle.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.replace('bi-moon-stars', 'bi-sun');
+            } else {
+                icon.classList.replace('bi-sun', 'bi-moon-stars');
+            }
+        });
+
+        // Smooth scrolling for in-page links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

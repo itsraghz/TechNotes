@@ -6,16 +6,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.6</version>
+		<version>3.2.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.raghsonline</groupId>
 	<artifactId>SpringBootDockerTest-01</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<name>SpringBootDockerTest-01</name>
 	<description>Demo Spring Boot Project for Docker</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

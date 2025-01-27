@@ -11,9 +11,9 @@ import java.util.Properties;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import upgrad.kafka.stock.model.PriceData;
 import upgrad.kafka.stock.model.Stock;
@@ -75,21 +75,17 @@ public class KafkaStockConsumer {
 				}
 				
 				/* JSON to Java Conversion */
-				JSONParser jsonParser = new JSONParser();
-				Object obj = null;
-				Stock stockObj = null;
-				PriceData priceData = null;
-				JSONObject jsonObj = null;
-				
-				try {
-					obj = jsonParser.parse(record.value());
-				} catch (ParseException e) {
-					System.err.println("Exception occurred while parsing the JSON data and converting to the Stock data model..");
-					e.printStackTrace();
-				}
-				
-				if(null!=obj)
-					 jsonObj = (JSONObject) obj;
+    ObjectMapper mapper = new ObjectMapper();
+    Stock stockObj = null;
+    PriceData priceData = null;
+    JsonNode jsonNode = null;
+
+    try {
+        jsonNode = mapper.readTree(record.value());
+    } catch (JsonProcessingException e) {
+        System.err.println("Exception occurred while parsing the JSON data and converting to the Stock data model..");
+        e.printStackTrace();
+    }
 
 				//System.out.println(" [##] jsonObject type : " + jsonObj.getClass().getTypeName());
 				//System.out.println(" [##] jsonObject  : " + jsonObj);
@@ -99,8 +95,8 @@ public class KafkaStockConsumer {
 				double volume = 0, high = 0, low = 0, close = 0, open = 0.0;
 				String formattedOutputStr = null;
 				
-				if(null!=jsonObj) {
-					symbol = String.valueOf(jsonObj.get("symbol"));
+    if(null!=jsonNode) {
+        symbol = jsonNode.get("symbol").asText();
 					
 					/** Business Validation : Consume only the interested stocks */
 					if(Objects.isNull(symbol) || !preferredStockList.contains(symbol)) {
@@ -112,22 +108,22 @@ public class KafkaStockConsumer {
 					}
 					
 					//2020-03-01 00:15:00
-					DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-					timestamp = LocalDateTime.parse(String.valueOf(jsonObj.get("timestamp")), dateTimeFormatter);
-					
-					formattedOutputStr = String.format("[JSON-Java] Symbol: [%s], dateTime : [%s]", symbol, timestamp);
-					
-					JSONObject priceDataJSONObj = (JSONObject) jsonObj.get("priceData");
-					if(null!=priceDataJSONObj) {
-						volume = Double.valueOf(String.valueOf(priceDataJSONObj.get("volume")));
-						if(volume < 0) {
-							System.out.println(" [{%%}] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
-							volume = Math.abs(volume);
-						}
-						high = Double.valueOf(String.valueOf(priceDataJSONObj.get("high")));
-						low = Double.valueOf(String.valueOf(priceDataJSONObj.get("low")));
-						close = Double.valueOf(String.valueOf(priceDataJSONObj.get("close")));
-						open = Double.valueOf(String.valueOf(priceDataJSONObj.get("open")));
+    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    timestamp = LocalDateTime.parse(jsonNode.get("timestamp").asText(), dateTimeFormatter);
+
+    formattedOutputStr = String.format("[JSON-Java] Symbol: [%s], dateTime : [%s]", symbol, timestamp);
+
+    JsonNode priceDataNode = jsonNode.get("priceData");
+    if(null!=priceDataNode) {
+        volume = priceDataNode.get("volume").asDouble();
+        if(volume < 0) {
+            System.out.println(" [{%%}] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
+            volume = Math.abs(volume);
+        }
+        high = priceDataNode.get("high").asDouble();
+        low = priceDataNode.get("low").asDouble();
+        close = priceDataNode.get("close").asDouble();
+        open = priceDataNode.get("open").asDouble();
 						
 						formattedOutputStr += String.format(", Volume : [%s]", volume);
 					}

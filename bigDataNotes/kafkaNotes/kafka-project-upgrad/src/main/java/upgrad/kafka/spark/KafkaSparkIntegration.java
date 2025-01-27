@@ -31,10 +31,11 @@ import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.kafka010.ConsumerStrategies;
 import org.apache.spark.streaming.kafka010.KafkaUtils;
 import org.apache.spark.streaming.kafka010.LocationStrategies;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import scala.Tuple2;
 import upgrad.kafka.stock.model.PriceData;
@@ -58,13 +59,13 @@ public class KafkaSparkIntegration {
 	}
 	
 	public static Stock getStockObjFromJSON(String record, int windowDuration) 
-	throws ParseException 
+	throws JsonProcessingException
 	{
 		Stock stockObj;
 		PriceData priceData;
 		    
-		JSONParser jsonParser = new JSONParser();
-		JSONObject jsonObj = (JSONObject) jsonParser.parse(record);;
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode jsonObj = mapper.readTree(record);
 		
 		//TODO
 		if (Stock.getTotalNoPeriod()>windowDuration) {
@@ -81,7 +82,7 @@ public class KafkaSparkIntegration {
 		LocalDateTime timestamp = null;
 		double volume = 0, high = 0, low = 0, close = 0, open = 0.0;
 		
-		symbol = String.valueOf(jsonObj.get("symbol"));
+		symbol = jsonObj.get("symbol").asText();
 		
 		/** Business Validation : Consume only the interested stocks */
 		if(Objects.isNull(symbol) || !preferredStockList.contains(symbol)) {
@@ -92,20 +93,20 @@ public class KafkaSparkIntegration {
 		
 		//2020-03-01 00:15:00
 		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-		timestamp = LocalDateTime.parse(String.valueOf(jsonObj.get("timestamp")), dateTimeFormatter);
+		timestamp = LocalDateTime.parse(jsonObj.get("timestamp").asText(), dateTimeFormatter);
 		
-		JSONObject priceDataJSONObj = (JSONObject) jsonObj.get("priceData");
-		if(null!=priceDataJSONObj) 
+		JsonNode priceDataJSONObj = jsonObj.get("priceData");
+		if(priceDataJSONObj != null && !priceDataJSONObj.isNull())
 		{
-			volume = Double.valueOf(String.valueOf(priceDataJSONObj.get("volume")));
+			volume = priceDataJSONObj.get("volume").asDouble();
 			if(volume < 0) {
 				System.out.println(" [{%%}] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
 				volume = Math.abs(volume);
 			}
-			high = Double.valueOf(String.valueOf(priceDataJSONObj.get("high")));
-			low = Double.valueOf(String.valueOf(priceDataJSONObj.get("low")));
-			close = Double.valueOf(String.valueOf(priceDataJSONObj.get("close")));
-			open = Double.valueOf(String.valueOf(priceDataJSONObj.get("open")));
+			high = priceDataJSONObj.get("high").asDouble();
+			low = priceDataJSONObj.get("low").asDouble();
+			close = priceDataJSONObj.get("close").asDouble();
+			open = priceDataJSONObj.get("open").asDouble();
 		}
 		priceData = new PriceData(close, high, low, open, volume);
 		stockObj = new Stock(symbol, timestamp, priceData);
@@ -326,16 +327,16 @@ public class KafkaSparkIntegration {
 				private static final long serialVersionUID = 1L;
 
 				@Override
-				public Iterator<Stock> call(String record) throws ParseException  
+    public Iterator<Stock> call(String record) throws JsonProcessingException  
 				{
 					System.out.println(" >>>> [UPGRAD-DEBUG] call() method of jsonExtractor - ENTRY");
 					
 					Stock stockObj;
 					PriceData priceData;
 					    
-					JSONParser jsonParser = new JSONParser();
-					JSONArray jsonArray = (JSONArray) jsonParser.parse(record);
-					JSONObject jsonObj = null;
+    ObjectMapper mapper = new ObjectMapper();
+    ArrayNode jsonArray = (ArrayNode) mapper.readTree(record);
+    JsonNode jsonObj = null;
 					
 					if (Stock.getTotalNoPeriod()>windowDuration) {
 						Stock.setTotalNoPeriod(windowDuration);
@@ -361,9 +362,9 @@ public class KafkaSparkIntegration {
 					
 					for(int i= 0 ; i < jsonArray.size(); i++)
 					{
-						jsonObj = (JSONObject) jsonArray.get(i);
-					
-						symbol = String.valueOf(jsonObj.get("symbol"));
+    jsonObj = jsonArray.get(i);
+
+    symbol = jsonObj.get("symbol").asText();
 						
 						/** Business Validation : Consume only the interested stocks */
 						if(Objects.isNull(symbol) || !preferredStockList.contains(symbol)) {
@@ -377,22 +378,22 @@ public class KafkaSparkIntegration {
 						
 						//2020-03-01 00:15:00
 						DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-						timestamp = LocalDateTime.parse(String.valueOf(jsonObj.get("timestamp")), dateTimeFormatter);
+    timestamp = LocalDateTime.parse(jsonObj.get("timestamp").asText(), dateTimeFormatter);
 						
 						formattedOutputStr = String.format("[JSON-Java] Symbol: [%s], dateTime : [%s]", symbol, timestamp);
 						
-						JSONObject priceDataJSONObj = (JSONObject) jsonObj.get("priceData");
-						if(null!=priceDataJSONObj) 
+    JsonNode priceDataJSONObj = jsonObj.get("priceData");
+    if(priceDataJSONObj != null && !priceDataJSONObj.isNull()) 
 						{
-							volume = Double.valueOf(String.valueOf(priceDataJSONObj.get("volume")));
-							if(volume < 0) {
+    volume = priceDataJSONObj.get("volume").asDouble();
+    if(volume < 0) {
 								System.out.println(" [{%%}] Volume - [" + volume + "] is negative. Taking the absolute value of it.");
 								volume = Math.abs(volume);
 							}
-							high = Double.valueOf(String.valueOf(priceDataJSONObj.get("high")));
-							low = Double.valueOf(String.valueOf(priceDataJSONObj.get("low")));
-							close = Double.valueOf(String.valueOf(priceDataJSONObj.get("close")));
-							open = Double.valueOf(String.valueOf(priceDataJSONObj.get("open")));
+    high = priceDataJSONObj.get("high").asDouble();
+    low = priceDataJSONObj.get("low").asDouble();
+    close = priceDataJSONObj.get("close").asDouble();
+    open = priceDataJSONObj.get("open").asDouble();
 							
 							formattedOutputStr += String.format(", Volume : [%s]", volume);
 						}
