@@ -108,3 +108,175 @@ Feel free to submit issues and enhancement requests or create pull requests with
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## UI Libraries Setup
+
+The project uses several UI libraries that can be served either locally or via CDN.
+
+### Available Libraries
+- Bootstrap 5.3.2 (CSS and JS)
+- Bootstrap Icons 1.11.2
+- Highlight.js 11.9.0
+
+### Directory Structure
+```
+lib/
+├── css/
+│   ├── bootstrap.min.css
+│   ├── bootstrap-icons.css
+│   └── highlight.min.css
+├── js/
+│   ├── bootstrap.bundle.min.js
+│   └── highlight.min.js
+└── fonts/
+    └── bootstrap-icons.*
+```
+
+### Downloading Libraries Locally
+
+1. Execute the download script:
+```bash
+chmod +x download-ui-libs.sh
+./download-ui-libs.sh
+```
+
+Expected output:
+```
+Creating directory structure...
+Downloading Bootstrap CSS...
+Downloading Bootstrap JS...
+Downloading Bootstrap Icons CSS...
+Downloading Bootstrap Icons Fonts...
+Downloading Highlight.js CSS...
+Downloading Highlight.js JS...
+All libraries downloaded successfully!
+```
+
+### Switching Between Local and CDN
+
+The application uses a configuration flag `USE_LOCAL_LIBS` in `config.js`:
+
+```javascript
+const config = {
+    useLocalLibs: true  // Set to false to use CDN versions
+};
+```
+
+To switch to CDN versions:
+1. Open `config.js`
+2. Set `useLocalLibs` to `false`
+3. Refresh the page
+3. Refresh the page
+
+All library paths will automatically update based on this setting.
+
+### Configuration System (config.js)
+
+The `config.js` file manages library paths and provides a flexible configuration system for the application's UI resources.
+
+#### Overview
+The configuration system allows switching between local and CDN-hosted libraries through a simple boolean flag. It handles path resolution automatically and provides a consistent API for accessing library resources.
+
+#### Configuration Options
+
+```javascript
+const config = {
+    useLocalLibs: true,          // Toggle between local and CDN resources
+    version: {
+        bootstrap: '5.3.2',      // Bootstrap version
+        bootstrapIcons: '1.11.2', // Bootstrap Icons version
+        highlightjs: '11.9.0'    // Highlight.js version
+    },
+    paths: {
+        local: {
+            css: '/lib/css/',    // Local CSS directory
+            js: '/lib/js/',      // Local JavaScript directory
+            fonts: '/lib/fonts/' // Local fonts directory
+        },
+        cdn: {
+            bootstrap: 'https://cdn.jsdelivr.net/npm/bootstrap@{version}',
+            bootstrapIcons: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@{version}',
+            highlightjs: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{version}'
+        }
+    }
+};
+```
+
+#### Usage Examples
+
+1. Getting a library path:
+```javascript
+// Get Bootstrap CSS path
+const bootstrapCss = config.getPath('bootstrap', 'css');
+
+// Get Highlight.js JavaScript path
+const highlightJs = config.getPath('highlightjs', 'js');
+```
+
+2. Checking configuration:
+```javascript
+// Check if using local libraries
+if (config.useLocalLibs) {
+    console.log('Using local libraries');
+}
+
+// Get current Bootstrap version
+const version = config.version.bootstrap;
+```
+
+#### Path Resolution System
+
+The path resolution system follows these rules:
+
+1. For local resources:
+- CSS files: `lib/css/{filename}.css`
+- JavaScript files: `lib/js/{filename}.js`
+- Fonts: `lib/fonts/{filename}`
+
+2. For CDN resources:
+- Replaces {version} placeholder with the corresponding version
+- Constructs full URLs based on CDN templates
+- Automatically appends appropriate file extensions
+
+#### API Documentation
+
+```javascript
+config.getPath(library, type)
+// Parameters:
+// - library: 'bootstrap'|'bootstrapIcons'|'highlightjs'
+// - type: 'css'|'js'|'fonts'
+// Returns: string (resolved path)
+
+config.getVersion(library)
+// Parameters:
+// - library: 'bootstrap'|'bootstrapIcons'|'highlightjs'
+// Returns: string (version number)
+
+config.isLocal()
+// Returns: boolean (true if using local libraries)
+```
+
+#### Implementation Examples
+
+1. Loading CSS in HTML:
+```html
+<link rel="stylesheet" href="/lib/css/bootstrap.min.css">
+```
+
+2. Dynamic path resolution in JavaScript:
+```javascript
+function loadLibrary(library, type) {
+    const path = config.getPath(library, type);
+    const element = type === 'css' 
+        ? createLinkElement(path)
+        : createScriptElement(path);
+    document.head.appendChild(element);
+}
+```
+
+3. Version checking:
+```javascript
+function isCompatible(library, minVersion) {
+    const currentVersion = config.getVersion(library);
+    return compareVersions(currentVersion, minVersion) >= 0;
+}
+```

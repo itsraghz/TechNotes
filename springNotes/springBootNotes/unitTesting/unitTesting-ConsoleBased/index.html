@@ -44,44 +44,104 @@
                             <i class="bi bi-house-door"></i> Overview
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" data-bs-toggle="tab" href="#fundamentals">
-                            <i class="bi bi-book"></i> Fundamentals
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <i class="bi bi-diagram-3"></i> JUnit
                         </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#junit-overview">
+                                    <i class="bi bi-book"></i> Framework Overview
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#junit-architecture">
+                                    <i class="bi bi-boxes"></i> Architecture
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#junit-annotations">
+                                    <i class="bi bi-at"></i> Core Annotations
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#junit-classes">
+                                    <i class="bi bi-code-square"></i> Key Classes & Interfaces
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#junit-lifecycle">
+                                    <i class="bi bi-arrow-repeat"></i> Test Lifecycle
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#junit-advanced">
+                                    <i class="bi bi-gear-wide-connected"></i> Advanced Features
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" data-bs-toggle="tab" href="#best-practices">
-                            <i class="bi bi-trophy"></i> Best Practices
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <i class="bi bi-book-half"></i> Theory
                         </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#fundamentals">
+                                    <i class="bi bi-book"></i> Fundamentals
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#best-practices">
+                                    <i class="bi bi-trophy"></i> Best Practices
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" data-bs-toggle="tab" href="#examples">
                             <i class="bi bi-code-square"></i> Examples
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" data-bs-toggle="tab" href="#program">
-                            <i class="bi bi-file-code"></i> Program
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <i class="bi bi-code-square"></i> Program and Output
                         </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#program">
+                                    <i class="bi bi-file-code"></i> Program
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#output">
+                                    <i class="bi bi-terminal"></i> Output
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" data-bs-toggle="tab" href="#output">
-                            <i class="bi bi-terminal"></i> Output
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <i class="bi bi-gear"></i> Technical
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" data-bs-toggle="tab" href="#testing">
-                            <i class="bi bi-terminal-fill"></i> Testing
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" data-bs-toggle="tab" href="#junit5">
-                            <i class="bi bi-puzzle"></i> JUnit 5
-                        </a>
-                    </li>
-                        <a class="nav-link text-white" data-bs-toggle="tab" href="#server-setup">
-                            <i class="bi bi-server"></i> Server Setup
-                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#ui-setup">
+                                    <i class="bi bi-gear-wide"></i> UI Setup
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#testing">
+                                    <i class="bi bi-terminal-fill"></i> Unit Testing
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" data-bs-toggle="tab" href="#server-setup">
+                                    <i class="bi bi-hdd-network"></i> Server Setup
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -91,6 +151,167 @@
     <!-- Tab Content -->
     <div class="container">
         <div class="tab-content">
+            <!-- JUnit Framework Content -->
+            <div class="tab-pane fade" id="junit-overview">
+                <h2 class="mb-4">JUnit Framework Overview</h2>
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title h5 mb-0">What is JUnit?</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>JUnit is a popular unit testing framework for Java programming language. It plays a crucial role in test-driven development (TDD).</p>
+                        
+                        <h4 class="mt-4">Key Features:</h4>
+                        <ul>
+                            <li>Simple API for writing tests</li>
+                            <li>Rich assertion methods</li>
+                            <li>Test suites for organizing tests</li>
+                            <li>Test runners for executing tests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="junit-architecture">
+                <h2 class="mb-4">JUnit Architecture</h2>
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="card-title h5 mb-0">JUnit Platform</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>The JUnit Platform serves as a foundation for launching testing frameworks on the JVM. It defines the TestEngine API for developing testing frameworks that run on the platform.</p>
+                        
+                        <h4 class="mt-4">Architecture Components:</h4>
+                        <ul>
+                            <li>JUnit Platform</li>
+                            <li>JUnit Jupiter</li>
+                            <li>JUnit Vintage</li>
+                            <li>TestEngine API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="junit-annotations">
+                <h2 class="mb-4">Core Annotations</h2>
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="card-title h5 mb-0">Commonly Used Annotations</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Annotation</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Test</td>
+                                    <td>Marks a method as a test case</td>
+                                </tr>
+                                <tr>
+                                    <td>@BeforeAll</td>
+                                    <td>Executed before all test methods</td>
+                                </tr>
+                                <tr>
+                                    <td>@AfterAll</td>
+                                    <td>Executed after all test methods</td>
+                                </tr>
+                                <tr>
+                                    <td>@BeforeEach</td>
+                                    <td>Executed before each test method</td>
+                                </tr>
+                                <tr>
+                                    <td>@AfterEach</td>
+                                    <td>Executed after each test method</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="junit-classes">
+                <h2 class="mb-4">Key Classes & Interfaces</h2>
+                <div class="card mb-4">
+                    <div class="card-header bg-warning">
+                        <h3 class="card-title h5 mb-0">Core Classes</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h4>Assertions Class</h4>
+                            <p>Contains various assertion methods for validating test results.</p>
+                            <pre><code class="language-java">
+                            import org.junit.jupiter.api.Assertions;
+                            
+                            // Example usage
+                            Assertions.assertEquals(expected, actual);
+                            Assertions.assertTrue(condition);
+                            Assertions.assertThrows(Exception.class, () -> {});
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="junit-lifecycle">
+                <h2 class="mb-4">Test Lifecycle</h2>
+                <div class="card mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h3 class="card-title h5 mb-0">Lifecycle Methods</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="lifecycle-diagram text-center mb-4">
+                            <!-- Add visual representation of lifecycle -->
+                            <div class="alert alert-info">
+                                <h4>Test Execution Flow:</h4>
+                                <ol>
+                                    <li>@BeforeAll (static)</li>
+                                    <li>@BeforeEach</li>
+                                    <li>@Test</li>
+                                    <li>@AfterEach</li>
+                                    <li>@AfterAll (static)</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="junit-advanced">
+                <h2 class="mb-4">Advanced Features</h2>
+                <div class="card mb-4">
+                    <div class="card-header bg-dark text-white">
+                        <h3 class="card-title h5 mb-0">Advanced Testing Capabilities</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Parameterized Tests</h4>
+                        <pre><code class="language-java">
+                        @ParameterizedTest
+                        @ValueSource(strings = { "Hello", "World" })
+                        void parameterizedTest(String arg) {
+                            assertNotNull(arg);
+                        }
+                        </code></pre>
+
+                        <h4 class="mt-4">Dynamic Tests</h4>
+                        <pre><code class="language-java">
+                        @TestFactory
+                        Collection<DynamicTest> dynamicTests() {
+                            return Arrays.asList(
+                                dynamicTest("Simple dynamic test",
+                                    () -> assertTrue(true)),
+                                dynamicTest("Exception dynamic test",
+                                    () -> assertThrows(Exception.class,
+                                        () -> { throw new Exception(); }))
+                            );
+                        }
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
             <div class="tab-pane fade show active" id="overview">
                 <!-- Carousel -->
                 <div id="unitTestingCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -390,11 +611,216 @@ public void testAddition() {
 }
                 </code></pre>
             </div>
-            
-            <div class="tab-pane fade" id="program">
-                <h2>Program</h2>
-                <pre><code class="language-java">
-public class Calculator {
+                        </div>
+
+                        <div class="tab-pane fade" id="ui-setup">
+                            <!-- Header Section -->
+                            <div class="bg-primary text-white py-4 mb-4 text-center rounded">
+                                <h1 class="display-5"><i class="bi bi-gear-wide-connected"></i> UI Setup & Documentation</h1>
+                                <p class="lead mb-0">Complete guide to setting up and configuring the UI libraries</p>
+                            </div>
+
+                            <div class="container">
+                                <!-- Config.js Content and Documentation -->
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h3 class="card-title h5 mb-0">Config.js Documentation</h3>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p>The <code>config.js</code> file manages library paths and enables switching between local and CDN versions.</p>
+                                            
+                                            <h4 class="mt-4">Configuration File Structure</h4>
+                                            <pre><code class="language-javascript">
+                                            // config.js
+                                            const config = {
+                                                useLocalLibs: true,  // Set to false to use CDN
+                                                
+                                                paths: {
+                                                    local: {
+                                                        bootstrap: {
+                                                            css: '/lib/css/bootstrap.min.css',
+                                                            js: '/lib/js/bootstrap.bundle.min.js'
+                                                        },
+                                                        icons: '/lib/css/bootstrap-icons.css',
+                                                        highlight: {
+                                                            css: '/lib/css/github.min.css',
+                                                            js: '/lib/js/highlight.min.js'
+                                                        }
+                                                    },
+                                                    cdn: {
+                                                        bootstrap: {
+                                                            css: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
+                                                            js: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
+                                                        },
+                                                        icons: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css',
+                                                        highlight: {
+                                                            css: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css',
+                                                            js: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js'
+                                                        }
+                                                    }
+                                                },
+                                                
+                                                getPath: function(library, type) {
+                                                    const source = this.useLocalLibs ? this.paths.local : this.paths.cdn;
+                                                    if (typeof source[library] === 'string') return source[library];
+                                                    return source[library][type];
+                                                }
+                                            };
+                                            </code></pre>
+                                            
+                                            <div class="alert alert-info mt-4">
+                                                <h5 class="h6">Usage Example:</h5>
+                                                <pre><code class="language-javascript">
+                                                // Get Bootstrap CSS path
+                                                const bootstrapCss = config.getPath('bootstrap', 'css');
+                                                
+                                                // Get Highlight.js path
+                                                const highlightJs = config.getPath('highlight', 'js');
+                                                </code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Download Script Content and Documentation -->
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-success text-white">
+                                            <h3 class="card-title h5 mb-0">Download Script</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>The download script automates the process of fetching and organizing UI libraries locally:</p>
+                                            <pre><code class="language-bash">
+                                            curl -L https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js -o lib/js/bootstrap.bundle.min.js
+                                            
+                                            # Download Bootstrap Icons
+                                            curl -L https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css -o lib/css/bootstrap-icons.css
+                                            
+                                            # Download Highlight.js
+                                            curl -L https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css -o lib/css/github.min.css
+                                            curl -L https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js -o lib/js/highlight.min.js
+                                            </code></pre>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion mb-4" id="downloadScriptAccordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#downloadScriptDocs">
+                                                    Download Script Documentation
+                                                </button>
+                                            </h2>
+                                            <div id="downloadScriptDocs" class="accordion-collapse collapse show" data-bs-parent="#downloadScriptAccordion">
+                                                <div class="accordion-body">
+                                                    <h4 class="h5">Purpose and Functionality</h4>
+                                                    <p>The download script automates the process of setting up local UI libraries for the project. It handles:</p>
+                                                    <ul>
+                                                        <li>Directory structure creation</li>
+                                                        <li>Library downloads via curl</li>
+                                                        <li>Proper file organization</li>
+                                                        <li>Error handling and status feedback</li>
+                                                    </ul>
+                                                    
+                                                    <h4 class="h5 mt-4">Step-by-Step Breakdown</h4>
+                                                    <ol>
+                                                        <li>Creates directory structure for CSS, JS, and fonts</li>
+                                                        <li>Downloads Bootstrap CSS and JS bundles</li>
+                                                        <li>Downloads Bootstrap Icons CSS and fonts</li>
+                                                        <li>Downloads Highlight.js CSS and JS files</li>
+                                                        <li>Verifies successful downloads</li>
+                                                    </ol>
+                                                    
+                                                    <h4 class="h5 mt-4">Usage Examples</h4>
+                                                    <pre><code class="language-bash">
+                                                    # Make script executable
+                                                    chmod +x download-ui-libs.sh
+                                                    
+                                                    # Run script
+                                                    ./download-ui-libs.sh
+                                                    
+                                                    # Check downloaded files
+                                                    ls -R lib/
+                                                    </code></pre>
+                                                    
+                                                    <h4 class="h5 mt-4">Troubleshooting Tips</h4>
+                                                    <div class="alert alert-info">
+                                                        <ul class="mb-0">
+                                                            <li>Ensure curl is installed on your system</li>
+                                                            <li>Check write permissions in target directory</li>
+                                                            <li>Verify internet connectivity</li>
+                                                            <li>Check disk space availability</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Config.js Documentation -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#configJsDocs">
+                                                    Config.js Documentation
+                                                </button>
+                                            </h2>
+                                            <div id="configJsDocs" class="accordion-collapse collapse" data-bs-parent="#uiSetupAccordion">
+                                                <div class="accordion-body">
+                                                    <h4 class="h5">Configuration Options</h4>
+                                                    <p>The config.js file provides a flexible system for managing library paths and sources:</p>
+                                                    <pre><code class="language-javascript">
+                                                    const config = {
+                                                        useLocalLibs: true,  // Toggle between local and CDN
+                                                        
+                                                        paths: {
+                                                            local: {
+                                                                // Local path configurations
+                                                            },
+                                                            cdn: {
+                                                                // CDN path configurations
+                                                            }
+                                                        }
+                                                    };
+                                                    </code></pre>
+                                                    
+                                                    <h4 class="h5 mt-4">Path Resolution System</h4>
+                                                    <p>The path resolution system automatically selects the appropriate source based on configuration:</p>
+                                                    <pre><code class="language-javascript">
+                                                    // Path resolution method
+                                                    getPath: function(library, type) {
+                                                        const source = this.useLocalLibs ? this.paths.local : this.paths.cdn;
+                                                        if (typeof source[library] === 'string') return source[library];
+                                                        return source[library][type];
+                                                    }
+                                                    </code></pre>
+                                                    
+                                                    <h4 class="h5 mt-4">API Methods</h4>
+                                                    <ul>
+                                                        <li><code>getPath(library, type)</code>: Resolves path for specified library and type</li>
+                                                        <li><code>toggleSource()</code>: Switches between local and CDN sources</li>
+                                                        <li><code>validatePaths()</code>: Verifies path configurations</li>
+                                                    </ul>
+                                                    
+                                                    <h4 class="h5 mt-4">Implementation Examples</h4>
+                                                    <pre><code class="language-javascript">
+                                                    // Get Bootstrap CSS path
+                                                    const bootstrapCss = config.getPath('bootstrap', 'css');
+                                                    
+                                                    // Get Highlight.js JS path
+                                                    const highlightJs = config.getPath('highlight', 'js');
+                                                    
+                                                    // Switch to CDN
+                                                    config.useLocalLibs = false;
+                                                    </code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="program">
+                            <h2>Program</h2>
+                            <pre><code class="language-java">
     public int add(int a, int b) {
         return a + b;
     }
@@ -412,6 +838,328 @@ All tests completed successfully!
                 </pre>
             </div>
 
+                                <div class="card-body">
+                                    <p>The <code>config.js</code> file manages library paths and enables switching between local and CDN versions.</p>
+                        
+                        <h4 class="mt-4">Configuration File Structure</h4>
+                        <pre><code class="language-javascript">
+                        // config.js
+                        const config = {
+                            useLocalLibs: true,  // Set to false to use CDN
+                            
+                            paths: {
+                                local: {
+                                    bootstrap: {
+                                        css: '/lib/css/bootstrap.min.css',
+                                        js: '/lib/js/bootstrap.bundle.min.js'
+                                    },
+                                    icons: '/lib/css/bootstrap-icons.css',
+                                    highlight: {
+                                        css: '/lib/css/github.min.css',
+                                        js: '/lib/js/highlight.min.js'
+                                    }
+                                },
+                                cdn: {
+                                    bootstrap: {
+                                        css: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
+                                        js: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
+                                    },
+                                    icons: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css',
+                                    highlight: {
+                                        css: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css',
+                                        js: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js'
+                                    }
+                                }
+                            },
+                            
+                            getPath: function(library, type) {
+                                const source = this.useLocalLibs ? this.paths.local : this.paths.cdn;
+                                if (typeof source[library] === 'string') return source[library];
+                                return source[library][type];
+                            }
+                        };
+                        </code></pre>
+                        
+                        <div class="alert alert-info mt-4">
+                            <h5 class="h6">Usage Example:</h5>
+                            <pre><code class="language-javascript">
+                            // Get Bootstrap CSS path
+                            const bootstrapCss = config.getPath('bootstrap', 'css');
+                            
+                            // Get Highlight.js path
+                            const highlightJs = config.getPath('highlight', 'js');
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Script Content and Documentation -->
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="card-title h5 mb-0">Download Script</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>The download script automates the process of fetching and organizing UI libraries locally:</p>
+                        <pre><code class="language-bash">
+                        curl -L https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js -o lib/js/bootstrap.bundle.min.js
+                        
+                        # Download Bootstrap Icons
+                        curl -L https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css -o lib/css/bootstrap-icons.css
+                        
+                        # Download Highlight.js
+                        curl -L https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css -o lib/css/github.min.css
+                        curl -L https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js -o lib/js/highlight.min.js
+                        </code></pre>
+                    </div>
+                </div>
+
+                <div class="accordion mb-4" id="downloadScriptAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#downloadScriptDocs">
+                                Download Script Documentation
+                            </button>
+                        </h2>
+                        <div id="downloadScriptDocs" class="accordion-collapse collapse show" data-bs-parent="#downloadScriptAccordion">
+                            <div class="accordion-body">
+                                <h4 class="h5">Purpose and Functionality</h4>
+                                <p>The download script automates the process of setting up local UI libraries for the project. It handles:</p>
+                                <ul>
+                                    <li>Directory structure creation</li>
+                                    <li>Library downloads via curl</li>
+                                    <li>Proper file organization</li>
+                                    <li>Error handling and status feedback</li>
+                                </ul>
+                                
+                                <h4 class="h5 mt-4">Step-by-Step Breakdown</h4>
+                                <ol>
+                                    <li>Creates directory structure for CSS, JS, and fonts</li>
+                                    <li>Downloads Bootstrap CSS and JS bundles</li>
+                                    <li>Downloads Bootstrap Icons CSS and fonts</li>
+                                    <li>Downloads Highlight.js CSS and JS files</li>
+                                    <li>Verifies successful downloads</li>
+                                </ol>
+                                
+                                <h4 class="h5 mt-4">Usage Examples</h4>
+                                <pre><code class="language-bash">
+                                # Make script executable
+                                chmod +x download-ui-libs.sh
+                                
+                                # Run script
+                                ./download-ui-libs.sh
+                                
+                                # Check downloaded files
+                                ls -R lib/
+                                </code></pre>
+                                
+                                <h4 class="h5 mt-4">Troubleshooting Tips</h4>
+                                <div class="alert alert-info">
+                                    <ul class="mb-0">
+                                        <li>Ensure curl is installed on your system</li>
+                                        <li>Check write permissions in target directory</li>
+                                        <li>Verify internet connectivity</li>
+                                        <li>Check disk space availability</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Config.js Documentation -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#configJsDocs">
+                                Config.js Documentation
+                            </button>
+                        </h2>
+                        <div id="configJsDocs" class="accordion-collapse collapse" data-bs-parent="#uiSetupAccordion">
+                            <div class="accordion-body">
+                                <h4 class="h5">Configuration Options</h4>
+                                <p>The config.js file provides a flexible system for managing library paths and sources:</p>
+                                <pre><code class="language-javascript">
+                                const config = {
+                                    useLocalLibs: true,  // Toggle between local and CDN
+                                    
+                                    paths: {
+                                        local: {
+                                            // Local path configurations
+                                        },
+                                        cdn: {
+                                            // CDN path configurations
+                                        }
+                                    }
+                                };
+                                </code></pre>
+                                
+                                <h4 class="h5 mt-4">Path Resolution System</h4>
+                                <p>The path resolution system automatically selects the appropriate source based on configuration:</p>
+                                <pre><code class="language-javascript">
+                                // Path resolution method
+                                getPath: function(library, type) {
+                                    const source = this.useLocalLibs ? this.paths.local : this.paths.cdn;
+                                    if (typeof source[library] === 'string') return source[library];
+                                    return source[library][type];
+                                }
+                                </code></pre>
+                                
+                                <h4 class="h5 mt-4">API Methods</h4>
+                                <ul>
+                                    <li><code>getPath(library, type)</code>: Resolves path for specified library and type</li>
+                                    <li><code>toggleSource()</code>: Switches between local and CDN sources</li>
+                                    <li><code>validatePaths()</code>: Verifies path configurations</li>
+                                </ul>
+                                
+                                <h4 class="h5 mt-4">Implementation Examples</h4>
+                                <pre><code class="language-javascript">
+                                // Get Bootstrap CSS path
+                                const bootstrapCss = config.getPath('bootstrap', 'css');
+                                
+                                // Get Highlight.js JS path
+                                const highlightJs = config.getPath('highlight', 'js');
+                                
+                                // Switch to CDN
+                                config.useLocalLibs = false;
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Config.js Documentation -->
+                <div class="col-md-6">
+                <div class="accordion mb-4" id="configJsAccordion">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#configJsContent">
+                        Config.js Documentation
+                        </button>
+                    </h2>
+                    <div id="configJsContent" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                        <h4 class="h5">Configuration Options</h4>
+                        <p>The config.js file manages library paths and enables switching between local and CDN versions:</p>
+                        <pre><code class="language-javascript">
+                        const config = {
+                            useLocalLibs: true,  // Set to false to use CDN
+                            
+                            paths: {
+                                local: {
+                                    // Local path configurations
+                                },
+                                cdn: {
+                                    // CDN path configurations
+                                }
+                            },
+                            
+                            getPath: function(library, type) {
+                                const source = this.useLocalLibs ? this.paths.local : this.paths.cdn;
+                                if (typeof source[library] === 'string') return source[library];
+                                return source[library][type];
+                            }
+                        };
+                        </code></pre>
+                        
+                        <div class="alert alert-info mt-3">
+                            <h5 class="h6">Usage Example:</h5>
+                            <pre><code class="language-javascript">
+                            // Get Bootstrap CSS path
+                            const bootstrapCss = config.getPath('bootstrap', 'css');
+                            
+                            // Switch to CDN version
+                            config.useLocalLibs = false;
+                            </code></pre>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Rest of the cards -->
+            <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="card-title h5 mb-0">Download Script</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Library Download Script</h4>
+                        <p>The download script automates the process of fetching and organizing UI libraries locally.</p>
+                                                <div class="card">
+                                                    <div class="card-header bg-success text-white">
+                                                        <h3 class="card-title h5 mb-0">Download Script Documentation</h3>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="h5 mt-0">Purpose and Functionality</h4>
+                                                        <p>The download script automates the process of setting up local UI libraries for the project. It handles:</p>
+                                                        <ul>
+                                                            <li>Directory structure creation</li>
+                                                            <li>Library downloads via curl</li>
+                                                            <li>Proper file organization</li>
+                                                            <li>Error handling and status feedback</li>
+                                                        </ul>
+                                                        
+                                                        <h4 class="h5 mt-4">Script Content</h4>
+                                                        <pre><code class="language-bash">
+                        curl -L https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js -o lib/js/bootstrap.bundle.min.js
+                        
+                        # Download Bootstrap Icons
+                        curl -L https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css -o lib/css/bootstrap-icons.css
+                        
+                        # Download Highlight.js
+                        curl -L https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css -o lib/css/github.min.css
+                        curl -L https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js -o lib/js/highlight.min.js
+                        </code></pre>
+                        
+                        <div class="alert alert-warning mt-4">
+                            <h5 class="h6">Important Notes:</h5>
+                            <ul class="mb-0">
+                                <li>Make script executable: <code>chmod +x download-ui-libs.sh</code></li>
+                                <li>Run from project root: <code>./download-ui-libs.sh</code></li>
+                                <li>Requires curl to be installed</li>
+                                <li>Check permissions before running</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Library Management -->
+                <hr class="my-4">
+
+                <!-- Library Management Section -->
+                <div class="card mt-4">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="card-title h5 mb-0">Library Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Directory Structure</h4>
+                        <pre><code class="language-plaintext">
+                        lib/
+                        ├── css/
+                        │   ├── bootstrap.min.css
+                        │   ├── bootstrap-icons.css
+                        │   └── github.min.css
+                        ├── js/
+                        │   ├── bootstrap.bundle.min.js
+                        │   ├── highlight.min.js
+                        │   └── config.js
+                        └── fonts/
+                            └── bootstrap-icons.woff2
+                        </code></pre>
+                        
+                        <h4 class="mt-4">Switching Between Local and CDN</h4>
+                        <div class="alert alert-info">
+                            <p>To switch between local and CDN versions:</p>
+                            <ol class="mb-0">
+                                <li>Open <code>config.js</code></li>
+                                <li>Set <code>useLocalLibs</code> to <code>true</code> for local or <code>false</code> for CDN</li>
+                                <li>Save the file and refresh your page</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
             <div class="tab-pane fade" id="testing">
                 <h2 class="mb-4">Testing the Bootstrap Page Locally</h2>
                 
@@ -830,7 +1578,39 @@ All tests completed successfully!
     <!-- Highlight.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
     <script>
+        // Initialize syntax highlighting
         hljs.highlightAll();
+        
+        // Add event listener for tab changes
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle tab switching
+            var tabLinks = document.querySelectorAll('[data-bs-toggle="tab"]');
+            tabLinks.forEach(function(tabLink) {
+                tabLink.addEventListener('shown.bs.tab', function (event) {
+                    // Rehighlight code blocks in the newly shown tab
+                    var targetPane = document.querySelector(event.target.getAttribute('href'));
+                    if (targetPane) {
+                        targetPane.querySelectorAll('pre code').forEach((block) => {
+                            hljs.highlightBlock(block);
+                        });
+                    }
+                });
+            });
+            
+            // Handle dropdown menu items
+            var dropdownItems = document.querySelectorAll('.dropdown-item[data-bs-toggle="tab"]');
+            dropdownItems.forEach(function(item) {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var targetId = this.getAttribute('href');
+                    var targetTab = document.querySelector(targetId);
+                    if (targetTab) {
+                        var tab = new bootstrap.Tab(this);
+                        tab.show();
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

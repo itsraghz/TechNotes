@@ -28,27 +28,31 @@ Types of changes:
 - `Removed` for now removed features
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
-
 ## [Unreleased]
 
+## [2025-01-30]
 ### Added
-- Added comprehensive JUnit 5 tutorial with detailed explanations and practical examples
-- Added in-depth unit testing theory content covering testing principles, methodologies, and best practices
-- Added interactive code examples and visual diagrams for better concept understanding
-- Added improved content organization with clear section hierarchies and visual elements
-### Changed
-- Enhanced fundamentals tab organization with intuitive section layout and interactive components
-- Improved content visualization using Bootstrap components for better user engagement
-- Relocated Carousel and Hero sections to Overview tab for improved content visibility and better user experience
-- Enhanced content structure with Bootstrap components for better readability
-- Improved overall navigation and user interface organization
-### Deprecated
+- Add new UI Setup & Documentation section under Technical group containing:
+- Config.js documentation and usage guide
+- Download script documentation and implementation
+- Library management instructions
+- Local vs CDN setup configuration
+- New comprehensive JUnit documentation section with subsections:
+- Overview
+- Architecture
+- Core Annotations
+- Key Classes & Interfaces
+- Test Lifecycle
+- Advanced Features
+- Visual diagrams and code examples for JUnit concepts
 
-### Removed
+### Changed
+- Reorganized navigation menu with new groupings (Theory, Program and Output)
+- Improved menu structure with logical grouping of related content
 
 ### Fixed
-
-### Security
+- Fixed duplicate entries under Technical dropdown
+- Fixed content loading issues in tab navigation
 
 ## [1.0.0] - 2025-01-27
 ### Added
