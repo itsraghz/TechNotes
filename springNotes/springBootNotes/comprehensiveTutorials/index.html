@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTuts - Technical Tutorials</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        #homeContent {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 1;
+        }
+    </style>
+    </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TechTuts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" id="homeLink">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Database</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-content="mysql">MySQL</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="postgresql">PostgreSQL</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="h2">H2</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="mongodb">MongoDB</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ORM</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-content="jpa">JPA</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="hibernate">Hibernate</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Unit Testing</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-content="unit-testing-fundamentals">Fundamentals</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="junit">JUnit</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="mockito">Mockito</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="testcontainers">TestContainers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Spring Framework</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-content="spring-core">Spring Core</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-mvc">Spring MVC</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-rest">Spring REST</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-data">Spring Data</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-boot">Spring Boot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Misc</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-content="ui-setup">UI Setup</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="cdn-setup">CDN Setup</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="version-history">Version History</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Content Section -->
+    <div id="homeContent">
+        <!-- Jumbotron -->
+        <div class="container mt-4">
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome to TechTuts!</h1>
+                <p class="lead">Your one-stop destination for high-quality technical tutorials on databases, ORM, testing, and Spring Framework.</p>
+                <hr class="my-4">
+                <p>Explore our comprehensive guides and enhance your development skills.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="container mb-4">
+        <div id="techCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d" class="d-block w-100" alt="Database">
+                    <div class="carousel-caption">
+                        <h3>Database Technologies</h3>
+                        <p>Master modern database systems</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" class="d-block w-100" alt="Spring">
+                    <div class="carousel-caption">
+                        <h3>Spring Framework</h3>
+                        <p>Build robust Java applications</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" class="d-block w-100" alt="Testing">
+                    <div class="carousel-caption">
+                        <h3>Testing Methodologies</h3>
+                        <p>Ensure code quality through testing</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <div id="mainContent">
+                    <h2>Featured Tutorials</h2>
+                    <p>Select a topic from the navigation menu to start learning!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h5>TechTuts</h5>
+                    <p>&copy; 2025 <a href="https://raghsonline.com" target="_blank" class="text-decoration-none">raghsonline.com</a>. All rights reserved.</p>
+                    <p>Last Modified: <span id="lastModified"></span></p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleDateString();
+        
+        // Function to toggle home sections
+        function toggleHomeSections(show) {
+            const homeContent = document.getElementById('homeContent');
+            if (show) {
+                homeContent.style.display = 'block';
+                setTimeout(() => homeContent.style.opacity = '1', 10);
+            } else {
+                homeContent.style.opacity = '0';
+                setTimeout(() => homeContent.style.display = 'none', 300);
+            }
+        }
+
+        // Handle home link click
+        document.getElementById('homeLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleHomeSections(true);
+            document.getElementById('mainContent').innerHTML = '<h2>Featured Tutorials</h2><p>Select a topic from the navigation menu to start learning!</p>';
+        });
+        
+        // Handle content loading
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', async (e) => {
+                e.preventDefault();
+                const content = document.getElementById('mainContent');
+                const contentId = e.target.getAttribute('data-content');
+
+                // Hide home sections
+                toggleHomeSections(false);
+
+                // Show loading state
+                content.innerHTML = '<div class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div><p class="mt-2">Loading content...</p></div>';
+                
+                try {
+                    const response = await fetch(`content/${contentId}.html`);
+                    if (response.ok) {
+                        const html = await response.text();
+                        content.innerHTML = html;
+                    } else {
+                        content.innerHTML = `
+                            <div class="alert alert-warning" role="alert">
+                                <h4 class="alert-heading">Content Coming Soon!</h4>
+                                <p>The tutorial for ${e.target.textContent} is currently being developed.</p>
+                                <hr>
+                                <p class="mb-0">Please check back later for updates.</p>
+                            </div>`;
+                    }
+                } catch (error) {
+                    content.innerHTML = `
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">Error Loading Content</h4>
+                            <p>An error occurred while loading the tutorial content.</p>
+                            <hr>
+                            <p class="mb-0">Please try again later or contact support if the problem persists.</p>
+                        </div>`;
+                    console.error('Error loading content:', error);
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
+
