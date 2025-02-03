@@ -2,9 +2,15 @@
 
 ## [1.3.0] - 2025-02-03
 ### Added
-- Cache control toggle feature:
-- Cache toggle button in the navigation bar
-- Visual indicator for cache state
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.1.0] - 2025-02-03
+
+### Added
+- Added Gradle documentation layout and version history tracking
+- Enhanced content organization for Gradle-related materials
+
+## [2.0.0] - 2024-01-11
 - Default cache-disabled state for fresh content
 - Real-time cache state switching
 

@@ -1,0 +1,339 @@
+<div>
+    <div class="row mt-2 mb-3">
+        <div class="col">
+            <h2 class="text-center mb-0">Gradle Build System</h2>
+            <p class="text-center text-muted small mb-2">A powerful and flexible build automation tool for modern software development</p>
+            <hr class="mt-2"/>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <!-- Nav tabs -->
+            <style>
+                .nav-tabs .nav-link {
+                    color: #6c757d;
+                    font-weight: normal;
+                    transition: all 0.2s ease-in-out;
+                    font-size: 0.95rem;
+                }
+                .nav-tabs .nav-link:hover {
+                    color: #495057;
+                    background-color: #f8f9fa;
+                    border-color: #dee2e6 #dee2e6 #fff;
+                }
+                .nav-tabs .nav-link.active {
+                    color: #2c3136;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    background-color: #fff;
+                    border-color: #dee2e6 #dee2e6 #fff;
+                }
+            </style>
+            <ul class="nav nav-tabs nav-fill mb-0 px-3" id="gradleTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="fundamentals-tab" data-bs-toggle="tab" data-bs-target="#fundamentals" 
+                            type="button" role="tab" aria-controls="fundamentals" aria-selected="true">Fundamentals</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="usage-tab" data-bs-toggle="tab" data-bs-target="#usage" 
+                            type="button" role="tab" aria-controls="usage" aria-selected="false">Usage</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="api-tab" data-bs-toggle="tab" data-bs-target="#api" 
+                            type="button" role="tab" aria-controls="api" aria-selected="false">Important API Classes & Methods</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="example-tab" data-bs-toggle="tab" data-bs-target="#example" 
+                            type="button" role="tab" aria-controls="example" aria-selected="false">Example Project</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="proscons-tab" data-bs-toggle="tab" data-bs-target="#proscons" 
+                            type="button" role="tab" aria-controls="proscons" aria-selected="false">Pros & Cons</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="versions-tab" data-bs-toggle="tab" data-bs-target="#versions" 
+                            type="button" role="tab" aria-controls="versions" aria-selected="false">Gradle Versions</button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content border border-top-0 rounded-bottom p-4" style="min-height: 500px; background-color: #fafafa;">
+                <div class="tab-pane fade show active" id="fundamentals" role="tabpanel" aria-labelledby="fundamentals-tab">
+                    <!-- Fundamentals content will go here -->
+                </div>
+                <div class="tab-pane fade" id="usage" role="tabpanel" aria-labelledby="usage-tab">
+                    <!-- Usage content will go here -->
+                </div>
+                <div class="tab-pane fade" id="api" role="tabpanel" aria-labelledby="api-tab">
+                    <!-- API content will go here -->
+                </div>
+                <div class="tab-pane fade" id="example" role="tabpanel" aria-labelledby="example-tab">
+                    <!-- Example Project content will go here -->
+                </div>
+                <div class="tab-pane fade" id="proscons" role="tabpanel" aria-labelledby="proscons-tab">
+                    <!-- Pros & Cons content will go here -->
+                </div>
+                <div class="tab-pane fade" id="versions" role="tabpanel" aria-labelledby="versions-tab">
+                    <h3 class="h5 mb-3">Version History</h3>
+                    <div class="accordion" id="versionHistory">
+                        <!-- Gradle 8.5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#version85">
+                                    Gradle 8.5 (November 2023)
+                                </button>
+                            </h2>
+                            <div id="version85" class="accordion-collapse collapse show" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Key Features:</strong>
+                                            <ul>
+                                                <li>Improved dependency resolution performance</li>
+                                                <li>Enhanced Kotlin DSL support</li>
+                                                <li>New Java toolchain improvements</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-0"><strong>Important Updates:</strong>
+                                            <ul>
+                                                <li>Configuration cache stability improvements</li>
+                                                <li>Better IDE integration</li>
+                                                <li>New testing infrastructure</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 8.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version80">
+                                    Gradle 8.0 (February 2023)
+                                </button>
+                            </h2>
+                            <div id="version80" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Major Features:</strong>
+                                            <ul>
+                                                <li>Configuration cache generally available</li>
+                                                <li>Java 19 support</li>
+                                                <li>Kotlin DSL improvements</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Breaking Changes:</strong>
+                                            <ul>
+                                                <li>Removed support for Java 7</li>
+                                                <li>Configuration cache enabled by default</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 7.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version70">
+                                    Gradle 7.0 (April 2021)
+                                </button>
+                            </h2>
+                            <div id="version70" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Major Features:</strong>
+                                            <ul>
+                                                <li>Java 16 support</li>
+                                                <li>Faster incremental builds</li>
+                                                <li>Improved dependency management</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Breaking Changes:</strong>
+                                            <ul>
+                                                <li>Removed support for Java 6</li>
+                                                <li>Changed default file encoding to UTF-8</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 6.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version60">
+                                    Gradle 6.0 (November 2019)
+                                </button>
+                            </h2>
+                            <div id="version60" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Major Features:</strong>
+                                            <ul>
+                                                <li>Dependency catalog support</li>
+                                                <li>Java modules support</li>
+                                                <li>Build scan improvements</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Improvements:</strong>
+                                            <ul>
+                                                <li>Faster incremental Java compilation</li>
+                                                <li>Better dependency insight</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 5.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version50">
+                                    Gradle 5.0 (November 2018)
+                                </button>
+                            </h2>
+                            <div id="version50" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Major Features:</strong>
+                                            <ul>
+                                                <li>Kotlin DSL 1.0</li>
+                                                <li>Java 11 support</li>
+                                                <li>Dependency version alignment</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Breaking Changes:</strong>
+                                            <ul>
+                                                <li>Removed support for Java 7</li>
+                                                <li>Changes to plugin development</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 4.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version40">
+                                    Gradle 4.0 (June 2017)
+                                </button>
+                            </h2>
+                            <div id="version40" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Major Features:</strong>
+                                            <ul>
+                                                <li>Build cache</li>
+                                                <li>Composite builds</li>
+                                                <li>Improved parallel execution</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Improvements:</strong>
+                                            <ul>
+                                                <li>Better IDE integration</li>
+                                                <li>Enhanced build time reporting</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 3.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version30">
+                                    Gradle 3.0 (August 2016)
+                                </button>
+                            </h2>
+                            <div id="version30" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Major Features:</strong>
+                                            <ul>
+                                                <li>Gradle Script Kotlin</li>
+                                                <li>Improved incremental compilation</li>
+                                                <li>Test execution improvements</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Breaking Changes:</strong>
+                                            <ul>
+                                                <li>Removed Gradle GUI</li>
+                                                <li>Changes to TestKit API</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 2.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version20">
+                                    Gradle 2.0 (July 2014)
+                                </button>
+                            </h2>
+                            <div id="version20" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Major Features:</strong>
+                                            <ul>
+                                                <li>Plugins 2.0</li>
+                                                <li>Worker API</li>
+                                                <li>Parallel test execution</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Improvements:</strong>
+                                            <ul>
+                                                <li>Daemon improvements</li>
+                                                <li>Better IDE support</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradle 1.0 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#version10">
+                                    Gradle 1.0 (June 2012)
+                                </button>
+                            </h2>
+                            <div id="version10" class="accordion-collapse collapse" data-bs-parent="#versionHistory">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Initial Stable Release Features:</strong>
+                                            <ul>
+                                                <li>First production-ready build system</li>
+                                                <li>Groovy-based DSL for build scripts</li>
+                                                <li>Maven-compatible dependency management</li>
+                                                <li>Multi-project build support</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2"><strong>Key Capabilities:</strong>
+                                            <ul>
+                                                <li>Incremental builds</li>
+                                                <li>Build-by-convention</li>
+                                                <li>ANT tasks integration</li>
+                                                <li>Extensible plugin system</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-0"><strong>Historical Significance:</strong>
+                                            <ul>
+                                                <li>First enterprise-ready release</li>
+                                                <li>Foundation for modern build automation</li>
+                                                <li>Established core principles still in use today</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    </div>
