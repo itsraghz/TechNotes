@@ -28,6 +28,53 @@
                         <a class="nav-link active" href="#" id="homeLink">Home</a>
                     </li>
                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Spring Framework</a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header">Getting Started</h6></li>
+                            <li><a class="dropdown-item" href="#" data-content="prerequisites">Prerequisites</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="installation">Installation Guide</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="quick-start">Quick Start Guide</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Core Framework</h6></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-core">Spring Core</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-mvc">Spring MVC</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-rest">Spring REST</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-data">Spring Data</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-boot">Spring Boot</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Architecture</h6></li>
+                            <li><a class="dropdown-item" href="#" data-content="system-overview">System Overview</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="components">Components</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="best-practices">Best Practices</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="design-patterns">Design Patterns</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Security</h6></li>
+                            <li><a class="dropdown-item" href="#" data-content="spring-security-basics">Spring Security Basics</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="authentication">Authentication</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="authorization">Authorization</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="oauth2">OAuth2 & JWT</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Web</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-content="html">HTML</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="css">CSS</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="javascript">JavaScript</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="restful">RESTful Services</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="cdn">CDN</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="caching">Caching</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Build Systems</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-content="ant">Ant</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="maven">Maven</a></li>
+                            <li><a class="dropdown-item" href="#" data-content="gradle">Gradle</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Database</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" data-content="mysql">MySQL</a></li>
@@ -71,6 +118,12 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="ms-auto">
+                    <button id="cacheToggle" class="btn btn-outline-light" title="Toggle Content Caching">
+                        <i class="fas fa-database"></i>
+                        <span class="ms-1">Cache: OFF</span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -165,6 +218,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script>
         document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleDateString();
+
+        // Cache control
+        let cacheEnabled = false;
+        const cacheToggleBtn = document.getElementById('cacheToggle');
+
+        function updateCacheButtonState() {
+            const icon = cacheToggleBtn.querySelector('i');
+            const text = cacheToggleBtn.querySelector('span');
+            if (cacheEnabled) {
+                icon.className = 'fas fa-database text-success';
+                text.textContent = 'Cache: ON';
+                cacheToggleBtn.classList.add('active');
+            } else {
+                icon.className = 'fas fa-database';
+                text.textContent = 'Cache: OFF';
+                cacheToggleBtn.classList.remove('active');
+            }
+        }
+
+        cacheToggleBtn.addEventListener('click', () => {
+            cacheEnabled = !cacheEnabled;
+            console.log('Cache state changed:', cacheEnabled ? 'ON' : 'OFF');
+            updateCacheButtonState();
+        });
         
         // Function to toggle home sections
         function toggleHomeSections(show) {
@@ -199,7 +276,16 @@
                 content.innerHTML = '<div class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div><p class="mt-2">Loading content...</p></div>';
                 
                 try {
-                    const response = await fetch(`content/${contentId}.html`);
+                    const timestamp = new Date().getTime();
+                    const fetchOptions = {
+                        headers: cacheEnabled ? {} : {
+                            'Cache-Control': 'no-cache, no-store, must-revalidate',
+                            'Pragma': 'no-cache',
+                            'Expires': '0'
+                        }
+                    };
+                    const url = `content/${contentId}.html${cacheEnabled ? '' : `?t=${timestamp}`}`;
+                    const response = await fetch(url, fetchOptions);
                     if (response.ok) {
                         const html = await response.text();
                         content.innerHTML = html;
