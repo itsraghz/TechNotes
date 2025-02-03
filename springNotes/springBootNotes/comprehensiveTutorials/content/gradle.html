@@ -60,10 +60,208 @@
             <!-- Tab panes -->
             <div class="tab-content border border-top-0 rounded-bottom p-4" style="min-height: 500px; background-color: #fafafa;">
                 <div class="tab-pane fade show active" id="fundamentals" role="tabpanel" aria-labelledby="fundamentals-tab">
-                    <!-- Fundamentals content will go here -->
+                    <div class="accordion" id="fundamentalsAccordion">
+                        <!-- What is Gradle? -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingGradle">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGradle" aria-expanded="false" aria-controls="collapseGradle">
+                                    <i class="bi bi-question-circle text-primary me-2"></i>What is Gradle?
+                                </button>
+                            </h2>
+                            <div id="collapseGradle" class="accordion-collapse collapse" aria-labelledby="headingGradle" data-bs-parent="#fundamentalsAccordion">
+                                <div class="accordion-body">
+                                    <p class="text-muted">Gradle is a powerful and flexible build automation tool that helps developers manage project dependencies, compile code, run tests, and package applications. It combines the best features of Apache Ant and Maven while introducing a Groovy-based Domain Specific Language (DSL) for declaring builds.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefits -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingBenefits">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBenefits" aria-expanded="false" aria-controls="collapseBenefits">
+                                    <i class="bi bi-award text-primary me-2"></i>Why Choose Gradle?
+                                </button>
+                            </h2>
+                            <div id="collapseBenefits" class="accordion-collapse collapse" aria-labelledby="headingBenefits" data-bs-parent="#fundamentalsAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-3">
+                                            <i class="bi bi-lightning-charge-fill text-primary me-2"></i>
+                                            <strong>High Performance:</strong> Incremental builds and build cache capabilities significantly reduce build times
+                                        </li>
+                                        <li class="mb-3">
+                                            <i class="bi bi-gear-fill text-primary me-2"></i>
+                                            <strong>Flexibility:</strong> Highly customizable with support for multiple languages and platforms
+                                        </li>
+                                        <li class="mb-3">
+                                            <i class="bi bi-code-square text-primary me-2"></i>
+                                            <strong>Developer Experience:</strong> Clear and concise build scripts using Groovy or Kotlin DSL
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-tools text-primary me-2"></i>
+                                            <strong>Extensibility:</strong> Rich plugin ecosystem and easy integration with existing tools
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFeatures">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeatures" aria-expanded="false" aria-controls="collapseFeatures">
+                                    <i class="bi bi-check2-square text-primary me-2"></i>Key Features
+                                </button>
+                            </h2>
+                            <div id="collapseFeatures" class="accordion-collapse collapse" aria-labelledby="headingFeatures" data-bs-parent="#fundamentalsAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled mb-md-0 mb-3">
+                                                <li class="mb-2">
+                                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                                    Incremental builds
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                                    Build cache support
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                                    Parallel task execution
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-2">
+                                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                                    Dependency management
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                                    Multi-project builds
+                                                </li>
+                                                <li>
+                                                    <i class="bi bi-check2-circle text-success me-2"></i>
+                                                    Custom task types
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="usage" role="tabpanel" aria-labelledby="usage-tab">
-                    <!-- Usage content will go here -->
+                    <div class="accordion" id="usageAccordion">
+                        <!-- Essential Commands -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    <i class="bi bi-terminal-fill text-primary me-2"></i>Essential Gradle Commands
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-3">
+                                            <code class="bg-light px-2 me-2">gradle build</code>
+                                            <span>Compiles and packages your project, running all tests</span>
+                                        </li>
+                                        <li class="mb-3">
+                                            <code class="bg-light px-2 me-2">gradle clean</code>
+                                            <span>Deletes the build directory and all built files</span>
+                                        </li>
+                                        <li class="mb-3">
+                                            <code class="bg-light px-2 me-2">gradle test</code>
+                                            <span>Runs all tests in your project</span>
+                                        </li>
+                                        <li>
+                                            <code class="bg-light px-2 me-2">gradle tasks</code>
+                                            <span>Lists all available tasks in the current project</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dependency Management -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <i class="bi bi-box-seam text-primary me-2"></i>Dependency Management
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <p class="text-muted mb-4">Gradle provides different dependency configurations to control how dependencies are used in your project.</p>
+                                    
+                                    <div class="mb-4">
+                                        <h4 class="h6 mb-3">Common Dependency Configurations</h4>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <div class="d-flex align-items-start">
+                                                    <i class="bi bi-arrow-right-circle text-success me-2 mt-1"></i>
+                                                    <div>
+                                                        <strong>implementation</strong>
+                                                        <p class="text-muted mb-2">Dependencies required for compilation and runtime. Not exposed to dependent projects.</p>
+                                                        <code class="d-block bg-light p-2 mb-3">implementation 'org.springframework.boot:spring-boot-starter-web:2.7.0'</code>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div class="d-flex align-items-start">
+                                                    <i class="bi bi-arrow-right-circle text-success me-2 mt-1"></i>
+                                                    <div>
+                                                        <strong>compileOnly</strong>
+                                                        <p class="text-muted mb-2">Dependencies needed only at compile time, not included in runtime classpath.</p>
+                                                        <code class="d-block bg-light p-2 mb-3">compileOnly 'org.projectlombok:lombok:1.18.24'</code>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div class="d-flex align-items-start">
+                                                    <i class="bi bi-arrow-right-circle text-success me-2 mt-1"></i>
+                                                    <div>
+                                                        <strong>testImplementation</strong>
+                                                        <p class="text-muted mb-2">Dependencies used for testing only, not included in the main artifact.</p>
+                                                        <code class="d-block bg-light p-2 mb-3">testImplementation 'junit:junit:4.13.2'</code>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-start">
+                                                    <i class="bi bi-arrow-right-circle text-success me-2 mt-1"></i>
+                                                    <div>
+                                                        <strong>runtimeOnly</strong>
+                                                        <p class="text-muted mb-2">Dependencies required only at runtime, not needed for compilation.</p>
+                                                        <code class="d-block bg-light p-2">runtimeOnly 'org.postgresql:postgresql:42.3.1'</code>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Task Configuration -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <i class="bi bi-gear-fill text-primary me-2"></i>Task Configuration
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <p class="text-muted mb-4">Tasks are the building blocks of Gradle builds. Here's how to create and configure them effectively.</p>
+                                    
+                                    <div class="mb-4">
+                                        <h4 class="h6 mb-3">Creating Custom Tasks</h4>
+                                        <p class="text-muted mb-2">Define custom tasks for specific build operations:</p>
+                                        <code class="d-block bg-light p-3
                 </div>
                 <div class="tab-pane fade" id="api" role="tabpanel" aria-labelledby="api-tab">
                     <!-- API content will go here -->

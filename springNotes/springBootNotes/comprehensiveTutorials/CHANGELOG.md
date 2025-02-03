@@ -1,14 +1,17 @@
 # Changelog
 
-## [1.3.0] - 2025-02-03
+## [2.1.1] - 2025-02-03
+
 ### Added
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+- Added the contents for Gradle fundamentals and Usage
+- Enhanced content organization with Accordions in each tab, with the latest/topmost expanded 
 
 ## [2.1.0] - 2025-02-03
 
 ### Added
 - Added Gradle documentation layout and version history tracking
 - Enhanced content organization for Gradle-related materials
+- this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [2.0.0] - 2024-01-11
 - Default cache-disabled state for fresh content
