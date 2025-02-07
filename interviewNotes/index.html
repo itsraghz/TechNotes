@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Interview Guide</title>
+    <!-- CDN Resources -->
+    <link id="bootstrap-css-cdn" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" disabled>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Local Resources -->
+    <link id="bootstrap-css-local" href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .dropdown-menu {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        @media (min-width: 992px) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+            .dropdown-menu {
+                margin-top: 0;
+            }
+        }
+        .dropdown-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+        .dropdown-menu::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dropdown-menu::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        .dropdown-item:hover {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .jumbotron {
+            background-color: #e3f2fd;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            }
+            .navbar-toggle-item {
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+            }
+            .navbar-toggle-item label {
+                margin-left: 5px;
+                margin-bottom: 0;
+                color: rgba(255,255,255,.75);
+                font-size: 0.9rem;
+            }
+            .navbar-nav .nav-link {
+                padding: 0.5rem 0.75rem;
+            }
+            .navbar-toggle-item .form-check-input {
+                cursor: pointer;
+            }
+            .navbar-toggle-item .form-check-label:hover {
+                color: #ffffff;
+            }
+    .content-section {
+        transition: opacity 0.3s ease-in-out;
+    }
+    .content-section.d-none {
+        display: none !important;
+    }
+    .carousel-item {
+        height: 400px;
+        background-color: #f8f9fa;
+    }
+    .carousel-item img {
+        height: 100%;
+        object-fit: contain;
+        margin: auto;
+    }
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .content-area {
+        min-height: 500px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* Footer Styles */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1030;
+    }
+    main {
+        margin-top: 60px; /* Adjust based on navbar height */
+    }
+    footer {
+        background-color: #212529;
+        color: #fff;
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
+    footer h5 {
+        color: #fff;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0.5rem;
+    }
+    footer ul li {
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+    }
+    footer a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: #fff;
+    }
+    .social-links {
+        text-align: center;
+    }
+    .social-links a {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.25rem;
+        margin: 0 0.5rem;
+    }
+    .footer-bottom {
+        text-align: center;
+        padding-top: 0.5rem;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tech Guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" id="homeLink">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Core Java</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Basics</a></li>
+                            <li><a class="dropdown-item" href="#">JRE vs JDK vs JVM</a></li>
+                            <li><a class="dropdown-item" href="#">Data Types</a></li>
+                            <li><a class="dropdown-item" href="#">String</a></li>
+                            <li><a class="dropdown-item" href="#">Arrays</a></li>
+                            <li><a class="dropdown-item" href="#">Collections</a></li>
+                            <li><a class="dropdown-item" href="#">I/O</a></li>
+                            <li><a class="dropdown-item" href="#">Networking</a></li>
+                            <li><a class="dropdown-item" href="#">Exceptions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Advanced Java</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">JDBC</a></li>
+                            <li><a class="dropdown-item" href="#">XML Parsing</a></li>
+                            <li><a class="dropdown-item" href="#">JSON Parsing</a></li>
+                            <li><a class="dropdown-item" href="#">Servlets</a></li>
+                            <li><a class="dropdown-item" href="#">JSP</a></li>
+                            <li><a class="dropdown-item" href="#">EJB</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Spring Framework</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Core Spring</a></li>
+                            <li><a class="dropdown-item" href="#">Dependency Injection</a></li>
+                            <li><a class="dropdown-item" href="#">AOP</a></li>
+                            <li><a class="dropdown-item" href="#">Spring MVC</a></li>
+                            <li><a class="dropdown-item" href="#">Spring Boot</a></li>
+                            <li><a class="dropdown-item" href="#">Spring Security</a></li>
+                            <li><a class="dropdown-item" href="#">Spring Data JPA</a></li>
+                            <li><a class="dropdown-item" href="#">Spring Cloud</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Build Systems</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Maven (POM, Lifecycle, Plugins)</a></li>
+                            <li><a class="dropdown-item" href="#">Gradle (Build Scripts, Tasks, Dependencies)</a></li>
+                            <li><a class="dropdown-item" href="#">Ant</a></li>
+                            <li><a class="dropdown-item" href="#">Continuous Integration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">DevOps</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Git & Version Control</a></li>
+                            <li><a class="dropdown-item" href="#">Docker (Containers, Images)</a></li>
+                            <li><a class="dropdown-item" href="#">Kubernetes (Pods, Services, Deployments)</a></li>
+                            <li><a class="dropdown-item" href="#">Jenkins</a></li>
+                            <li><a class="dropdown-item" href="#">AWS/Cloud Platforms</a></li>
+                            <li><a class="dropdown-item" href="#">Monitoring & Logging</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Databases</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">RDBMS Concepts</a></li>
+                            <li><a class="dropdown-item" href="#">SQL (DDL, DML, TCL)</a></li>
+                            <li><a class="dropdown-item" href="#">Database Design</a></li>
+                            <li><a class="dropdown-item" href="#">Normalization</a></li>
+                            <li><a class="dropdown-item" href="#">Indexing & Performance</a></li>
+                            <li><a class="dropdown-item" href="#">NoSQL (MongoDB, Cassandra)</a></li>
+                            <li><a class="dropdown-item" href="#">Caching (Redis)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Testing</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Unit Testing (JUnit)</a></li>
+                            <li><a class="dropdown-item" href="#">Mock Testing (Mockito)</a></li>
+                            <li><a class="dropdown-item" href="#">Integration Testing</a></li>
+                            <li><a class="dropdown-item" href="#">TDD</a></li>
+                            <li><a class="dropdown-item" href="#">BDD (Cucumber)</a></li>
+                            <li><a class="dropdown-item" href="#">Performance Testing</a></li>
+                        </ul>
+                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Version History
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#versionModal">v1.0.0 (Current)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-nav ms-auto">
+                <div class="navbar-toggle-item">
+                    <input class="form-check-input" type="checkbox" id="resourceToggle">
+                    <label class="form-check-label" for="resourceToggle">Use CDN</label>
+                </div>
+                <div class="navbar-toggle-item">
+                    <input class="form-check-input" type="checkbox" id="cacheToggle" checked>
+                    <label class="form-check-label" for="cacheToggle">Enable Cache</label>
+                </div>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <main class="container mt-4">
+        <!-- Home Content -->
+        <section id="home-content" class="content-section active">
+            <!-- Jumbotron -->
+            <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Technical Interview Guide</h1>
+            <p class="lead">Your comprehensive resource for Java ecosystem interview preparation</p>
+            <hr class="my-4">
+            <p>Explore topics across Core Java, Frameworks, DevOps, and more.</p>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="container mb-5">
+        <div id="techCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Java Ecosystem"></button>
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="1" aria-label="Maven"></button>
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="2" aria-label="Spring Framework"></button>
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="3" aria-label="Hibernate"></button>
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="4" aria-label="JUnit Testing"></button>
+                <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="5" aria-label="Kubernetes"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/java-ecosystem.jpg" class="d-block w-100" alt="Complete Java Development Ecosystem">
+                    <div class="carousel-caption">
+                        <h3>Java Ecosystem</h3>
+                        <p>From core concepts to enterprise development - your complete Java journey</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/maven.png" class="d-block w-100" alt="Apache Maven Build System">
+                    <div class="carousel-caption">
+                        <h3>Maven Build Tool</h3>
+                        <p>Professional build automation and dependency management for Java projects</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/spring-framework.jpg" class="d-block w-100" alt="Spring Framework Architecture">
+                    <div class="carousel-caption">
+                        <h3>Spring Framework</h3>
+                        <p>Building robust enterprise applications with Spring's comprehensive ecosystem</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/hibernate.png" class="d-block w-100" alt="Hibernate ORM Framework">
+                    <div class="carousel-caption">
+                        <h3>Hibernate ORM</h3>
+                        <p>Simplified database operations with Java's leading ORM framework</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/junit.png" class="d-block w-100" alt="JUnit 5 Testing Framework">
+                    <div class="carousel-caption">
+                        <h3>JUnit Testing</h3>
+                        <p>Modern testing practices with JUnit 5 for reliable Java applications</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/kubernetes.png" class="d-block w-100" alt="Kubernetes Container Orchestration">
+                    <div class="carousel-caption">
+                        <h3>Kubernetes</h3>
+                        <p>Modern container orchestration for scalable microservices deployment</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Other Content Sections -->
+<section id="core-java-content" class="content-section d-none">
+    <h2>Core Java</h2>
+    <div class="content-area p-4">
+        <!-- Core Java content will be loaded here -->
+    </div>
+</section>
+
+<section id="advanced-java-content" class="content-section d-none">
+    <h2>Advanced Java</h2>
+    <div class="content-area p-4">
+        <!-- Advanced Java content will be loaded here -->
+    </div>
+</section>
+
+<section id="spring-content" class="content-section d-none">
+    <h2>Spring Framework</h2>
+    <div class="content-area p-4">
+        <!-- Spring content will be loaded here -->
+    </div>
+</main>
+
+<!-- Version History Modal -->
+<div class="modal fade" id="versionModal" tabindex="-1" aria-labelledby="versionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="versionModalLabel">Version History</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Version 1.0.0 (February 7, 2025)</h6>
+                <ul>
+                    <li>Initial release with Bootstrap-based responsive design</li>
+                    <li>Interactive navigation menu with dropdown categories</li>
+                    <li>Carousel component for featured content</li>
+                    <li>Cache/CDN toggle functionality in navbar</li>
+                    <li>Fixed navigation header</li>
+                    <li>Optimized footer design</li>
+                    <li>Enhanced mobile responsiveness</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Quick Links</h5>
+                <ul class="d-flex flex-wrap">
+                    <li class="me-3"><a href="#">Home</a></li>
+                    <li class="me-3"><a href="#">Core Java</a></li>
+                    <li class="me-3"><a href="#">Spring</a></li>
+                    <li class="me-3"><a href="#">DevOps</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="social-links">
+                    <a href="#"><i class="bi bi-github"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <small>&copy; 2025 RaghsOnline. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+</footer>
+
+<!-- CDN Scripts -->
+    <script id="jquery-cdn" src="https://code.jquery.com/jquery-3.7.0.min.js" disabled></script>
+    <script id="bootstrap-js-cdn" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" disabled></script>
+
+    <!-- Local Scripts -->
+    <script id="jquery-local" src="assets/js/jquery-3.7.0.min.js"></script>
+    <script id="bootstrap-js-local" src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('resourceToggle').addEventListener('change', function() {
+            const useCDN = this.checked;
+
+            // CSS Resources
+            document.getElementById('bootstrap-css-cdn').disabled = !useCDN;
+            document.getElementById('bootstrap-css-local').disabled = useCDN;
+
+            // JavaScript Resources
+            document.getElementById('jquery-cdn').disabled = !useCDN;
+            document.getElementById('bootstrap-js-cdn').disabled = !useCDN;
+            document.getElementById('jquery-local').disabled = useCDN;
+            document.getElementById('bootstrap-js-local').disabled = useCDN;
+        });
+
+        // Cache control handling
+        document.getElementById('cacheToggle').addEventListener('change', function() {
+            const useCache = this.checked;
+            if (!useCache) {
+                // Force reload without cache
+                const timestamp = new Date().getTime();
+                const currentUrl = window.location.href.split('?')[0];
+                window.location.href = `${currentUrl}?nocache=${timestamp}`;
+            } else {
+                // Normal reload (with cache)
+                window.location.reload();
+            }
+        });
+
+        // Add cache control headers using meta tags
+        if (new URLSearchParams(window.location.search).has('nocache')) {
+            const meta = document.createElement('meta');
+            meta.setAttribute('http-equiv', 'Cache-Control');
+            meta.setAttribute('content', 'no-cache, no-store, must-revalidate');
+            document.head.appendChild(meta);
+            
+            const metaPragma = document.createElement('meta');
+            metaPragma.setAttribute('http-equiv', 'Pragma');
+            metaPragma.setAttribute('content', 'no-cache');
+            document.head.appendChild(metaPragma);
+            
+            const metaExpires = document.createElement('meta');
+            metaExpires.setAttribute('http-equiv', 'Expires');
+            metaExpires.setAttribute('content', '0');
+            document.head.appendChild(metaExpires);
+            
+            // Uncheck the cache toggle if we're in no-cache mode
+            document.getElementById('cacheToggle').checked = false;
+        }
+
+        // Enhanced dropdown behavior
+        $(document).ready(function() {
+            // Initialize Bootstrap dropdowns
+            $('.dropdown-toggle').dropdown();
+            
+            // Add hover functionality for desktop
+            if ($(window).width() >= 992) {
+                $('.dropdown').hover(
+                    function() {
+                        $(this).find('.dropdown-menu').addClass('show');
+                        $(this).find('.dropdown-toggle').attr('aria-expanded', 'true');
+                    },
+                    function() {
+                        $(this).find('.dropdown-menu').removeClass('show');
+                        $(this).find('.dropdown-toggle').attr('aria-expanded', 'false');
+                    }
+                );
+            }
+        });
+
+        // Content navigation handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentSections = document.querySelectorAll('.content-section');
+            const menuItems = document.querySelectorAll('.nav-link');
+
+            function showContent(contentId) {
+                contentSections.forEach(section => {
+                    section.classList.add('d-none');
+                });
+                const targetContent = document.getElementById(contentId);
+                if (targetContent) {
+                    targetContent.classList.remove('d-none');
+                }
+            }
+
+            // Home link handling
+            document.getElementById('homeLink').addEventListener('click', function(e) {
+                e.preventDefault();
+                showContent('home-content');
+            });
+
+            // Menu items handling
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (this.classList.contains('dropdown-toggle')) return;
+                    e.preventDefault();
+                    const contentId = this.getAttribute('href').substring(1) + '-content';
+                    showContent(contentId);
+                });
+            });
+
+            // Dropdown items handling
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parentDropdown = this.closest('.dropdown');
+                    const contentId = parentDropdown.querySelector('.nav-link').getAttribute('href').substring(1) + '-content';
+                    showContent(contentId);
+                });
+            });
+        });
+    });
+</script>
+</body>
+</html>

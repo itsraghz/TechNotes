@@ -1,10 +1,26 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [1.0.0] - 2025-02-07
+### Added
+- Initial release with Bootstrap-based responsive design
+- Interactive navigation menu with dropdown categories
+- Carousel component for featured content
+- Cache/CDN toggle functionality in navbar
+- Fixed navigation header for better accessibility
+- Social media links in footer
+- Quick links section
 
-## [2.0.0] - 2024-01-11
+### Changed
+- Updated navbar styling with toggle buttons
+- Improved footer design with minimalist layout
+- Enhanced color scheme for better visibility
+- Optimized mobile responsiveness
+
+### Technical Updates
+- Implemented Bootstrap 5 components
+- Added jQuery support for enhanced interactivity
+- Integrated Bootstrap Icons
+- Improved cache management with toggle switches
 
 ### Security
 - Updated Spring Boot from 2.4.2/2.5.6 to 3.2.1 in all Spring projects
