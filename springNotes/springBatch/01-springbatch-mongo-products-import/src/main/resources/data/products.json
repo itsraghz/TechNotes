@@ -1,0 +1,281 @@
+[
+  {
+    "name": "iPhone 13 Pro",
+    "description": "Apple's flagship smartphone with Pro camera system",
+    "category": "Smartphones",
+    "price": 999.99,
+    "stockQuantity": 100,
+    "manufacturer": "Apple",
+    "sku": "APL-IP13P-128GB"
+  },
+  {
+    "name": "Samsung Galaxy S21",
+    "description": "Premium Android smartphone with 5G capability",
+    "category": "Smartphones",
+    "price": 799.99,
+    "stockQuantity": 150,
+    "manufacturer": "Samsung",
+    "sku": "SAM-GS21-128GB"
+  },
+  {
+    "name": "MacBook Pro 14",
+    "description": "Professional laptop with M1 Pro chip",
+    "category": "Laptops",
+    "price": 1999.99,
+    "stockQuantity": 50,
+    "manufacturer": "Apple",
+    "sku": "APL-MBP14-512GB"
+  },
+  {
+    "name": "Dell XPS 15",
+    "description": "Premium Windows laptop with 4K display",
+    "category": "Laptops",
+    "price": 1799.99,
+    "stockQuantity": 75,
+    "manufacturer": "Dell",
+    "sku": "DEL-XPS15-1TB"
+  },
+  {
+    "name": "iPad Air",
+    "description": "Versatile tablet with M1 chip",
+    "category": "Tablets",
+    "price": 599.99,
+    "stockQuantity": 200,
+    "manufacturer": "Apple",
+    "sku": "APL-IPAD-64GB"
+  },
+  {
+    "name": "Sony WH-1000XM4",
+    "description": "Premium noise-cancelling headphones",
+    "category": "Audio",
+    "price": 349.99,
+    "stockQuantity": 120,
+    "manufacturer": "Sony",
+    "sku": "SNY-WH1000XM4"
+  },
+  {
+    "name": "Canon EOS R5",
+    "description": "Professional mirrorless camera",
+    "category": "Cameras",
+    "price": 3899.99,
+    "stockQuantity": 25,
+    "manufacturer": "Canon",
+    "sku": "CAN-EOSR5"
+  },
+  {
+    "name": "LG C1 OLED 65",
+    "description": "65-inch 4K OLED Smart TV",
+    "category": "TVs",
+    "price": 2499.99,
+    "stockQuantity": 30,
+    "manufacturer": "LG",
+    "sku": "LG-C1-65"
+  },
+  {
+    "name": "PS5 Digital Edition",
+    "description": "Next-gen gaming console",
+    "category": "Gaming",
+    "price": 399.99,
+    "stockQuantity": 45,
+    "manufacturer": "Sony",
+    "sku": "SNY-PS5-DE"
+  },
+  {
+    "name": "Dyson V15 Detect",
+    "description": "Smart cordless vacuum cleaner",
+    "category": "Home Appliances",
+    "price": 699.99,
+    "stockQuantity": 60,
+    "manufacturer": "Dyson",
+    "sku": "DYS-V15D"
+  },
+  {
+    "name": "Google Pixel 6 Pro",
+    "description": "Google's flagship phone with advanced AI features",
+    "category": "Smartphones",
+    "price": 899.99,
+    "stockQuantity": 85,
+    "manufacturer": "Google",
+    "sku": "GOO-PIX6P-256"
+  },
+  {
+    "name": "Samsung Galaxy Tab S7+",
+    "description": "Premium Android tablet with S Pen",
+    "category": "Tablets",
+    "price": 849.99,
+    "stockQuantity": 65,
+    "manufacturer": "Samsung",
+    "sku": "SAM-TABS7P"
+  },
+  {
+    "name": "Microsoft Surface Laptop 4",
+    "description": "Sleek laptop with touch display",
+    "category": "Laptops",
+    "price": 1299.99,
+    "stockQuantity": 40,
+    "manufacturer": "Microsoft",
+    "sku": "MS-SL4-512"
+  },
+  {
+    "name": "Apple Watch Series 7",
+    "description": "Advanced smartwatch with health features",
+    "category": "Wearables",
+    "price": 399.99,
+    "stockQuantity": 150,
+    "manufacturer": "Apple",
+    "sku": "APL-AWS7-45"
+  },
+  {
+    "name": "Bose QuietComfort 45",
+    "description": "Wireless noise cancelling headphones",
+    "category": "Audio",
+    "price": 329.99,
+    "stockQuantity": 90,
+    "manufacturer": "Bose",
+    "sku": "BOSE-QC45"
+  },
+  {
+    "name": "Nintendo Switch OLED",
+    "description": "Gaming console with enhanced display",
+    "category": "Gaming",
+    "price": 349.99,
+    "stockQuantity": 75,
+    "manufacturer": "Nintendo",
+    "sku": "NIN-SWOLED"
+  },
+  {
+    "name": "Sony A7 IV",
+    "description": "Full-frame mirrorless camera",
+    "category": "Cameras",
+    "price": 2499.99,
+    "stockQuantity": 35,
+    "manufacturer": "Sony",
+    "sku": "SNY-A7IV"
+  },
+  {
+    "name": "Samsung QN90A Neo QLED",
+    "description": "75-inch Neo QLED 4K Smart TV",
+    "category": "TVs",
+    "price": 2999.99,
+    "stockQuantity": 25,
+    "manufacturer": "Samsung",
+    "sku": "SAM-QN90A-75"
+  },
+  {
+    "name": "Lenovo ThinkPad X1 Carbon",
+    "description": "Business laptop with Intel vPro",
+    "category": "Laptops",
+    "price": 1599.99,
+    "stockQuantity": 60,
+    "manufacturer": "Lenovo",
+    "sku": "LEN-X1C-G9"
+  },
+  {
+    "name": "iPad Pro 12.9",
+    "description": "Pro tablet with M1 chip and XDR display",
+    "category": "Tablets",
+    "price": 1099.99,
+    "stockQuantity": 80,
+    "manufacturer": "Apple",
+    "sku": "APL-IPP-12"
+  },
+  {
+    "name": "ROG Strix G15",
+    "description": "Gaming laptop with RTX 3080",
+    "category": "Gaming Laptops",
+    "price": 1999.99,
+    "stockQuantity": 40,
+    "manufacturer": "ASUS",
+    "sku": "ASU-ROGG15"
+  },
+  {
+    "name": "GoPro HERO10 Black",
+    "description": "Action camera with 5.3K video",
+    "category": "Cameras",
+    "price": 499.99,
+    "stockQuantity": 100,
+    "manufacturer": "GoPro",
+    "sku": "GP-HERO10"
+  },
+  {
+    "name": "Samsung Galaxy Watch 4",
+    "description": "Smart watch with health monitoring",
+    "category": "Wearables",
+    "price": 249.99,
+    "stockQuantity": 120,
+    "manufacturer": "Samsung",
+    "sku": "SAM-GW4-44"
+  },
+  {
+    "name": "Razer BlackShark V2 Pro",
+    "description": "Wireless gaming headset",
+    "category": "Gaming Audio",
+    "price": 179.99,
+    "stockQuantity": 85,
+    "manufacturer": "Razer",
+    "sku": "RZR-BSV2P"
+  },
+  {
+    "name": "LG Gram 17",
+    "description": "Ultra-lightweight 17-inch laptop",
+    "category": "Laptops",
+    "price": 1699.99,
+    "stockQuantity": 45,
+    "manufacturer": "LG",
+    "sku": "LG-GRAM17"
+  },
+  {
+    "name": "Kindle Paperwhite",
+    "description": "E-reader with adjustable warm light",
+    "category": "E-readers",
+    "price": 139.99,
+    "stockQuantity": 200,
+    "manufacturer": "Amazon",
+    "sku": "AMZ-KPW5"
+  },
+  {
+    "name": "Fitbit Sense",
+    "description": "Advanced health smartwatch",
+    "category": "Wearables",
+    "price": 299.99,
+    "stockQuantity": 110,
+    "manufacturer": "Fitbit",
+    "sku": "FIT-SENSE"
+  },
+  {
+    "name": "Sony HT-A7000",
+    "description": "7.1.2ch Soundbar with Dolby Atmos",
+    "category": "Audio",
+    "price": 1299.99,
+    "stockQuantity": 30,
+    "manufacturer": "Sony",
+    "sku": "SNY-HTA7000"
+  },
+  {
+    "name": "DJI Air 2S",
+    "description": "Drone with 5.4K camera",
+    "category": "Drones",
+    "price": 999.99,
+    "stockQuantity": 40,
+    "manufacturer": "DJI",
+    "sku": "DJI-AIR2S"
+  },
+  {
+    "name": "ASUS ROG Swift PG32UQ",
+    "description": "32-inch 4K Gaming Monitor",
+    "category": "Monitors",
+    "price": 999.99,
+    "stockQuantity": 35,
+    "manufacturer": "ASUS",
+    "sku": "ASU-PG32UQ"
+  },
+  {
+    "name": "Logitech MX Master 3",
+    "description": "Advanced wireless mouse",
+    "category": "Accessories",
+    "price": 99.99,
+    "stockQuantity": 150,
+    "manufacturer": "Logitech",
+    "sku": "LOG-MXM3"
+  }
+]

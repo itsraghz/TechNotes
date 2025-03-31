@@ -1,0 +1,10 @@
+spring:
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+
+mongock:
+  enabled: false
+

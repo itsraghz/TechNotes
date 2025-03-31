@@ -1,0 +1,38 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/product_batch_db
+      database: product_batch_db
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false  # Disable automatic job execution at startup
+
+mongock:
+  migration-scan-package:
+    - com.learning.springbatch.mongo.config.migration
+  enabled: true
+  
+logging:
+  level:
+    com.learning.springbatch: DEBUG
+    org.springframework.batch: DEBUG
+    org.springframework.data.mongodb: DEBUG
+
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/product_batch_test_db
+      database: product_batch_test_db
+
+mongock:
+  enabled: false
+
