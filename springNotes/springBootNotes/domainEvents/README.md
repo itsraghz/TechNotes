@@ -29,7 +29,7 @@ A demonstration of domain events pattern implementation using Spring Boot and Ap
 
 Event Flow:
 +--------------+     +--------------+     +----------------+     +------------------+
-| Order Created |---->| Event Published|--->| Kafka Topics   |---->| Consumer Services|
+|Order Created |---->|Event Published|--->| Kafka Topics   |---->| Consumer Services|
 +--------------+     +--------------+     +----------------+     +------------------+
                                                 |
                                          +------+------+
@@ -332,7 +332,7 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 \
 
 #### 1. Kafka Connection Issues
 **Error**: `org.apache.kafka.common.errors.TimeoutException`
-**Solution**: 
+**Solution**:
 ```bash
 # Verify Kafka is running
 docker ps
@@ -360,4 +360,3 @@ For additional support:
 - Check the [docs/](/docs) directory for detailed documentation
 - Submit issues on GitHub
 - Contact the development team at dev@example.com
-
